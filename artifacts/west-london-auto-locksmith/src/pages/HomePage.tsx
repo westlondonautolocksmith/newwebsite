@@ -137,7 +137,7 @@ export default function HomePage() {
           <ul className="flex flex-col gap-3 mb-6">
             <li className="flex items-center gap-3 text-white">
               <span className="text-[#C9A227] text-lg leading-none">★</span>
-              <span className="text-sm font-medium">5.0 Google Rating (2 Reviews)</span>
+              <span className="text-sm font-medium">5.0 Google Rating</span>
             </li>
             <li className="flex items-center gap-3 text-white">
               <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
