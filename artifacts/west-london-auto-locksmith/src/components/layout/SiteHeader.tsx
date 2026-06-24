@@ -33,7 +33,7 @@ export default function SiteHeader() {
           aria-label="West London Auto Locksmith — home"
         >
           <img
-            src="/images/logo-dark-bg.jpg"
+            src="/images/logo-new.png"
             alt="West London Auto Locksmith"
             className="h-full w-full object-cover object-left"
             style={{ objectPosition: "20% center" }}
