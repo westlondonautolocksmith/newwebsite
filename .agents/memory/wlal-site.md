@@ -34,7 +34,11 @@ The string `"PHONE_NUMBER_PLACEHOLDER"` is checked via `const hasPhone = siteCon
 
 ## Analytics
 
-Analytics module is in `src/lib/analytics.ts`. It is a no-op until `siteContent.analytics.gaId` is set and `siteContent.analytics.enabled = true`. GA script must also be added to `index.html` manually — there is a comment placeholder.
+Analytics module is in `src/lib/analytics.ts`, gated by the `siteContent.analytics.enabled` master switch. A Google Ads tag (`gadsId` = `AW-18144470949`) is loaded in `index.html` and `enabled` is `true`.
+
+Click-to-call conversion: `reportCallConversion()` fires the Google Ads conversion (`gadsCallConversionLabel`, value 1.0 GBP) and is called from inside `trackCallClick()`. **Why there:** every Call Now (tel:) button already routes through `trackCallClick`, so wiring the conversion there covers all of them in one place — do NOT add per-button conversion calls. It does NOT preventDefault/navigate via callback: tel: links don't unload the page, so the beacon sends fine and the dialer must never be blocked.
+
+CookieConsent banner shows when `gaId` OR `gadsId` is set (informational only — it does not actually gate gtag firing; true consent-gating / Google Consent Mode is a future task). GA4 (`gaId`, a `G-` id) is not yet configured.
 
 ## Conditional sections
 

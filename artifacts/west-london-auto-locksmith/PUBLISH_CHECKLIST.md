@@ -64,8 +64,8 @@ in `src/content/siteContent.ts` unless otherwise noted.
 - [ ] Add the GA script tag to `index.html` (replace the comment placeholder)
 - [ ] Set `siteContent.analytics.enabled: true`
 - [ ] Test call button click events appear in GA4 DebugView before going live
-- [ ] (Optional) Set up Google Ads conversion tracking — add to `siteContent.analytics.gadsId`
-- [ ] Add Google Ads script to `index.html` when ready
+- [x] Google Ads tag (`AW-18144470949`) added to `index.html` and `siteContent.analytics.gadsId`
+- [x] Click-to-call conversion wired to all Call Now buttons via `siteContent.analytics.gadsCallConversionLabel`
 
 ---
 

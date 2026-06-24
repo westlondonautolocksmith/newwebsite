@@ -61,9 +61,10 @@ export const siteContent = {
     yearEstablished: "",
   },
   analytics: {
-    gaId: "",        // Google Analytics measurement ID - DO NOT enable until set
-    gadsId: "",      // Google Ads conversion ID
-    enabled: false,  // master switch - stays false until owner provides IDs
+    gaId: "",        // Google Analytics 4 measurement ID (G-...) — none yet
+    gadsId: "AW-18144470949",  // Google Ads tag ID (loaded in index.html)
+    gadsCallConversionLabel: "AW-18144470949/OL0FCOf5wbgcEKXP-stD", // click-to-call conversion
+    enabled: true,   // master switch — on now that the Google Ads tag is live
   },
   seo: {
     siteUrl: "https://westlondonautolocksmith.co.uk",   // placeholder until domain confirmed

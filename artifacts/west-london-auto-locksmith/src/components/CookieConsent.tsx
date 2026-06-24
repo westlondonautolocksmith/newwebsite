@@ -7,18 +7,32 @@ export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!siteContent.analytics.gaId) return;
+    if (!siteContent.analytics.gaId && !siteContent.analytics.gadsId) return;
     const stored = localStorage.getItem(CONSENT_KEY);
     if (!stored) setVisible(true);
   }, []);
 
+  const updateConsent = (granted: boolean) => {
+    const value = granted ? "granted" : "denied";
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("consent", "update", {
+        ad_storage: value,
+        ad_user_data: value,
+        ad_personalization: value,
+        analytics_storage: value,
+      });
+    }
+  };
+
   const accept = () => {
     localStorage.setItem(CONSENT_KEY, "accepted");
+    updateConsent(true);
     setVisible(false);
   };
 
   const decline = () => {
     localStorage.setItem(CONSENT_KEY, "declined");
+    updateConsent(false);
     setVisible(false);
   };
 
@@ -33,7 +47,7 @@ export default function CookieConsent() {
     >
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
         <p className="text-sm text-white/90 flex-1">
-          This site uses cookies for analytics to help us understand how visitors find us.{" "}
+          This site uses cookies for analytics and advertising to help us understand how visitors find us.{" "}
           <a href="/cookies" className="underline text-white hover:text-[#C9A227] transition-colors">
             Cookie Policy
           </a>

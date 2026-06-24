@@ -25,24 +25,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!--
-      Google Analytics: add script here when GA Measurement ID is provided.
-      Replace G-XXXXXXXXXX with your actual ID.
-      Also set siteContent.analytics.gaId and siteContent.analytics.enabled = true.
+    <!-- Google tag (gtag.js) — Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18144470949"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      Example (do not add until ID is confirmed):
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-      </script>
-    -->
+      // Consent Mode v2 — default to denied until the visitor accepts the cookie banner.
+      // A previously stored choice is restored so returning visitors keep their preference.
+      (function () {
+        var stored = 'denied';
+        try { if (localStorage.getItem('cookie_consent') === 'accepted') stored = 'granted'; } catch (e) {}
+        gtag('consent', 'default', {
+          ad_storage: stored,
+          ad_user_data: stored,
+          ad_personalization: stored,
+          analytics_storage: stored
+        });
+      })();
+
+      gtag('config', 'AW-18144470949');
+    </script>
 
     <!--
-      Google Ads: add conversion tracking script here when Google Ads ID is provided.
-      Also set siteContent.analytics.gadsId.
+      Google Analytics (GA4): if a G- Measurement ID is added later, add a second
+      gtag('config', 'G-XXXXXXXXXX') call above and set siteContent.analytics.gaId.
     -->
   </head>
   <body>
