@@ -40,6 +40,12 @@ Click-to-call conversion: `reportCallConversion()` fires the Google Ads conversi
 
 CookieConsent banner shows when `gaId` OR `gadsId` is set (informational only — it does not actually gate gtag firing; true consent-gating / Google Consent Mode is a future task). GA4 (`gaId`, a `G-` id) is not yet configured.
 
+## Desktop call fallback
+
+`trackCallClick()` also calls `offerDesktopCallFallback()`: on non-mobile devices it copies the phone number to the clipboard and shows a shadcn toast ("Phone number copied", or fallback "Call <number>" if clipboard write is blocked, e.g. in an iframe). **Why:** `tel:` links do nothing on laptops with no dialer app, so the click appeared dead. Mobile is untouched (the dialer still opens). It never preventDefaults the link.
+
+Device detection (`isLikelyDesktop()`) MUST use `navigator.userAgentData.mobile` first (then fall back to `matchMedia("(pointer: coarse)")`). **Why:** the Playwright test harness runs with touch emulation, so BOTH `(hover: hover) and (pointer: fine)` and `(pointer: coarse)` misreport the device as mobile and the fallback never fires under test. The UA `mobile` hint is UA-based, unaffected by touch emulation — correct on real laptops AND testable. Do NOT revert to pointer/hover-only detection.
+
 ## Conditional sections
 
 ReviewsList, JobGallery, WhatsApp button, legal details block, trust block — all check siteContent data before rendering. They render nothing if data is absent. This is intentional — no empty/placeholder sections.
