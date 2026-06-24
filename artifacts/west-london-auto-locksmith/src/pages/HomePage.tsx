@@ -131,6 +131,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Trust bullets + CTA — dark bg, continues collage section */}
+      <section className="bg-[#121212] px-4 pt-2 pb-8" data-testid="section-trust-cta">
+        <div className="max-w-3xl mx-auto">
+          <ul className="flex flex-col gap-3 mb-6">
+            <li className="flex items-center gap-3 text-white">
+              <span className="text-[#C9A227] text-lg leading-none">★</span>
+              <span className="text-sm font-medium">5.0 Google Rating (2 Reviews)</span>
+            </li>
+            <li className="flex items-center gap-3 text-white">
+              <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
+              <span className="text-sm font-medium">Vehicle Lockout Specialists</span>
+            </li>
+            <li className="flex items-center gap-3 text-white">
+              <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
+              <span className="text-sm font-medium">Clear Price Before Travel</span>
+            </li>
+            <li className="flex items-center gap-3 text-white">
+              <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
+              <span className="text-sm font-medium">Uxbridge &amp; Surrounding Areas</span>
+            </li>
+          </ul>
+          <a
+            href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
+            onClick={() => trackCallClick("below-collage")}
+            className="flex items-center justify-center gap-3 w-full px-4 py-5 bg-[#C9A227] text-[#121212] font-bold text-base sm:text-xl rounded hover:bg-[#A88417] transition-colors min-h-[64px] whitespace-nowrap"
+            data-testid="button-call-below-collage"
+          >
+            <Phone size={24} />
+            {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
+          </a>
+        </div>
+      </section>
+
       {/* Clarity strip */}
       <section className="bg-white border-b border-[#D8D8D3] py-8 px-4" data-testid="section-clarity">
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
