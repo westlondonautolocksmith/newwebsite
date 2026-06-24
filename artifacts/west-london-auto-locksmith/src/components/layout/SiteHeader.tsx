@@ -69,6 +69,13 @@ export default function SiteHeader() {
         </div>
       </div>
 
+      {/* Tagline strip */}
+      <div className="bg-[#2A2A2A] border-t border-white/10 px-4 py-1.5 text-center">
+        <p className="text-white/80 text-xs tracking-wide">
+          Vehicle lockout specialist&nbsp;&nbsp;·&nbsp;&nbsp;Fast quote &amp; ETA confirmed before dispatch
+        </p>
+      </div>
+
       {/* Mobile/desktop nav drawer */}
       {menuOpen && (
         <div className="bg-[#2A2A2A] border-t border-white/10" data-testid="nav-menu">
