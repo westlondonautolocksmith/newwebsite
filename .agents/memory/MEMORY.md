@@ -1,0 +1,1 @@
+- [West London Auto Locksmith site](wlal-site.md) — pure frontend React/Vite, all content in siteContent.ts, strict no-fake-reviews/no-unverified-claims rules

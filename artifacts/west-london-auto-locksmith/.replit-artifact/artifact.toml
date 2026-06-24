@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "West London Auto Locksmith"
+version = "1.0.0"
+id = "artifacts/west-london-auto-locksmith"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21438
+
+[services.development]
+run = "pnpm --filter @workspace/west-london-auto-locksmith run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/west-london-auto-locksmith", "run", "build" ]
+publicDir = "artifacts/west-london-auto-locksmith/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21438"
+BASE_PATH = "/"

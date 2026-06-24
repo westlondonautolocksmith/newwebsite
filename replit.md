@@ -1,45 +1,60 @@
-# [Project name]
+# West London Auto Locksmith
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A production marketing website for a vehicle lockout specialist based in Uxbridge, West London. Pure frontend — no backend, no database.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/west-london-auto-locksmith run dev` — run the site dev server (port 21438)
 - `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- React + Vite (pure frontend, no backend)
+- Tailwind CSS v4
+- Wouter (client-side routing)
+- No database, no API
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/west-london-auto-locksmith/src/content/siteContent.ts` — **single source of truth** for all business content (phone, pricing, reviews, areas, trust details, analytics IDs)
+- `artifacts/west-london-auto-locksmith/src/pages/` — 10 page components
+- `artifacts/west-london-auto-locksmith/src/components/layout/` — SiteHeader, SiteFooter, StickyCallBar, PageLayout
+- `artifacts/west-london-auto-locksmith/src/components/sections/` — CallCTA, ReviewsList, JobGallery
+- `artifacts/west-london-auto-locksmith/src/lib/analytics.ts` — call tracking events
+- `artifacts/west-london-auto-locksmith/public/images/jobs/` — upload real job photos here
+- `artifacts/west-london-auto-locksmith/PUBLISH_CHECKLIST.md` — full pre-launch checklist
+- `artifacts/west-london-auto-locksmith/README.md` — business owner guide
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- All editable content lives in one `siteContent.ts` file — phone, pricing wording, coverage areas, reviews, photos, analytics, legal details
+- Phone number placeholder (`PHONE_NUMBER_PLACEHOLDER`) is checked across the site — no `tel:` links until a real number is added
+- All conditional sections (reviews, photos, trust details, WhatsApp, legal) render nothing if the data is absent — no empty sections visible
+- Analytics is a master-switched module: disabled unless both `gaId` and `enabled: true` are set; CookieConsent only appears if `gaId` is set
+- Sticky call bar appears only on mobile (`md:hidden`) — pushes content above it with `pb-20 md:pb-0`
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+10-page marketing website: Home, Vehicle Lockout, Areas We Cover, Pricing, Reviews, FAQs, About, Contact, Privacy, Cookies. Designed to convert urgent phone calls. Amber CTAs, dark charcoal header/footer, Inter font, mobile-first.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- UK English throughout (lockout not lock-out, authorise not authorize etc.)
+- No fake reviews — reviews section only renders if real items are in siteContent
+- No unverified claims — no "24/7", "30-minute arrival", "DBS checked", or similar until confirmed
+- No fixed pricing shown until approved — controlled by `siteContent.pricing.showFromPrice`
+- Vehicle lockouts ONLY — all pages explicitly state no key programming, house locksmithing, etc.
+- Price must be confirmed before travel — this is a core brand message on every page
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Never set `siteContent.reviews.items` to fake/placeholder data — the owner will add real reviews
+- `PHONE_NUMBER_PLACEHOLDER` must be replaced before launch — tracked in PUBLISH_CHECKLIST.md
+- sitemap.xml and robots.txt Sitemap URL use `westlondonautolocksmith.co.uk` — update when real domain is known
+- Google Analytics script must be added to `index.html` manually when a GA ID is provided
 
 ## Pointers
 
 - See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- See `PUBLISH_CHECKLIST.md` for the complete pre-launch task list
