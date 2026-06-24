@@ -71,12 +71,12 @@ export default function SiteHeader() {
       <div className="sticky top-0 z-40" data-testid="sticky-reviews-bar">
 
         {/* Reviews strip + hamburger on same row */}
-        <div className="flex items-center bg-[#121212] border-b border-white/10 px-4 py-0.5">
-          <p className="flex-1 text-center text-[10px] tracking-wide whitespace-nowrap overflow-hidden">
+        <div className="flex items-center bg-[#1e1a0e] border-y border-[#C9A227]/30 px-4 py-1.5">
+          <p className="flex-1 text-center text-[11px] tracking-wide whitespace-nowrap overflow-hidden font-semibold">
             <span className="text-[#C9A227]">★★★★★</span>
-            <span className="text-white/70 ml-1.5">5.0 on Google</span>
-            <span className="text-white/30 mx-2">·</span>
-            <span className="text-white/50">Read our Google reviews (2 Reviews)</span>
+            <span className="text-white ml-1.5">5.0 on Google</span>
+            <span className="text-[#C9A227]/50 mx-2">·</span>
+            <span className="text-white/70">Read our Google reviews (2 Reviews)</span>
           </p>
 
           {/* Hamburger always accessible */}
