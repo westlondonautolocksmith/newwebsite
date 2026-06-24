@@ -39,3 +39,13 @@ Analytics module is in `src/lib/analytics.ts`. It is a no-op until `siteContent.
 ## Conditional sections
 
 ReviewsList, JobGallery, WhatsApp button, legal details block, trust block — all check siteContent data before rendering. They render nothing if data is absent. This is intentional — no empty/placeholder sections.
+
+## Structured data (JSON-LD)
+
+Site-wide LocalBusiness/Locksmith JSON-LD is injected once via `src/components/StructuredData.tsx` (built by `src/lib/structuredData.ts`), mounted in `App.tsx`. It uses id `"ld-localbusiness"`, deliberately distinct from `SEOMeta`'s per-page `"structured-data"` id so the two never clobber each other.
+
+**Why / rules:** Deliberately OMITS `aggregateRating`/`review` (Google advises against self-serving review markup on your own site) and OMITS `image` (no owner-approved schema image exists; the no-fabrication rule extends to schema — never point it at unverified `job*.png` photos). `areaServed` uses `@type: "Place"` (coverage areas aren't all cities). Phone is normalised to E.164 via `toE164UK()`.
+
+## coverageRadius wording gotcha
+
+`siteContent.business.coverageRadius` is the bare value `"12 miles"` — call sites prepend "approximately" themselves (e.g. "within approximately {coverageRadius}"). Do NOT put "approximately" back into the value or it double-prints ("approximately approximately 12 miles"). This bug was present across most pages until fixed.

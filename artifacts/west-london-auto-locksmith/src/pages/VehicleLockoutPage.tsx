@@ -20,6 +20,10 @@ const faqs = [
     a: "We confirm the price before travelling to you. The final cost depends on your location, vehicle type, and the nature of the job. There are no hidden charges.",
   },
   {
+    q: "Will you damage my vehicle?",
+    a: "Our aim is always to gain entry without causing damage, and we use non-destructive methods wherever possible. The right approach depends on your vehicle, and we will explain anything you should be aware of before we start.",
+  },
+  {
     q: "Do you cover my area?",
     a: `We operate within approximately ${siteContent.business.coverageRadius} of ${siteContent.business.baseArea}. Call us with your location and we'll confirm immediately.`,
   },
@@ -251,6 +255,21 @@ export default function VehicleLockoutPage() {
       </section>
 
       <ReviewsList />
+
+      {/* Read all reviews link — only when genuine reviews exist */}
+      {siteContent.reviews.items.length > 0 && (
+        <section className="bg-white px-4 pb-12" data-testid="section-vl-reviews-link">
+          <div className="max-w-3xl mx-auto text-center">
+            <Link
+              href="/reviews"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/20 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
+              data-testid="link-vl-reviews"
+            >
+              Read All Reviews <ChevronRight size={14} />
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* FAQs */}
       <section className="py-12 px-4 bg-white" data-testid="section-vl-faqs">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
+import { Link } from "wouter";
 import PageLayout from "@/components/layout/PageLayout";
 import CallCTA from "@/components/sections/CallCTA";
 import { siteContent } from "@/content/siteContent";
@@ -142,6 +143,24 @@ export default function AreasPage() {
             {areaFaqs.map((faq) => (
               <FaqItem key={faq.q} q={faq.q} a={faq.a} />
             ))}
+          </div>
+
+          {/* Related links */}
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/vehicle-lockout"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/20 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
+              data-testid="link-areas-vehicle-lockout"
+            >
+              Our Vehicle Lockout Service <ChevronRight size={14} />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/20 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
+              data-testid="link-areas-contact"
+            >
+              Contact Us <ChevronRight size={14} />
+            </Link>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ export const siteContent = {
     whatsappEnabled: true,
     whatsappNumber: "447723191544",
     baseArea: "Uxbridge",
-    coverageRadius: "approximately 12 miles",
+    coverageRadius: "12 miles",
     coverageAreas: [
       "Uxbridge", "Hayes", "Southall", "Hillingdon", "Ruislip",
       "Northolt", "Greenford", "Ealing", "Slough", "West Drayton",

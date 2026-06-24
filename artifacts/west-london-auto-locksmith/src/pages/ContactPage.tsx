@@ -1,7 +1,7 @@
 import PageLayout from "@/components/layout/PageLayout";
 import { siteContent } from "@/content/siteContent";
 import { Phone, Mail } from "lucide-react";
-import { trackCallClick } from "@/lib/analytics";
+import { trackCallClick, trackWhatsAppClick } from "@/lib/analytics";
 
 const hasPhone = siteContent.business.phone !== "PHONE_NUMBER_PLACEHOLDER";
 
@@ -91,6 +91,7 @@ export default function ContactPage() {
                 "Your current location (street, area, or postcode)",
                 "Vehicle make and model",
                 "Brief description of the situation — keys locked inside, or cannot open the vehicle",
+                "Be ready to confirm you are entitled to access the vehicle (a standard precaution)",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-[#121212]/80">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] mt-2 shrink-0" />
@@ -118,9 +119,7 @@ export default function ContactPage() {
                 href={`https://wa.me/${siteContent.business.whatsappNumber.replace(/[^0-9]/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => {
-                  import("@/lib/analytics").then(({ trackEvent }) => trackEvent("whatsapp_click"));
-                }}
+                onClick={() => trackWhatsAppClick("contact")}
                 className="inline-flex items-center gap-2 px-5 py-3 border border-[#25D366] text-[#121212] font-medium text-sm rounded hover:bg-[#25D366]/5 transition-colors min-h-[48px]"
                 data-testid="button-whatsapp"
               >

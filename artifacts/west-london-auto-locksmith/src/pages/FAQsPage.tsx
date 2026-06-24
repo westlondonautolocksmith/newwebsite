@@ -37,6 +37,10 @@ const faqs = [
     a: "Yes. Keys locked inside the vehicle is one of the most common situations we deal with. Call us with your location and vehicle details and we will confirm whether we can help and give you a clear price.",
   },
   {
+    q: "Will you damage my vehicle?",
+    a: "Our aim is always to gain entry without causing damage, and we use non-destructive entry methods wherever possible. The right approach depends on your vehicle, so if there is anything you should be aware of before we start, we will explain it to you first. We will not begin work without talking you through what is involved.",
+  },
+  {
     q: "Do you cover my location?",
     a: `We operate within approximately ${siteContent.business.coverageRadius} of ${siteContent.business.baseArea}. If you are unsure whether you are within our area, the quickest way to check is to call us — we will confirm immediately. We may not be able to reach you if your location is too far outside our operating area.`,
   },

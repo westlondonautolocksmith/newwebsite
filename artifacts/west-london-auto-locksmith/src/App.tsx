@@ -14,6 +14,7 @@ import ContactPage from "@/pages/ContactPage";
 import PrivacyPage from "@/pages/PrivacyPage";
 import CookiesPage from "@/pages/CookiesPage";
 import CookieConsent from "@/components/CookieConsent";
+import StructuredData from "@/components/StructuredData";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -47,6 +48,7 @@ function Router() {
 function App() {
   return (
     <TooltipProvider>
+      <StructuredData />
       <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
         <Router />
         <CookieConsent />

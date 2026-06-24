@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import { siteContent } from "@/content/siteContent";
-import { trackCallClick } from "@/lib/analytics";
+import { trackCallClick, trackWhatsAppClick } from "@/lib/analytics";
 
 const navLinks = [
   { label: "Vehicle Lockout", href: "/vehicle-lockout" },
@@ -34,7 +34,7 @@ export default function SiteFooter() {
               {siteContent.business.tagline}
             </p>
             <p className="text-sm text-white/60 mb-4">
-              Covering Uxbridge and surrounding areas within {siteContent.business.coverageRadius}.
+              Covering Uxbridge and surrounding areas within approximately {siteContent.business.coverageRadius}.
             </p>
             {hasPhone && (
               <a
@@ -59,9 +59,10 @@ export default function SiteFooter() {
             )}
             {siteContent.business.whatsappEnabled && siteContent.business.whatsappNumber && (
               <a
-                href={`https://wa.me/${siteContent.business.whatsappNumber}`}
+                href={`https://wa.me/${siteContent.business.whatsappNumber.replace(/[^0-9]/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("footer")}
                 className="inline-flex items-center gap-2 text-white/60 text-sm hover:text-[#25D366] transition-colors mt-2"
                 data-testid="link-whatsapp-footer"
               >

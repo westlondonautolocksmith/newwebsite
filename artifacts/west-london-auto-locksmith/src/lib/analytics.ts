@@ -8,6 +8,10 @@ export function trackEvent(eventName: string, params?: Record<string, string | n
   }
 }
 
+export function trackWhatsAppClick(source: string) {
+  trackEvent("whatsapp_click", { source });
+}
+
 export function trackCallClick(source: string) {
   trackEvent("call_click", { source });
   trackEvent(`call_click_${source}`);
