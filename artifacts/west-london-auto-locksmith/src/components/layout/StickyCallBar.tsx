@@ -7,7 +7,7 @@ const hasPhone = siteContent.business.phone !== "PHONE_NUMBER_PLACEHOLDER";
 export default function StickyCallBar() {
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-[#1a2332] border-t border-white/10 py-3"
+      className="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-[#1a2332] border-t border-white/10 py-3 pr-4"
       data-testid="sticky-call-bar"
     >
       <div className="flex items-center">
