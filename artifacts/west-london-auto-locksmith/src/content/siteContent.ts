@@ -3,8 +3,8 @@ export const siteContent = {
   business: {
     name: "West London Auto Locksmith",
     tagline: "Vehicle Lockouts Only",
-    phone: "PHONE_NUMBER_PLACEHOLDER",    // replaced when owner provides it
-    phoneDisplay: "Call to Check Availability",  // shown before phone number is set
+    phone: "020 3488 0390",
+    phoneDisplay: "020 3488 0390",
     whatsappEnabled: false,
     whatsappNumber: "",
     baseArea: "Uxbridge",
