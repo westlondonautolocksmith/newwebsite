@@ -80,7 +80,7 @@ export default function HomePage() {
             <span className="block text-3xl sm:text-4xl md:text-5xl">We Can Help</span>
           </h1>
           <p className="text-white/70 text-base">We specialise in vehicle lockouts</p>
-          <p className="text-white/50 text-sm mt-1">Operating out of Uxbridge, we serve the whole of West London</p>
+          <p className="text-white/50 text-sm mt-1">Call for a clear price and estimated arrival time</p>
 
           <div className="mt-6" data-testid="section-hero-cta">
             <a
