@@ -72,31 +72,35 @@ export default function HomePage() {
           "Locked out of your car in West London? Call for a clear price and estimated arrival time before we travel.",
       }}
     >
-      {/* Hero */}
-      <section className="bg-[#121212] text-white pt-16 md:pt-20 pb-6 px-4" data-testid="section-hero">
+      {/* Call button — full-width, immediately below headers */}
+      <div className="bg-[#121212] px-4 pt-8 pb-4" data-testid="section-hero-cta">
+        <a
+          href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
+          onClick={() => trackCallClick("hero")}
+          className="flex items-center justify-center gap-3 w-full max-w-3xl mx-auto px-8 py-5 bg-[#C9A227] text-[#121212] font-bold text-xl rounded hover:bg-[#A88417] transition-colors min-h-[64px]"
+          data-testid="button-call-hero"
+        >
+          <Phone size={24} />
+          {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
+        </a>
+        {siteContent.pricing.showFromPrice && (
+          <p className="mt-3 text-center text-sm text-[#C9A227] font-medium">
+            {siteContent.pricing.approvedWording}
+          </p>
+        )}
+      </div>
+
+      {/* Hero heading + subtext */}
+      <section className="bg-[#121212] text-white pt-6 pb-6 px-4" data-testid="section-hero">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 text-white">
             Locked Out of Your Car in West London?
           </h1>
-          <p className="text-base md:text-lg text-white/75 mb-8 max-w-xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-white/75 mb-4 max-w-xl mx-auto leading-relaxed">
             Vehicle entry across Uxbridge and surrounding areas. Call for a clear price and
             estimated arrival time before we travel.
           </p>
-          <a
-            href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
-            onClick={() => trackCallClick("hero")}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C9A227] text-[#121212] font-bold text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px]"
-            data-testid="button-call-hero"
-          >
-            <Phone size={20} />
-            {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
-          </a>
-          {siteContent.pricing.showFromPrice && (
-            <p className="mt-4 text-sm text-[#C9A227] font-medium">
-              {siteContent.pricing.approvedWording}
-            </p>
-          )}
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-white/50">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-white/50">
             <span>Vehicle lockouts only</span>
             <span className="hidden sm:inline">·</span>
             <span>Uxbridge and surrounding areas, up to around 12 miles</span>
