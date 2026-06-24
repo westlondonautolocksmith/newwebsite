@@ -1,4 +1,5 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
@@ -14,21 +15,32 @@ import PrivacyPage from "@/pages/PrivacyPage";
 import CookiesPage from "@/pages/CookiesPage";
 import CookieConsent from "@/components/CookieConsent";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
+
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={HomePage} />
-      <Route path="/vehicle-lockout" component={VehicleLockoutPage} />
-      <Route path="/areas-we-cover" component={AreasPage} />
-      <Route path="/pricing" component={PricingPage} />
-      <Route path="/reviews" component={ReviewsPage} />
-      <Route path="/faqs" component={FAQsPage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/contact" component={ContactPage} />
-      <Route path="/privacy" component={PrivacyPage} />
-      <Route path="/cookies" component={CookiesPage} />
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path="/" component={HomePage} />
+        <Route path="/vehicle-lockout" component={VehicleLockoutPage} />
+        <Route path="/areas-we-cover" component={AreasPage} />
+        <Route path="/pricing" component={PricingPage} />
+        <Route path="/reviews" component={ReviewsPage} />
+        <Route path="/faqs" component={FAQsPage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route path="/privacy" component={PrivacyPage} />
+        <Route path="/cookies" component={CookiesPage} />
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 
