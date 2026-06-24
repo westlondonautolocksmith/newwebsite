@@ -38,7 +38,7 @@ export default function SiteHeader() {
             <img
               src="/images/logo-new.png"
               alt="West London Auto Locksmith"
-              className="h-full w-full object-cover object-left"
+              className="h-full w-full object-cover object-left md:w-auto md:object-contain"
               style={{ objectPosition: "20% center" }}
             />
           </Link>
