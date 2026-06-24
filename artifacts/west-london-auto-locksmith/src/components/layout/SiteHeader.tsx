@@ -59,7 +59,7 @@ export default function SiteHeader() {
         </div>
 
         {/* Tagline strip — scrolls away with the logo */}
-        <div className="bg-[#1a1a1a] border-t border-white/10 px-2 py-2 text-center overflow-hidden">
+        <div className="bg-[#1a1a1a] border-t border-white/10 px-2 py-1 text-center overflow-hidden">
           <p className="text-white/80 text-[10px] font-medium tracking-wide whitespace-nowrap">
             Vehicle lockout specialists&nbsp;·&nbsp;Serving Uxbridge and surrounding areas
           </p>
@@ -71,7 +71,7 @@ export default function SiteHeader() {
       <div className="sticky top-0 z-40" data-testid="sticky-reviews-bar">
 
         {/* Reviews strip + hamburger on same row */}
-        <div className="flex items-center bg-[#121212] border-b border-white/10 px-4 py-1">
+        <div className="flex items-center bg-[#121212] border-b border-white/10 px-4 py-0.5">
           <p className="flex-1 text-center text-[10px] tracking-wide whitespace-nowrap overflow-hidden">
             <span className="text-[#C9A227]">★★★★★</span>
             <span className="text-white/70 ml-1.5">5.0 on Google</span>
