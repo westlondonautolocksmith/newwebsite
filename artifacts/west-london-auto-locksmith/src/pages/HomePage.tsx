@@ -164,21 +164,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Clarity strip */}
-      <section className="bg-white border-b border-[#D8D8D3] py-8 px-4" data-testid="section-clarity">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {[
-            "Vehicle Lockouts Only",
-            "Clear Price Before Travel",
-            `${siteContent.business.baseArea} + Surrounding Areas`,
-          ].map((point) => (
-            <div key={point} className="flex items-center gap-3 justify-center sm:justify-start">
-              <CheckCircle size={18} className="text-[#C9A227] shrink-0" />
-              <span className="text-sm font-semibold text-[#121212]">{point}</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* What we help with */}
       <section className="py-14 px-4 bg-white" data-testid="section-services">
