@@ -34,6 +34,13 @@ export const siteContent = {
         source: "Google",
         date: "2 weeks ago",
       },
+      {
+        name: "Louis Debouze",
+        rating: 5,
+        text: "Locked my keys in my Lexus and he got it open quickly and without damage.",
+        source: "Google",
+        date: "1 week ago",
+      },
     ],
   },
   recentJobs: {
