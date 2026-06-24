@@ -40,7 +40,7 @@ export default function CookieConsent() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 bg-[#121212] text-white border-t border-white/10 px-4 py-4 md:py-3"
+      className="fixed bottom-20 md:bottom-0 left-0 right-0 z-50 bg-[#121212] text-white border-t border-white/10 px-4 py-4 md:py-3"
       role="dialog"
       aria-label="Cookie consent"
       data-testid="cookie-consent-banner"
