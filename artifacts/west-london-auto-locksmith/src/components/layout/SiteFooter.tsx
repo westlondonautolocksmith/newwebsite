@@ -22,7 +22,7 @@ const hasTrust =
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-[#111c2a] text-white/80 mt-auto" data-testid="site-footer">
+    <footer className="bg-[#2A2A2A] text-white/80 mt-auto" data-testid="site-footer">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand column */}
@@ -30,7 +30,7 @@ export default function SiteFooter() {
             <p className="font-bold text-white text-lg leading-tight">
               {siteContent.business.name}
             </p>
-            <p className="text-[#E8A020] text-xs font-medium uppercase tracking-wider mt-1 mb-4">
+            <p className="text-[#C9A227] text-xs font-medium uppercase tracking-wider mt-1 mb-4">
               {siteContent.business.tagline}
             </p>
             <p className="text-sm text-white/60 mb-4">
@@ -40,7 +40,7 @@ export default function SiteFooter() {
               <a
                 href={`tel:${siteContent.business.phone.replace(/\s/g, "")}`}
                 onClick={() => trackCallClick("footer")}
-                className="inline-flex items-center gap-2 text-white font-semibold text-base hover:text-[#E8A020] transition-colors"
+                className="inline-flex items-center gap-2 text-white font-semibold text-base hover:text-[#C9A227] transition-colors"
                 data-testid="link-call-footer"
               >
                 <Phone size={16} />

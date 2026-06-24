@@ -25,14 +25,14 @@ export default function SiteHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#1a2332] text-white shadow-md" data-testid="site-header">
+    <header className="sticky top-0 z-40 bg-[#121212] text-white shadow-md" data-testid="site-header">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex flex-col leading-tight hover:opacity-90 transition-opacity shrink-0" data-testid="header-logo">
           <span className="font-bold text-base md:text-lg tracking-tight text-white">
             West London Auto Locksmith
           </span>
-          <span className="text-[10px] md:text-xs text-[#E8A020] font-medium tracking-wide uppercase">
+          <span className="text-[10px] md:text-xs text-[#C9A227] font-medium tracking-wide uppercase">
             Vehicle Lockouts Only
           </span>
         </Link>
@@ -43,8 +43,8 @@ export default function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-[#E8A020] ${
-                location === link.href ? "text-[#E8A020]" : "text-white/80"
+              className={`text-sm font-medium transition-colors hover:text-[#C9A227] ${
+                location === link.href ? "text-[#C9A227]" : "text-white/80"
               }`}
               data-testid={`nav-link-${link.href.replace(/\//g, "")}`}
             >
@@ -70,7 +70,7 @@ export default function SiteHeader() {
           <a
             href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
             onClick={handleCallClick}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E8A020] text-[#1a2332] font-bold text-sm rounded hover:bg-[#d4911c] transition-colors min-h-[44px]"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#C9A227] text-[#121212] font-bold text-sm rounded hover:bg-[#A88417] transition-colors min-h-[44px]"
             data-testid="button-call-header"
           >
             <Phone size={15} />
@@ -83,7 +83,7 @@ export default function SiteHeader() {
           <a
             href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
             onClick={handleCallClick}
-            className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#E8A020] text-[#1a2332] font-bold text-sm rounded hover:bg-[#d4911c] transition-colors min-h-[44px]"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#C9A227] text-[#121212] font-bold text-sm rounded hover:bg-[#A88417] transition-colors min-h-[44px]"
             data-testid="button-call-header-mobile"
           >
             <Phone size={14} />
@@ -103,15 +103,15 @@ export default function SiteHeader() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-[#111c2a] border-t border-white/10" data-testid="mobile-menu">
+        <div className="lg:hidden bg-[#2A2A2A] border-t border-white/10" data-testid="mobile-menu">
           <nav className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1" aria-label="Mobile navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className={`py-3 px-2 text-base font-medium border-b border-white/10 transition-colors hover:text-[#E8A020] ${
-                  location === link.href ? "text-[#E8A020]" : "text-white/80"
+                className={`py-3 px-2 text-base font-medium border-b border-white/10 transition-colors hover:text-[#C9A227] ${
+                  location === link.href ? "text-[#C9A227]" : "text-white/80"
                 }`}
                 data-testid={`mobile-nav-${link.href.replace(/\//g, "")}`}
               >

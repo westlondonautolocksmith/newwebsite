@@ -23,7 +23,7 @@ export default function AboutPage() {
           "Uxbridge-based vehicle lockout specialist covering approximately 12 miles. Clear pricing, honest service.",
       }}
     >
-      <section className="bg-[#1a2332] text-white py-14 px-4" data-testid="section-about-hero">
+      <section className="bg-[#121212] text-white py-14 px-4" data-testid="section-about-hero">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-4 text-white">
             About West London Auto Locksmith
@@ -38,8 +38,8 @@ export default function AboutPage() {
       <section className="py-12 px-4 bg-white" data-testid="section-about-intro">
         <div className="max-w-3xl mx-auto space-y-6">
           <div>
-            <h2 className="text-xl font-bold text-[#1a2332] mb-3">Who We Are</h2>
-            <p className="text-sm text-[#1a2332]/75 leading-relaxed">
+            <h2 className="text-xl font-bold text-[#121212] mb-3">Who We Are</h2>
+            <p className="text-sm text-[#121212]/75 leading-relaxed">
               {siteContent.business.name} is a vehicle lockout specialist operating from{" "}
               {siteContent.business.baseArea}, West London. We help people who are locked out
               of their cars, have keys locked inside their vehicles, or have lost access and
@@ -47,7 +47,7 @@ export default function AboutPage() {
               {siteContent.business.coverageRadius} around {siteContent.business.baseArea}.
             </p>
             {siteContent.trust.yearEstablished && (
-              <p className="text-sm text-[#1a2332]/60 mt-2">
+              <p className="text-sm text-[#121212]/60 mt-2">
                 Established {siteContent.trust.yearEstablished}.
               </p>
             )}
@@ -56,10 +56,10 @@ export default function AboutPage() {
       </section>
 
       {/* What we do / don't do */}
-      <section className="py-12 px-4 bg-gray-50" data-testid="section-about-scope">
+      <section className="py-12 px-4 bg-[#F7F7F4]" data-testid="section-about-scope">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-xl font-bold text-[#1a2332] mb-4">What We Do</h2>
+            <h2 className="text-xl font-bold text-[#121212] mb-4">What We Do</h2>
             <ul className="space-y-3">
               {[
                 "Vehicle entry for cars and light vehicles",
@@ -67,15 +67,15 @@ export default function AboutPage() {
                 "Locked out of your car",
                 "Lost access to your vehicle",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-[#1a2332]/80">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E8A020] mt-2 shrink-0" />
+                <li key={item} className="flex items-start gap-2 text-sm text-[#121212]/80">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] mt-2 shrink-0" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-[#1a2332] mb-4">What We Do Not Do</h2>
+            <h2 className="text-xl font-bold text-[#121212] mb-4">What We Do Not Do</h2>
             <ul className="space-y-3">
               {[
                 "House or commercial locksmithing",
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 "Ignition repairs",
                 "General roadside recovery",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-[#1a2332]/60">
+                <li key={item} className="flex items-start gap-2 text-sm text-[#121212]/60">
                   <span className="w-1.5 h-1.5 rounded-full bg-gray-300 mt-2 shrink-0" />
                   {item}
                 </li>
@@ -101,25 +101,25 @@ export default function AboutPage() {
       {/* How we work */}
       <section className="py-12 px-4 bg-white" data-testid="section-about-approach">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-bold text-[#1a2332] mb-4">How We Communicate</h2>
+          <h2 className="text-xl font-bold text-[#121212] mb-4">How We Communicate</h2>
           <div className="space-y-4">
-            <div className="border-l-2 border-[#E8A020] pl-4">
-              <p className="text-sm font-semibold text-[#1a2332]">Price confirmed before travel</p>
-              <p className="text-xs text-[#1a2332]/60 mt-1">
+            <div className="border-l-2 border-[#C9A227] pl-4">
+              <p className="text-sm font-semibold text-[#121212]">Price confirmed before travel</p>
+              <p className="text-xs text-[#121212]/60 mt-1">
                 We give you a clear price before we travel. You are never committed before
                 agreeing on the cost.
               </p>
             </div>
-            <div className="border-l-2 border-[#E8A020] pl-4">
-              <p className="text-sm font-semibold text-[#1a2332]">Estimated arrival time given upfront</p>
-              <p className="text-xs text-[#1a2332]/60 mt-1">
+            <div className="border-l-2 border-[#C9A227] pl-4">
+              <p className="text-sm font-semibold text-[#121212]">Estimated arrival time given upfront</p>
+              <p className="text-xs text-[#121212]/60 mt-1">
                 We give an estimated arrival time when you call. We are honest if we are not
                 available or cannot reach you in reasonable time.
               </p>
             </div>
-            <div className="border-l-2 border-[#E8A020] pl-4">
-              <p className="text-sm font-semibold text-[#1a2332]">We confirm whether we can help</p>
-              <p className="text-xs text-[#1a2332]/60 mt-1">
+            <div className="border-l-2 border-[#C9A227] pl-4">
+              <p className="text-sm font-semibold text-[#121212]">We confirm whether we can help</p>
+              <p className="text-xs text-[#121212]/60 mt-1">
                 Not all vehicles or situations are the same. We tell you honestly if we can
                 assist with your specific situation before we travel.
               </p>
@@ -130,10 +130,10 @@ export default function AboutPage() {
 
       {/* Legal identity */}
       {hasTrust && (
-        <section className="py-10 px-4 bg-gray-50 border-y border-gray-100" data-testid="section-about-legal">
+        <section className="py-10 px-4 bg-[#F7F7F4] border-y border-[#D8D8D3]" data-testid="section-about-legal">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-lg font-bold text-[#1a2332] mb-4">Business Details</h2>
-            <div className="text-sm text-[#1a2332]/60 space-y-1">
+            <h2 className="text-lg font-bold text-[#121212] mb-4">Business Details</h2>
+            <div className="text-sm text-[#121212]/60 space-y-1">
               {siteContent.trust.legalName && <p>{siteContent.trust.legalName}</p>}
               {siteContent.trust.legalAddress && <p>{siteContent.trust.legalAddress}</p>}
               {siteContent.trust.companyRegistration && (

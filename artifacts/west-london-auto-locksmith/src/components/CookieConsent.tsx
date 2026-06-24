@@ -26,7 +26,7 @@ export default function CookieConsent() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 bg-[#1a2332] text-white border-t border-white/10 px-4 py-4 md:py-3"
+      className="fixed bottom-0 left-0 right-0 z-50 bg-[#121212] text-white border-t border-white/10 px-4 py-4 md:py-3"
       role="dialog"
       aria-label="Cookie consent"
       data-testid="cookie-consent-banner"
@@ -34,7 +34,7 @@ export default function CookieConsent() {
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
         <p className="text-sm text-white/90 flex-1">
           This site uses cookies for analytics to help us understand how visitors find us.{" "}
-          <a href="/cookies" className="underline text-white hover:text-[#E8A020] transition-colors">
+          <a href="/cookies" className="underline text-white hover:text-[#C9A227] transition-colors">
             Cookie Policy
           </a>
         </p>
@@ -48,7 +48,7 @@ export default function CookieConsent() {
           </button>
           <button
             onClick={accept}
-            className="text-sm px-4 py-2 rounded bg-[#E8A020] text-[#1a2332] font-semibold hover:bg-[#d4911c] transition-colors min-h-[44px]"
+            className="text-sm px-4 py-2 rounded bg-[#C9A227] text-[#121212] font-semibold hover:bg-[#A88417] transition-colors min-h-[44px]"
             data-testid="cookie-accept"
           >
             Accept

@@ -34,21 +34,21 @@ const homeFaqs = [
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-gray-100">
+    <div className="border-b border-[#D8D8D3]">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full text-left py-4 flex items-center justify-between gap-4 font-medium text-[#1a2332] hover:text-[#1a2332]/70 transition-colors min-h-[56px]"
+        className="w-full text-left py-4 flex items-center justify-between gap-4 font-medium text-[#121212] hover:text-[#121212]/70 transition-colors min-h-[56px]"
         aria-expanded={open}
         data-testid={`faq-toggle-${q.substring(0, 20).replace(/\s/g, "-").toLowerCase()}`}
       >
         <span>{q}</span>
         <ChevronRight
           size={18}
-          className={`shrink-0 text-[#1a2332]/40 transition-transform ${open ? "rotate-90" : ""}`}
+          className={`shrink-0 text-[#121212]/40 transition-transform ${open ? "rotate-90" : ""}`}
         />
       </button>
       {open && (
-        <p className="pb-4 text-sm text-[#1a2332]/70 leading-relaxed">{a}</p>
+        <p className="pb-4 text-sm text-[#121212]/70 leading-relaxed">{a}</p>
       )}
     </div>
   );
@@ -73,7 +73,7 @@ export default function HomePage() {
       }}
     >
       {/* Hero */}
-      <section className="bg-[#1a2332] text-white py-16 md:py-20 px-4" data-testid="section-hero">
+      <section className="bg-[#121212] text-white py-16 md:py-20 px-4" data-testid="section-hero">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 text-white">
             Locked Out of Your Car in West London?
@@ -85,14 +85,14 @@ export default function HomePage() {
           <a
             href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
             onClick={() => trackCallClick("hero")}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E8A020] text-[#1a2332] font-bold text-lg rounded hover:bg-[#d4911c] transition-colors min-h-[56px]"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C9A227] text-[#121212] font-bold text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px]"
             data-testid="button-call-hero"
           >
             <Phone size={20} />
             {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
           </a>
           {siteContent.pricing.showFromPrice && (
-            <p className="mt-4 text-sm text-[#E8A020] font-medium">
+            <p className="mt-4 text-sm text-[#C9A227] font-medium">
               {siteContent.pricing.approvedWording}
             </p>
           )}
@@ -105,7 +105,7 @@ export default function HomePage() {
       </section>
 
       {/* Clarity strip */}
-      <section className="bg-white border-b border-gray-100 py-8 px-4" data-testid="section-clarity">
+      <section className="bg-white border-b border-[#D8D8D3] py-8 px-4" data-testid="section-clarity">
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             "Vehicle Lockouts Only",
@@ -113,8 +113,8 @@ export default function HomePage() {
             `${siteContent.business.baseArea} + Surrounding Areas`,
           ].map((point) => (
             <div key={point} className="flex items-center gap-3 justify-center sm:justify-start">
-              <CheckCircle size={18} className="text-[#E8A020] shrink-0" />
-              <span className="text-sm font-semibold text-[#1a2332]">{point}</span>
+              <CheckCircle size={18} className="text-[#C9A227] shrink-0" />
+              <span className="text-sm font-semibold text-[#121212]">{point}</span>
             </div>
           ))}
         </div>
@@ -123,10 +123,10 @@ export default function HomePage() {
       {/* What we help with */}
       <section className="py-14 px-4 bg-white" data-testid="section-services">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-2">
             Locked Out of Your Vehicle?
           </h2>
-          <p className="text-[#1a2332]/60 mb-8 text-sm">
+          <p className="text-[#121212]/60 mb-8 text-sm">
             We specialise in vehicle entry only. We do not offer house locksmithing or key programming.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -146,11 +146,11 @@ export default function HomePage() {
             ].map((card) => (
               <div
                 key={card.title}
-                className="bg-gray-50 border border-gray-100 rounded-lg p-6"
+                className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg p-6"
                 data-testid={`service-card-${card.title.replace(/\s/g, "-").toLowerCase()}`}
               >
-                <h3 className="font-bold text-[#1a2332] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#1a2332]/65 leading-relaxed">{card.desc}</p>
+                <h3 className="font-bold text-[#121212] mb-2">{card.title}</h3>
+                <p className="text-sm text-[#121212]/65 leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -158,7 +158,7 @@ export default function HomePage() {
             <a
               href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
               onClick={() => trackCallClick("services")}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#E8A020] text-[#1a2332] font-bold rounded hover:bg-[#d4911c] transition-colors min-h-[48px]"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold rounded hover:bg-[#A88417] transition-colors min-h-[48px]"
               data-testid="button-call-services"
             >
               <Phone size={17} />
@@ -169,9 +169,9 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="py-14 px-4 bg-gray-50" data-testid="section-how-it-works">
+      <section className="py-14 px-4 bg-[#F7F7F4]" data-testid="section-how-it-works">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-8">
             What Happens When You Call
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
@@ -182,15 +182,15 @@ export default function HomePage() {
               { n: "4", title: "We Attend and Open", desc: "We come to you and carry out vehicle entry." },
             ].map((step) => (
               <div key={step.n} className="flex flex-col" data-testid={`step-${step.n}`}>
-                <div className="w-10 h-10 rounded-full bg-[#1a2332] text-white flex items-center justify-center font-bold text-base mb-3 shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#121212] text-white flex items-center justify-center font-bold text-base mb-3 shrink-0">
                   {step.n}
                 </div>
-                <h3 className="font-bold text-[#1a2332] mb-1.5">{step.title}</h3>
-                <p className="text-sm text-[#1a2332]/65 leading-relaxed">{step.desc}</p>
+                <h3 className="font-bold text-[#121212] mb-1.5">{step.title}</h3>
+                <p className="text-sm text-[#121212]/65 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-xs text-[#1a2332]/50 border-l-2 border-[#E8A020] pl-3 max-w-2xl">
+          <p className="text-xs text-[#121212]/50 border-l-2 border-[#C9A227] pl-3 max-w-2xl">
             We may need to confirm you are entitled to access the vehicle before entry.
           </p>
         </div>
@@ -199,10 +199,10 @@ export default function HomePage() {
       {/* Coverage */}
       <section className="py-14 px-4 bg-white" data-testid="section-coverage">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-3">
             Vehicle Lockout Coverage Around Uxbridge
           </h2>
-          <p className="text-[#1a2332]/60 mb-6 text-sm leading-relaxed max-w-xl">
+          <p className="text-[#121212]/60 mb-6 text-sm leading-relaxed max-w-xl">
             We cover vehicle lockouts within approximately {siteContent.business.coverageRadius} of{" "}
             {siteContent.business.baseArea}. Arrival time depends on your location, traffic, and
             current availability. Call to confirm we can reach you.
@@ -211,7 +211,7 @@ export default function HomePage() {
             {siteContent.business.coverageAreas.map((area) => (
               <span
                 key={area}
-                className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded text-sm text-[#1a2332] font-medium"
+                className="px-3 py-1.5 bg-[#F7F7F4] border border-[#D8D8D3] rounded text-sm text-[#121212] font-medium"
                 data-testid={`area-tag-${area.replace(/\s/g, "-").toLowerCase()}`}
               >
                 {area}
@@ -220,7 +220,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/areas-we-cover"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1a2332] border border-[#1a2332]/20 rounded px-5 py-2.5 hover:border-[#1a2332]/50 transition-colors min-h-[44px]"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/20 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
             data-testid="link-areas"
           >
             See Areas We Cover <ChevronRight size={15} />
@@ -235,41 +235,41 @@ export default function HomePage() {
       <JobGallery />
 
       {/* Trust section */}
-      <section className="py-14 px-4 bg-gray-50" data-testid="section-trust">
+      <section className="py-14 px-4 bg-[#F7F7F4]" data-testid="section-trust">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-6">
             A Clear, Straightforward Vehicle Entry Service
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex items-start gap-3">
-              <CheckCircle size={18} className="text-[#E8A020] shrink-0 mt-0.5" />
+              <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-sm text-[#1a2332]">{siteContent.business.name}</p>
-                <p className="text-xs text-[#1a2332]/55">Based in {siteContent.business.baseArea}, West London</p>
+                <p className="font-semibold text-sm text-[#121212]">{siteContent.business.name}</p>
+                <p className="text-xs text-[#121212]/55">Based in {siteContent.business.baseArea}, West London</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle size={18} className="text-[#E8A020] shrink-0 mt-0.5" />
+              <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-sm text-[#1a2332]">Price confirmed before travel</p>
-                <p className="text-xs text-[#1a2332]/55">You know the cost before we travel to you</p>
+                <p className="font-semibold text-sm text-[#121212]">Price confirmed before travel</p>
+                <p className="text-xs text-[#121212]/55">You know the cost before we travel to you</p>
               </div>
             </div>
             {siteContent.trust.invoiceAvailable && (
               <div className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#E8A020] shrink-0 mt-0.5" />
+                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-sm text-[#1a2332]">Invoice provided</p>
-                  <p className="text-xs text-[#1a2332]/55">Receipt available on request</p>
+                  <p className="font-semibold text-sm text-[#121212]">Invoice provided</p>
+                  <p className="text-xs text-[#121212]/55">Receipt available on request</p>
                 </div>
               </div>
             )}
             {siteContent.pricing.paymentMethods.length > 0 && (
               <div className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#E8A020] shrink-0 mt-0.5" />
+                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-sm text-[#1a2332]">Payment methods</p>
-                  <p className="text-xs text-[#1a2332]/55">
+                  <p className="font-semibold text-sm text-[#121212]">Payment methods</p>
+                  <p className="text-xs text-[#121212]/55">
                     {siteContent.pricing.paymentMethods.join(", ")}
                   </p>
                 </div>
@@ -277,14 +277,14 @@ export default function HomePage() {
             )}
             {siteContent.reviews.googleReviewsUrl && (
               <div className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#E8A020] shrink-0 mt-0.5" />
+                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-sm text-[#1a2332]">Google reviews</p>
+                  <p className="font-semibold text-sm text-[#121212]">Google reviews</p>
                   <a
                     href={siteContent.reviews.googleReviewsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-[#1a2332]/55 underline hover:text-[#1a2332]"
+                    className="text-xs text-[#121212]/55 underline hover:text-[#121212]"
                     data-testid="link-trust-google-reviews"
                   >
                     View on Google
@@ -294,10 +294,10 @@ export default function HomePage() {
             )}
             {siteContent.trust.legalName && (
               <div className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#E8A020] shrink-0 mt-0.5" />
+                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-sm text-[#1a2332]">Registered business</p>
-                  <p className="text-xs text-[#1a2332]/55">{siteContent.trust.legalName}</p>
+                  <p className="font-semibold text-sm text-[#121212]">Registered business</p>
+                  <p className="text-xs text-[#121212]/55">{siteContent.trust.legalName}</p>
                 </div>
               </div>
             )}
@@ -308,10 +308,10 @@ export default function HomePage() {
       {/* FAQ preview */}
       <section className="py-14 px-4 bg-white" data-testid="section-faq-preview">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-6">
             Common Questions
           </h2>
-          <div className="divide-y divide-gray-100">
+          <div className="divide-y divide-[#D8D8D3]">
             {homeFaqs.map((faq) => (
               <FaqItem key={faq.q} q={faq.q} a={faq.a} />
             ))}
@@ -319,7 +319,7 @@ export default function HomePage() {
           <div className="mt-6">
             <Link
               href="/faqs"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1a2332] border border-[#1a2332]/20 rounded px-5 py-2.5 hover:border-[#1a2332]/50 transition-colors min-h-[44px]"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/20 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
               data-testid="link-all-faqs"
             >
               See All FAQs <ChevronRight size={15} />

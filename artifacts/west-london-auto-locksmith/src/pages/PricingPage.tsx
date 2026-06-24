@@ -20,7 +20,7 @@ export default function PricingPage() {
       }}
     >
       {/* Hero */}
-      <section className="bg-[#1a2332] text-white py-14 px-4" data-testid="section-pricing-hero">
+      <section className="bg-[#121212] text-white py-14 px-4" data-testid="section-pricing-hero">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-4 text-white">
             Vehicle Lockout Prices
@@ -35,14 +35,14 @@ export default function PricingPage() {
         <div className="max-w-3xl mx-auto space-y-8">
 
           {/* Main pricing statement */}
-          <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 md:p-8">
-            <h2 className="text-xl font-bold text-[#1a2332] mb-3">How Pricing Works</h2>
-            <p className="text-[#1a2332]/80 text-sm leading-relaxed mb-4">
+          <div className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 md:p-8">
+            <h2 className="text-xl font-bold text-[#121212] mb-3">How Pricing Works</h2>
+            <p className="text-[#121212]/80 text-sm leading-relaxed mb-4">
               {siteContent.pricing.defaultWording}
             </p>
             {siteContent.pricing.showFromPrice && (
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <p className="text-base font-semibold text-[#1a2332]">
+              <div className="mt-4 pt-4 border-t border-[#D8D8D3]">
+                <p className="text-base font-semibold text-[#121212]">
                   {siteContent.pricing.approvedWording}
                 </p>
               </div>
@@ -51,8 +51,8 @@ export default function PricingPage() {
 
           {/* Why price varies */}
           <div>
-            <h2 className="text-xl font-bold text-[#1a2332] mb-4">What Affects the Price</h2>
-            <p className="text-sm text-[#1a2332]/70 mb-4 leading-relaxed">
+            <h2 className="text-xl font-bold text-[#121212] mb-4">What Affects the Price</h2>
+            <p className="text-sm text-[#121212]/70 mb-4 leading-relaxed">
               The final cost of vehicle entry can vary depending on several factors. We are
               straightforward about this:
             </p>
@@ -68,10 +68,10 @@ export default function PricingPage() {
                   className="flex items-start gap-3 text-sm"
                   data-testid={`pricing-factor-${item.label.replace(/\s/g, "-").toLowerCase()}`}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E8A020] mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] mt-2 shrink-0" />
                   <span>
-                    <strong className="text-[#1a2332]">{item.label}</strong>
-                    <span className="text-[#1a2332]/60"> — {item.desc}</span>
+                    <strong className="text-[#121212]">{item.label}</strong>
+                    <span className="text-[#121212]/60"> — {item.desc}</span>
                   </span>
                 </li>
               ))}
@@ -80,11 +80,11 @@ export default function PricingPage() {
 
           {/* Confirmation commitment */}
           {siteContent.pricing.priceConfirmBeforeTravel && (
-            <div className="border-l-4 border-[#E8A020] bg-[#E8A020]/5 rounded-r-lg p-5">
-              <p className="text-sm font-medium text-[#1a2332]">
+            <div className="border-l-4 border-[#C9A227] bg-[#C9A227]/5 rounded-r-lg p-5">
+              <p className="text-sm font-medium text-[#121212]">
                 We confirm the price before we travel to you.
               </p>
-              <p className="text-xs text-[#1a2332]/60 mt-1">
+              <p className="text-xs text-[#121212]/60 mt-1">
                 You will know the cost before we leave — no surprises.
               </p>
             </div>
@@ -93,12 +93,12 @@ export default function PricingPage() {
           {/* Payment methods */}
           {siteContent.pricing.paymentMethods.length > 0 && (
             <div>
-              <h2 className="text-lg font-bold text-[#1a2332] mb-3">Payment Methods</h2>
+              <h2 className="text-lg font-bold text-[#121212] mb-3">Payment Methods</h2>
               <div className="flex flex-wrap gap-2">
                 {siteContent.pricing.paymentMethods.map((method) => (
                   <span
                     key={method}
-                    className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded text-sm text-[#1a2332]"
+                    className="px-3 py-1.5 bg-[#F7F7F4] border border-[#D8D8D3] rounded text-sm text-[#121212]"
                     data-testid={`payment-${method.replace(/\s/g, "-").toLowerCase()}`}
                   >
                     {method}
@@ -113,7 +113,7 @@ export default function PricingPage() {
             <a
               href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
               onClick={() => trackCallClick("pricing")}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#E8A020] text-[#1a2332] font-bold text-base rounded hover:bg-[#d4911c] transition-colors min-h-[52px]"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#C9A227] text-[#121212] font-bold text-base rounded hover:bg-[#A88417] transition-colors min-h-[52px]"
               data-testid="button-call-pricing"
             >
               <Phone size={18} />

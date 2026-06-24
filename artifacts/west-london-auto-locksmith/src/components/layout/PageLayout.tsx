@@ -18,7 +18,7 @@ interface PageLayoutProps {
 
 export default function PageLayout({ children, meta }: PageLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-[#F7F7F4]">
       <SEOMeta {...meta} />
       <SiteHeader />
       <main className="flex-1 pb-20 md:pb-0" id="main-content">

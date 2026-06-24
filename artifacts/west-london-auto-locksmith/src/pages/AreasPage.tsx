@@ -22,20 +22,20 @@ const areaFaqs = [
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-gray-100">
+    <div className="border-b border-[#D8D8D3]">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full text-left py-4 flex items-center justify-between gap-4 font-medium text-[#1a2332] hover:text-[#1a2332]/70 transition-colors min-h-[56px]"
+        className="w-full text-left py-4 flex items-center justify-between gap-4 font-medium text-[#121212] hover:text-[#121212]/70 transition-colors min-h-[56px]"
         aria-expanded={open}
         data-testid={`faq-toggle-areas-${q.substring(0, 15).replace(/\s/g, "-").toLowerCase()}`}
       >
         <span>{q}</span>
         <ChevronRight
           size={18}
-          className={`shrink-0 text-[#1a2332]/40 transition-transform ${open ? "rotate-90" : ""}`}
+          className={`shrink-0 text-[#121212]/40 transition-transform ${open ? "rotate-90" : ""}`}
         />
       </button>
-      {open && <p className="pb-4 text-sm text-[#1a2332]/70 leading-relaxed">{a}</p>}
+      {open && <p className="pb-4 text-sm text-[#121212]/70 leading-relaxed">{a}</p>}
     </div>
   );
 }
@@ -54,7 +54,7 @@ export default function AreasPage() {
       }}
     >
       {/* Hero */}
-      <section className="bg-[#1a2332] text-white py-14 px-4" data-testid="section-areas-hero">
+      <section className="bg-[#121212] text-white py-14 px-4" data-testid="section-areas-hero">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-4 text-white">
             Areas We Cover From Uxbridge
@@ -70,8 +70,8 @@ export default function AreasPage() {
       {/* Coverage explanation */}
       <section className="py-12 px-4 bg-white" data-testid="section-areas-main">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#1a2332] mb-4">Our Service Area</h2>
-          <p className="text-[#1a2332]/70 text-sm leading-relaxed mb-8 max-w-2xl">
+          <h2 className="text-2xl font-bold text-[#121212] mb-4">Our Service Area</h2>
+          <p className="text-[#121212]/70 text-sm leading-relaxed mb-8 max-w-2xl">
             We operate from {siteContent.business.baseArea} and travel to vehicle lockout jobs
             across West London and the surrounding area. The towns and areas listed below are
             examples within our operating radius. If your location is not listed, call us — we
@@ -79,26 +79,26 @@ export default function AreasPage() {
           </p>
 
           {/* Coverage radius visual */}
-          <div className="mb-8 bg-gray-50 border border-gray-100 rounded-xl p-6 md:p-8 max-w-sm">
+          <div className="mb-8 bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 md:p-8 max-w-sm">
             <div className="flex flex-col items-center text-center">
-              <div className="w-32 h-32 rounded-full border-4 border-[#E8A020]/30 flex items-center justify-center mb-4 relative">
-                <div className="w-20 h-20 rounded-full border-2 border-[#E8A020]/50 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-[#E8A020]" />
+              <div className="w-32 h-32 rounded-full border-4 border-[#C9A227]/30 flex items-center justify-center mb-4 relative">
+                <div className="w-20 h-20 rounded-full border-2 border-[#C9A227]/50 flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-[#C9A227]" />
                 </div>
               </div>
-              <p className="font-bold text-[#1a2332]">{siteContent.business.baseArea}</p>
-              <p className="text-xs text-[#1a2332]/50 mt-1">
+              <p className="font-bold text-[#121212]">{siteContent.business.baseArea}</p>
+              <p className="text-xs text-[#121212]/50 mt-1">
                 Base location &mdash; {siteContent.business.coverageRadius} radius
               </p>
             </div>
           </div>
 
-          <h2 className="text-xl font-bold text-[#1a2332] mb-4">Example Areas Covered</h2>
+          <h2 className="text-xl font-bold text-[#121212] mb-4">Example Areas Covered</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-8">
             {siteContent.business.coverageAreas.map((area) => (
               <div
                 key={area}
-                className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-[#1a2332] font-medium text-center"
+                className="px-4 py-3 bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg text-sm text-[#121212] font-medium text-center"
                 data-testid={`area-item-${area.replace(/\s/g, "-").toLowerCase()}`}
               >
                 {area}
@@ -106,9 +106,9 @@ export default function AreasPage() {
             ))}
           </div>
 
-          <div className="bg-[#1a2332]/5 border border-[#1a2332]/10 rounded-lg p-5 max-w-2xl">
-            <p className="text-sm text-[#1a2332]/80 leading-relaxed">
-              <strong className="text-[#1a2332]">Not sure if we cover your area?</strong>{" "}
+          <div className="bg-[#121212]/5 border border-[#121212]/10 rounded-lg p-5 max-w-2xl">
+            <p className="text-sm text-[#121212]/80 leading-relaxed">
+              <strong className="text-[#121212]">Not sure if we cover your area?</strong>{" "}
               Call us with your location and we will tell you immediately. We will not travel
               to you without first confirming the price and arrival time estimate.
             </p>
@@ -117,15 +117,15 @@ export default function AreasPage() {
       </section>
 
       {/* CTA to call with location */}
-      <section className="py-10 px-4 bg-gray-50 border-y border-gray-100" data-testid="section-areas-cta">
+      <section className="py-10 px-4 bg-[#F7F7F4] border-y border-[#D8D8D3]" data-testid="section-areas-cta">
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#1a2332] font-medium text-sm">
+          <p className="text-[#121212] font-medium text-sm">
             Not sure if we cover your area? Call with your location and we'll confirm.
           </p>
           <a
             href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
             onClick={() => trackCallClick("areas-mid")}
-            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#E8A020] text-[#1a2332] font-bold text-sm rounded hover:bg-[#d4911c] transition-colors min-h-[48px]"
+            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold text-sm rounded hover:bg-[#A88417] transition-colors min-h-[48px]"
             data-testid="button-call-areas-mid"
           >
             <Phone size={16} />
@@ -137,8 +137,8 @@ export default function AreasPage() {
       {/* FAQs */}
       <section className="py-12 px-4 bg-white" data-testid="section-areas-faqs">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#1a2332] mb-4">Coverage Questions</h2>
-          <div className="divide-y divide-gray-100">
+          <h2 className="text-2xl font-bold text-[#121212] mb-4">Coverage Questions</h2>
+          <div className="divide-y divide-[#D8D8D3]">
             {areaFaqs.map((faq) => (
               <FaqItem key={faq.q} q={faq.q} a={faq.a} />
             ))}
