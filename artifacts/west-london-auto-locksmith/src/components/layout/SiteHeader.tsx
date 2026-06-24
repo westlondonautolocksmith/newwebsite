@@ -23,7 +23,7 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 bg-[#121212]" data-testid="site-header">
       {/* Main bar */}
-      <div className="flex items-stretch h-16">
+      <div className="flex items-stretch h-24">
 
         {/* Logo — left 3/4 */}
         <Link
