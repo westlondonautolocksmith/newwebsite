@@ -44,6 +44,16 @@ CookieConsent banner shows when `gaId` OR `gadsId` is set (informational only �
 
 ReviewsList, JobGallery, WhatsApp button, legal details block, trust block — all check siteContent data before rendering. They render nothing if data is absent. This is intentional — no empty/placeholder sections.
 
+## Vercel deployment (deploy only this site from the monorepo)
+
+Root `vercel.json` scopes the deploy to the locksmith site. Hard constraints:
+- `vite.config.ts` THROWS if `PORT` or `BASE_PATH` are unset, so the buildCommand must supply them inline: `BASE_PATH=/ PORT=3000 pnpm --filter @workspace/west-london-auto-locksmith run build`. PORT is unused by build output — it only satisfies the guard.
+- Vite emits to `dist/public` (NOT `dist`), so `outputDirectory` = `artifacts/west-london-auto-locksmith/dist/public`.
+- SPA needs a catch-all rewrite `"/(.*)" -> "/index.html"` (wouter client routing). Safe because Vercel applies rewrites only AFTER the filesystem check, so robots.txt/sitemap.xml/assets still serve directly.
+- Do NOT let Vercel run the root `pnpm -r run build` — it builds every artifact, and mockup-sandbox/api-server also require PORT and fail. The Vercel Project "Root Directory" must stay at the repo root so it reads root vercel.json.
+
+**Why:** `BASE_PATH=/` assumes root-domain hosting; change it only if hosting under a subpath.
+
 ## Structured data (JSON-LD)
 
 Site-wide LocalBusiness/Locksmith JSON-LD is injected once via `src/components/StructuredData.tsx` (built by `src/lib/structuredData.ts`), mounted in `App.tsx`. It uses id `"ld-localbusiness"`, deliberately distinct from `SEOMeta`'s per-page `"structured-data"` id so the two never clobber each other.

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "pnpm install",
+  "buildCommand": "BASE_PATH=/ PORT=3000 pnpm --filter @workspace/west-london-auto-locksmith run build",
+  "outputDirectory": "artifacts/west-london-auto-locksmith/dist/public",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
