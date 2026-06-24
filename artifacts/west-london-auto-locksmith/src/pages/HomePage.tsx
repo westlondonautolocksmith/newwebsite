@@ -98,6 +98,7 @@ export default function HomePage() {
             <span className="block text-3xl sm:text-4xl md:text-5xl">We Can Help</span>
           </h1>
           <p className="text-white/70 text-base">We specialise in vehicle lockouts</p>
+          <p className="text-white/50 text-sm mt-1">Operating out of Uxbridge, we serve the whole of West London</p>
         </div>
       </section>
 
