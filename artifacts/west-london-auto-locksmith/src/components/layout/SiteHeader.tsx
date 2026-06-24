@@ -51,7 +51,7 @@ export default function SiteHeader() {
             aria-label={`Call us on ${phone}`}
             data-testid="button-call-header"
           >
-            <Phone size={22} className="text-[#121212]" />
+            <Phone size={34} className="text-[#121212]" />
             <span className="text-[#121212] font-bold text-[10px] mt-0.5 hidden sm:block tracking-wide">
               CALL
             </span>
