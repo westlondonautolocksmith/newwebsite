@@ -1,0 +1,68 @@
+Rewrite the Pricing page around our genuine fixed-price offer. Do not change the site header, footer, branding, sticky mobile call bar, colour palette or overall design system.
+
+Important business rule:
+We charge £100 fixed price for vehicle entry across our advertised service area. This is the total customer price, including VAT. There are no extra call-out, mileage or hidden charges within the advertised service area.
+
+Remove all wording that suggests the price may vary, including:
+
+“Call us with your location and vehicle for a clear price before we travel.”
+“How Pricing Works”
+“What Affects the Price”
+Any text saying the final cost can vary depending on location, vehicle, access difficulty, time or availability.
+“Call for a Clear Price”
+
+Replace the top of the page with:
+
+H1:
+£100 Fixed-Price Vehicle Entry
+
+Intro:
+Locked out of your car? Vehicle entry is £100 across our advertised service area, including VAT.
+
+Supporting line:
+No call-out fee. No mileage charge. No hidden extras.
+
+CTA button:
+Call Now — £100 Fixed Price
+020 3488 0390
+
+Replace the “How Pricing Works” card with a section titled:
+
+What’s Included
+
+Use three simple trust points:
+
+£100 fixed vehicle-entry price
+No call-out, mileage or hidden charges
+Live ETA confirmed before dispatch
+
+Add a small section titled:
+
+Why We Ask for Your Location and Vehicle
+
+Copy:
+We ask for your location so we can confirm you are within our service area and give you a live estimated arrival time. We ask for your vehicle details so we can arrive prepared. Your vehicle-entry price remains £100.
+
+Keep the Payment Methods section, but make the wording clear:
+
+Payment Methods
+
+Card, cash and bank transfer accepted.
+
+Replace the lower dark CTA section with:
+
+Need Help Now?
+
+£100 fixed-price vehicle entry across our service area. Call now for your live ETA.
+
+Button:
+Call Now — 020 3488 0390
+
+Keep “Vehicle lockouts only” below the button.
+
+On mobile:
+
+Keep the first CTA fully visible before the first major scroll.
+Keep the page concise and easy to scan.
+Use the existing gold buttons and dark/light section styling.
+Do not add price tables, fake urgency, stock images, badges or unsupported claims.
