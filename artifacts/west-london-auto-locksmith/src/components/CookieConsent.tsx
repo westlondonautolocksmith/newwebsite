@@ -40,13 +40,13 @@ export default function CookieConsent() {
 
   return (
     <div
-      className="fixed bottom-20 md:bottom-0 left-0 right-0 z-50 bg-[#121212] text-white border-t border-white/10 px-4 py-2 md:py-3"
+      className="fixed bottom-20 md:bottom-0 left-3 right-3 md:left-0 md:right-0 z-50 bg-[#121212] text-white border border-white/10 md:border-0 md:border-t rounded-xl md:rounded-none px-4 py-2 md:py-3"
       role="dialog"
       aria-label="Cookie consent"
       data-testid="cookie-consent-banner"
     >
       <div className="max-w-4xl mx-auto flex flex-row items-center gap-3 sm:gap-4">
-        <p className="text-xs md:text-sm text-white/90 flex-1 leading-snug">
+        <p className="text-[11px] md:text-sm text-white/90 flex-1 leading-snug">
           We use cookies to measure calls and improve ads.{" "}
           <a href="/cookies" className="underline text-white hover:text-[#C9A227] transition-colors whitespace-nowrap">
             Cookie Policy
