@@ -98,6 +98,14 @@ export default function HomePage() {
               </p>
             )}
           </div>
+          <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-1.5">
+            {["No Call-Out Fee", "20–40 min typical Arrival", "Insured & DBS-checked"].map((item) => (
+              <span key={item} className="inline-flex items-center gap-1 text-xs text-white/55">
+                <span className="text-[#C9A227] font-bold">✔</span>
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -148,7 +156,7 @@ export default function HomePage() {
             </li>
             <li className="flex items-center gap-3 text-white">
               <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
-              <span className="text-sm font-medium">Clear Price Before Travel</span>
+              <span className="text-sm font-medium">Fixed price across service area</span>
             </li>
             <li className="flex items-center gap-3 text-white">
               <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
