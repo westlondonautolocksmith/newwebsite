@@ -73,7 +73,7 @@ export default function HomePage() {
       }}
     >
       {/* Hero heading + call button */}
-      <section className="bg-[#121212] text-white pt-8 pb-6 px-4" data-testid="section-hero">
+      <section className="bg-[#121212] text-white pt-8 pb-3 px-4" data-testid="section-hero">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="font-bold leading-tight mb-3 text-white whitespace-nowrap">
             <span className="block text-2xl sm:text-3xl md:text-4xl">Locked Out of Your Car?</span>
@@ -110,7 +110,7 @@ export default function HomePage() {
       </section>
 
       {/* Photo collage — directly under hero */}
-      <section className="bg-[#121212] px-4 pt-4 pb-6" data-testid="section-photo-collage">
+      <section className="bg-[#121212] px-4 pt-2 pb-6" data-testid="section-photo-collage">
         <div className="max-w-4xl mx-auto flex flex-col gap-2 md:gap-3">
           {/* Top row: wide shot + portrait */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
