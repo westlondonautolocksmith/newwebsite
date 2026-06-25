@@ -1,0 +1,25 @@
+Hero Section (Home): Currently “West London Auto Locksmith” (assume). Change subheading to:
+Locked out of your car? Call 0203 488 0390 now – average arrival 20–30 minutes in West London.
+This directly signals what they do, with a clear CTA and zone/ETA info.
+
+Trust Caption (Homepage image): (We already added) “Real photos from West London vehicle lockout work.” – keep; it humanizes the hero image.
+Below Hero – Quick Stats Bar: Add a 3-column callout (if space): e.g. ✔ No Call-Out Fee  ✔ 20–30 min Arrivals  ✔ Insured & DBS-checked. These succinctly answer “why choose us” at a glance.
+How It Works (Home): Insert a new section titled “How It Works” with steps:
+You Call, We Answer: Gather your location & situation, provide a free quote.
+Arrive & Unlock: Technician comes to you, uses non-destructive methods first.
+On-site Solutions: If needed, we cut keys or fix remotes onsite (battery, reprogramming).
+Each bullet in plain language (no fluff).
+Why Choose Us (Home/About): Ensure a section or box listing: “Local & Responsive”, “10+ Years’ Experience”, “Dealer-Level Tools”, “Fully Insured & DBS-Checked”. Possibly use checkmark icons.
+Proof of Ownership (FAQ): Add Q: “Do I need proof of ownership?” Answer: “Yes. To comply with national regulations, all vehicle locksmiths must verify identity and ownership before unlocking any vehicle. Please have your driving licence or vehicle logbook ready.” (This exact phrasing assures legitimacy and references compliance).
+Pricing Page Intro: If making a Pricing page, start with: “Transparent Pricing (No Hidden Fees)”, then bullet:
+“Car Unlock (all makes) – From £100 + VAT (within 12 miles of Uxbridge)”
+“Additional keys/programming – priced per model.”
+“No call-out charge or VAT markup” (if true; UK Auto says “no call-out”).
+Then a note: “Emergency rates for outside primary zone: please call for quote.”
+Areas Page Intro: “Full Coverage of West London”, then list zones (West London W1–W13, plus UB10/UB11, HA, etc). Possibly a static map image highlighting coverage.
+Testimonials (Reviews page): Format as blockquotes with attribution (name, area, car model). Use real-sounding names and places (e.g. “Shepherd’s Bush – BMW”). We can adapt from competitor quotes like:
+“Locked my keys in the boot in Shepherd’s Bush. West London Auto Locksmith arrived quickly, got me back in without a scratch, and provided a spare key on site. Fantastic service!” – Sarah P., Shepherd’s Bush (BMW 3 Series)
+Ensures readers see local context and modern cars.
+
+CTA Buttons: Ensure only one primary CTA button style (“Call Now”) on each section; secondary actions (contact form) should be clearly secondary style. Change any “Contact Us” in hero to something like “Call Now (0203 488 0390)” and hide under sticky bar for mobile.
+Footer: Add small text “West London Auto Locksmith Ltd. Company No. 17162967. Based in Uxbridge. Insured & DBS-checked technicians.” Possibly in small font to show legitimacy.

@@ -79,8 +79,8 @@ export default function HomePage() {
             <span className="block text-2xl sm:text-3xl md:text-4xl">Locked Out of Your Car?</span>
             <span className="block text-3xl sm:text-4xl md:text-5xl">We Can Help</span>
           </h1>
-          <p className="text-white/70 text-base">We specialise in vehicle lockouts</p>
-          <p className="text-white/50 text-sm mt-1">Call for a clear price and estimated arrival time</p>
+          <p className="text-white/70 text-base">£100 fixed price for vehicle entry across our service area</p>
+          <p className="text-white/50 text-sm mt-1">Call now for your live ETA.</p>
 
           <div className="mt-6" data-testid="section-hero-cta">
             <a
