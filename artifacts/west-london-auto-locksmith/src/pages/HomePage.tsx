@@ -112,9 +112,6 @@ export default function HomePage() {
       {/* Photo collage — directly under hero */}
       <section className="bg-[#121212] px-4 pt-4 pb-6" data-testid="section-photo-collage">
         <div className="max-w-4xl mx-auto flex flex-col gap-2 md:gap-3">
-          <p className="text-[11px] text-white/35 text-center tracking-wide mb-0">
-            Real photos from West London vehicle lockout work
-          </p>
           {/* Top row: wide shot + portrait */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
             <div className="col-span-2 aspect-[16/9] overflow-hidden rounded-lg">
