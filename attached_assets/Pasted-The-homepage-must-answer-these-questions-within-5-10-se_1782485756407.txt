@@ -1,0 +1,397 @@
+The homepage must answer these questions within 5–10 seconds:
+
+Are you a real local car locksmith?
+Can you help with my specific problem?
+Do you do lockouts, replacement/spare keys and all keys lost?
+How do I get a price and ETA?
+How do I call immediately?
+
+Primary conversion goal:
+Phone call to 020 3488 0390.
+
+Use tel:+442034880390 for every call CTA.
+
+Do not use a contact form as the primary action.
+
+BRANDING AND DESIGN
+
+Keep the existing visual identity exactly consistent:
+
+Dark charcoal/black main theme
+Warm gold CTA buttons
+White/off-white headings
+Existing West London Auto Locksmith logo
+Existing sticky mobile call bar
+Existing cookie banner and consent logic
+Existing photo style and gold accents
+No gradients
+No stock locksmith images
+No generic AI-generated locksmith photos
+No blue CTA buttons
+No fake badges
+No unsupported “24/7”, “fastest”, “all makes”, “no damage guaranteed”, “fully insured”, “DBS checked” or similar claims
+
+Do not automatically switch the website into a light theme based on device settings. Keep the website dark-led, with warm off-white sections lower down where useful for readability.
+
+Use the existing real technician and branded vehicle photos.
+
+ROUTE-AWARE HEADER
+
+On the new homepage /, change the small header/service-area line to:
+
+Mobile car locksmith • Serving Uxbridge and surrounding areas
+
+On /vehicle-lockout, retain the current lockout-specific wording:
+
+Vehicle lockout specialists • Serving Uxbridge and surrounding areas
+
+Keep the Google review strip directly below this header line.
+
+Use the real current Google rating and review count only. Make the rating and count centrally editable through the existing site content configuration.
+
+SEO FOR THE HOMEPAGE
+
+Use:
+
+Page title:
+Car Locksmith in Uxbridge & West London | West London Auto Locksmith
+
+Meta description:
+Locked out, need a spare car key or lost all your keys? Mobile car locksmith services across Uxbridge and surrounding West London. Call for availability, a clear price and a live ETA.
+
+Use one H1 only.
+
+Set canonical URL through the site’s production URL configuration, not a hard-coded Replit preview URL.
+
+HOMEPAGE SECTION ORDER
+HERO
+
+H1:
+Car Locksmith in Uxbridge & West London
+
+Supporting copy:
+Locked out, need a spare car key, or lost all your keys? Call for mobile car locksmith help, a clear price and a live ETA before we set off.
+
+Primary gold CTA:
+Call Now — 020 3488 0390
+
+Under the button, add one subtle line:
+
+Proof of ownership required before work begins.
+
+Do not show a price in the hero.
+
+Ensure the hero remains clean, spacious and easy to read on mobile.
+
+SERVICE SELECTOR — MUST APPEAR VERY EARLY
+
+Immediately below the hero, add:
+
+H2:
+What do you need help with?
+
+Create three strong service cards. These must be clearly differentiated, easy to scan, and fully tappable on mobile.
+
+Card 1:
+Title:
+Locked Out of Your Car?
+
+Copy:
+£100 fixed-price vehicle entry across our advertised service area. Live ETA confirmed before dispatch.
+
+Button:
+Vehicle Lockout Service
+
+Link:
+/vehicle-lockout
+
+Card 2:
+Title:
+Need a Spare or Replacement Key?
+
+Copy:
+Spare keys, replacement keys, remote keys and programming for supported vehicles.
+
+Button:
+Car Key Services
+
+Temporary link:
+#car-keys
+
+Card 3:
+Title:
+Lost All Your Car Keys?
+
+Copy:
+Call with your make, model, year and location so we can confirm availability, price and ETA before travel.
+
+Button:
+Lost Car Key Help
+
+Temporary link:
+#lost-car-keys
+
+Important:
+
+Do not promise all vehicles are supported.
+Do not give a fixed price for key services or all-keys-lost work.
+The lockout card should be visually prominent but not oversized compared with the other cards.
+On mobile, use a stacked layout with generous tap targets.
+On tablet and desktop, use a balanced three-card row.
+REAL BUSINESS PROOF PHOTO
+
+Below the three service cards, place the strongest branded technician-and-vehicle image.
+
+Do not add a caption above it.
+
+Use accessible alt text:
+
+West London Auto Locksmith technician beside branded vehicle in Uxbridge
+
+Keep the image large enough to prove:
+
+real technician
+real branded vehicle
+real local business
+SERVICE DETAILS — ON THE HOMEPAGE
+
+Create three concise detail sections further down the homepage. Each section needs an anchor ID so the service-card links work immediately without broken links.
+
+A. Vehicle lockouts
+
+Anchor:
+id="vehicle-lockouts"
+
+Heading:
+Vehicle Lockout Service
+
+Copy:
+Locked keys in your car? We provide £100 fixed-price vehicle entry across our advertised service area. Your live ETA is confirmed before we set off.
+
+CTA:
+View Vehicle Lockout Service
+Link:
+/vehicle-lockout
+
+B. Car keys
+
+Anchor:
+id="car-keys"
+
+Heading:
+Spare & Replacement Car Keys
+
+Copy:
+Need another working key, a replacement remote or key programming? Tell us your vehicle make, model, year and whether you still have a working key. We will confirm availability and price before travelling.
+
+CTA:
+Call About Car Keys
+Link:
+tel:+442034880390
+
+C. Lost all keys
+
+Anchor:
+id="lost-car-keys"
+
+Heading:
+Lost All Your Car Keys?
+
+Copy:
+All-keys-lost work depends on the vehicle. Call with your make, model, year and location so we can check whether we can help and confirm price and ETA before travel.
+
+CTA:
+Call About Lost Car Keys
+Link:
+tel:+442034880390
+
+HOW IT WORKS
+
+Use a concise, visual three-step section.
+
+H2:
+How It Works
+
+Step 1:
+Call Us
+
+Copy:
+Tell us your location, vehicle make, model, year and what has happened.
+
+Step 2:
+Price and ETA Confirmed
+
+Copy:
+We confirm availability, a clear price and your estimated arrival time before we set off.
+
+Step 3:
+We Help You Get Moving
+
+Copy:
+We attend with the right equipment for the service you need, where the job is supported.
+
+Do not claim guaranteed results, guaranteed non-damage entry or every vehicle type.
+
+TRUST SECTION
+
+Use these exact trust points:
+
+Clear price before dispatch
+Proof of ownership checked
+Card, cash and bank transfer accepted
+Real local technician and branded vehicle
+
+Do not include “No call-out fee” here because it is relevant to the fixed-price lockout offer, not necessarily every key service.
+
+SERVICE AREA SECTION
+
+Heading:
+Based in Uxbridge, Serving West London
+
+Copy:
+We serve Uxbridge and surrounding areas including Hillingdon, Ickenham, West Drayton, Yiewsley, Hayes, Ruislip and nearby locations.
+
+Add:
+View Areas We Cover
+
+Link:
+/areas-served
+
+Do not create a large keyword-stuffed town list.
+
+REVIEWS SECTION
+
+Use the real Google rating and exact current review count only.
+
+Heading:
+Rated by Local Customers
+
+Show:
+★★★★★ 5.0 on Google (current real review count)
+
+CTA:
+Read Our Google Reviews
+
+Link:
+existing Google Business Profile review link.
+
+Important:
+
+Do not create made-up review cards.
+Do not show placeholder testimonials.
+Do not write fabricated customer names, locations or quotes.
+If genuine review text is already stored in the site’s data, show no more than two short, attributed excerpts with the Google source.
+RECENT PHOTOS SECTION
+
+Heading:
+West London Auto Locksmith
+
+Use the existing real images of:
+
+branded vehicle
+technician at vehicle
+technician with tools
+clean vehicle/work imagery
+
+Do not call these “recent jobs” unless they are genuinely taken on real completed customer work.
+
+Do not show customer faces, number plates, addresses or personal belongings unnecessarily.
+
+FAQ SECTION
+
+Heading:
+Car Locksmith Questions
+
+Use these questions:
+
+Can you help if I am locked out of my car?
+Can you make a spare or replacement car key?
+Can you help if I have lost all my car keys?
+What details do you need when I call?
+Do you need proof that I own the vehicle?
+How is the price confirmed?
+Which areas do you cover?
+
+Keep answers short and factual.
+
+FINAL CTA
+
+Use a dark section with a strong gold CTA.
+
+Heading:
+Need Help With Your Car Keys?
+
+Supporting text:
+Call now with your location and vehicle details. We will confirm availability, price and a live ETA before we set off.
+
+Button:
+Call Now — 020 3488 0390
+
+Small text beneath:
+Vehicle lockouts, spare keys, replacement keys and all-keys-lost help for supported vehicles.
+
+FOOTER
+
+Update footer navigation to include:
+
+Home
+Vehicle Lockout
+Car Keys
+Lost Car Keys
+Areas We Cover
+Pricing
+Reviews
+About
+FAQ
+Privacy
+Cookies
+
+For Car Keys and Lost Car Keys, do not add links to non-existent routes yet. Link them to the relevant homepage sections until dedicated pages are built.
+
+MOBILE REQUIREMENTS
+
+This homepage is primarily for urgent mobile visitors.
+
+Requirements:
+
+The first screen must show:
+business identity
+car locksmith service clarity
+primary call CTA
+The service selector must appear within the first major scroll.
+All buttons must be at least 44px high.
+The sticky mobile Call Now bar must remain visible and never be blocked by the cookie banner.
+The cookie banner must stay compact and above the sticky call bar.
+Do not allow the cookie banner to cover the first service card or main CTA unnecessarily.
+Keep spacing tight enough that service cards appear early, but do not make the hero crowded.
+Test widths around 360px, 390px and 430px.
+Maintain readable contrast for all body text outdoors.
+ANALYTICS AND TRACKING
+
+Keep existing consent logic.
+
+Only fire optional tracking after the visitor grants consent.
+
+Track these interactions:
+
+homepage_hero_call_click
+homepage_lockout_card_click
+homepage_car_keys_card_click
+homepage_lost_keys_card_click
+homepage_sticky_call_click
+homepage_reviews_click
+homepage_areas_click
+
+Do not break any current Google Ads or GA4 tracking.
+
+IMPLEMENTATION RULES
+Reuse existing shared components and site content configuration.
+Do not duplicate header, footer, review or CTA code unnecessarily.
+Do not create broken links.
+Do not remove /vehicle-lockout.
+Do not edit the visual design of /vehicle-lockout except for any shared-code changes needed to keep it working.
+Do not add empty location pages.
+Do not add a generic “auto locksmith” page that suggests domestic locksmithing or services not offered.
+Do not invent business details, payment methods, insurance, accreditations, opening hours, response times or review content.
+Test all routes and all click-to-call links before finishing.
+Confirm the new homepage works as a general Google Ads landing page while the dedicated lockout page remains available for sitelinks and organic visitors.

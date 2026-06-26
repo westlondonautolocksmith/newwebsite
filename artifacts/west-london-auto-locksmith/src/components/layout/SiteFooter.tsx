@@ -4,13 +4,16 @@ import { siteContent } from "@/content/siteContent";
 import { trackCallClick, trackWhatsAppClick } from "@/lib/analytics";
 
 const navLinks = [
-  { label: "Vehicle Lockout", href: "/vehicle-lockout" },
-  { label: "Areas We Cover", href: "/areas-we-cover" },
-  { label: "Prices", href: "/pricing" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "FAQs", href: "/faqs" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "/", external: false },
+  { label: "Vehicle Lockout", href: "/vehicle-lockout", external: false },
+  { label: "Car Keys", href: "/#car-keys", external: true },
+  { label: "Lost Car Keys", href: "/#lost-car-keys", external: true },
+  { label: "Areas We Cover", href: "/areas-we-cover", external: false },
+  { label: "Pricing", href: "/pricing", external: false },
+  { label: "Reviews", href: "/reviews", external: false },
+  { label: "About", href: "/about", external: false },
+  { label: "FAQ", href: "/faqs", external: false },
+  { label: "Contact", href: "/contact", external: false },
 ];
 
 const hasPhone = siteContent.business.phone !== "PHONE_NUMBER_PLACEHOLDER";
@@ -38,7 +41,7 @@ export default function SiteFooter() {
             </p>
             {hasPhone && (
               <a
-                href={`tel:${siteContent.business.phone.replace(/\s/g, "")}`}
+                href={`tel:${siteContent.business.phoneE164}`}
                 onClick={() => trackCallClick("footer")}
                 className="inline-flex items-center gap-2 text-white font-semibold text-base hover:text-[#C9A227] transition-colors"
                 data-testid="link-call-footer"
@@ -50,7 +53,7 @@ export default function SiteFooter() {
             {siteContent.business.email && (
               <a
                 href={`mailto:${siteContent.business.email}`}
-                className="inline-flex items-center gap-2 text-white/60 text-sm hover:text-[#C9A227] transition-colors mt-2"
+                className="flex items-center gap-2 text-white/60 text-sm hover:text-[#C9A227] transition-colors mt-2"
                 data-testid="link-email-footer"
               >
                 <Mail size={14} />
@@ -63,7 +66,7 @@ export default function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackWhatsAppClick("footer")}
-                className="inline-flex items-center gap-2 text-white/60 text-sm hover:text-[#25D366] transition-colors mt-2"
+                className="flex items-center gap-2 text-white/60 text-sm hover:text-[#25D366] transition-colors mt-2"
                 data-testid="link-whatsapp-footer"
               >
                 <MessageCircle size={14} />
@@ -78,13 +81,22 @@ export default function SiteFooter() {
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/60 hover:text-white transition-colors"
-                    data-testid={`footer-nav-${link.href.replace(/\//g, "")}`}
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      className="text-sm text-white/60 hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-white/60 hover:text-white transition-colors"
+                      data-testid={`footer-nav-${link.href.replace(/[\/#]/g, "")}`}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -125,7 +137,7 @@ export default function SiteFooter() {
           <p>
             &copy; {new Date().getFullYear()} {siteContent.business.name}. All rights reserved.
           </p>
-          <p>Vehicle lockout services in West London.</p>
+          <p>Mobile car locksmith services in West London.</p>
         </div>
       </div>
     </footer>

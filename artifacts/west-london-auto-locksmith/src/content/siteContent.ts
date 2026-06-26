@@ -2,9 +2,10 @@
 export const siteContent = {
   business: {
     name: "West London Auto Locksmith",
-    tagline: "Vehicle Lockouts Only",
+    tagline: "Mobile Car Locksmith",
     phone: "020 3488 0390",
     phoneDisplay: "020 3488 0390",
+    phoneE164: "+442034880390",
     email: "info@westlondonautolocksmith.co.uk",
     whatsappEnabled: true,
     whatsappNumber: "447723191544",
@@ -17,15 +18,17 @@ export const siteContent = {
     ],
   },
   pricing: {
-    showFromPrice: false,          // set to true to show "from £100"
+    showFromPrice: false,
     fromPrice: "from £100",
     defaultWording: "Call for a clear price and estimated arrival time before we travel.",
     approvedWording: "Vehicle entry from £100 — final price and estimated arrival time confirmed before we travel.",
     priceConfirmBeforeTravel: true,
-    paymentMethods: ["Card", "Cash", "Bank transfer"] as string[],   // confirmed by owner
+    paymentMethods: ["Card", "Cash", "Bank transfer"] as string[],
   },
   reviews: {
     googleReviewsUrl: "https://www.google.com/maps/place/West+London+Auto+Locksmith/@51.5392625,-0.4712062,17.64z/data=!4m6!3m5!1s0x2341289f576a5e79:0x78ccd061f5531765!8m2!3d51.5391116!4d-0.4703696!16s%2Fg%2F11njc3_w5j?entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D",
+    rating: "5.0",
+    reviewCount: "",     // set to e.g. "12" when confirmed
     items: [
       {
         name: "Jamie Allan",
@@ -61,13 +64,13 @@ export const siteContent = {
     yearEstablished: "",
   },
   analytics: {
-    gaId: "",        // Google Analytics 4 measurement ID (G-...) — none yet
-    gadsId: "AW-18144470949",  // Google Ads tag ID (loaded in index.html)
-    gadsCallConversionLabel: "AW-18144470949/OL0FCOf5wbgcEKXP-stD", // click-to-call conversion
-    enabled: true,   // master switch — on now that the Google Ads tag is live
+    gaId: "",
+    gadsId: "AW-18144470949",
+    gadsCallConversionLabel: "AW-18144470949/OL0FCOf5wbgcEKXP-stD",
+    enabled: true,
   },
   seo: {
-    siteUrl: "https://westlondonautolocksmith.co.uk",   // placeholder until domain confirmed
+    siteUrl: "https://westlondonautolocksmith.co.uk",
   },
   legal: {
     privacyLastUpdated: "June 2025",

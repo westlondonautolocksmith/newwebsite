@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { siteContent } from "@/content/siteContent";
 import { trackCallClick } from "@/lib/analytics";
 
 const navLinks = [
   { label: "Vehicle Lockout", href: "/vehicle-lockout" },
+  { label: "Car Keys", href: "/#car-keys" },
+  { label: "Lost Car Keys", href: "/#lost-car-keys" },
   { label: "Areas We Cover", href: "/areas-we-cover" },
   { label: "Prices", href: "/pricing" },
   { label: "Reviews", href: "/reviews" },
@@ -15,10 +17,19 @@ const navLinks = [
 ];
 
 const phone = siteContent.business.phone;
-const phoneHref = `tel:${phone.replace(/\s/g, "")}`;
+const phoneHref = `tel:${siteContent.business.phoneE164}`;
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [location] = useLocation();
+
+  const isHome = location === "/" || location === "";
+  const tagline = isHome
+    ? "Mobile car locksmith\u00a0·\u00a0Serving Uxbridge and surrounding areas"
+    : "Vehicle lockout specialists\u00a0·\u00a0Serving Uxbridge and surrounding areas";
+
+  const rating = siteContent.reviews.rating;
+  const reviewCount = siteContent.reviews.reviewCount;
 
   return (
     <>
@@ -58,10 +69,10 @@ export default function SiteHeader() {
           </a>
         </div>
 
-        {/* Tagline strip — scrolls away with the logo */}
+        {/* Tagline strip — route-aware, scrolls away with the logo */}
         <div className="bg-[#1a1a1a] border-t border-white/10 px-2 py-1 text-center overflow-hidden">
           <p className="text-white/80 text-[10px] font-medium tracking-wide whitespace-nowrap">
-            Vehicle lockout specialists&nbsp;·&nbsp;Serving Uxbridge and surrounding areas
+            {tagline}
           </p>
         </div>
 
@@ -74,7 +85,10 @@ export default function SiteHeader() {
         <div className="flex items-center bg-[#1e1a0e] border-y border-[#C9A227]/30 px-4 py-1.5">
           <p className="flex-1 text-center text-[11px] tracking-wide whitespace-nowrap overflow-hidden font-semibold">
             <span className="text-[#C9A227]">★★★★★</span>
-            <span className="text-white ml-1.5">5.0 on Google</span>
+            <span className="text-white ml-1.5">{rating} on Google</span>
+            {reviewCount && (
+              <span className="text-white/50 ml-1">({reviewCount} reviews)</span>
+            )}
             <span className="text-[#C9A227]/50 mx-2">·</span>
             {siteContent.reviews.googleReviewsUrl ? (
               <a
@@ -107,15 +121,26 @@ export default function SiteHeader() {
           <div className="bg-[#2A2A2A] border-b border-white/10" data-testid="nav-menu">
             <nav className="max-w-6xl mx-auto px-4 py-2" aria-label="Site navigation">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="flex items-center py-3.5 border-b border-white/10 text-white/80 hover:text-white text-sm font-medium transition-colors last:border-0"
-                  data-testid={`nav-link-${link.href.replace(/\//g, "")}`}
-                >
-                  {link.label}
-                </Link>
+                link.href.startsWith("/#") ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center py-3.5 border-b border-white/10 text-white/80 hover:text-white text-sm font-medium transition-colors last:border-0"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center py-3.5 border-b border-white/10 text-white/80 hover:text-white text-sm font-medium transition-colors last:border-0"
+                    data-testid={`nav-link-${link.href.replace(/\//g, "")}`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </nav>
           </div>
