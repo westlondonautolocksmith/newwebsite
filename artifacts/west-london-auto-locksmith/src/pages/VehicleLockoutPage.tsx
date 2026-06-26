@@ -180,12 +180,11 @@ export default function VehicleLockoutPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-8">
             What Happens When You Call
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
             {[
-              { n: "1", title: "Tell Us Your Location", desc: "Give us your current location and your vehicle make and model." },
-              { n: "2", title: "We Confirm We Can Help", desc: "We'll tell you honestly whether this is something we can assist with." },
-              { n: "3", title: "Arrival Time", desc: "We give you an estimated arrival time before we travel." },
-              { n: "4", title: "We Attend and Open", desc: "We come to you and carry out vehicle entry." },
+              { n: "1", title: "Tell Us Your Location", desc: "Give us your location, vehicle make and model." },
+              { n: "2", title: "£100 Price & ETA Confirmed", desc: "We confirm availability, the £100 fixed price and your estimated arrival time before we set off." },
+              { n: "3", title: "We Attend and Carry Out Entry", desc: "Once proof of ownership is checked, we attend and carry out vehicle entry." },
             ].map((step) => (
               <div key={step.n} className="flex flex-col" data-testid={`step-${step.n}`}>
                 <div className="w-10 h-10 rounded-full bg-[#121212] text-white flex items-center justify-center font-bold text-base mb-3 shrink-0">
