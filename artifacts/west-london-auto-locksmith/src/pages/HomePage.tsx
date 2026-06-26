@@ -147,7 +147,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICE SELECTOR ──────────────────────────────────────────────── */}
-      <section className="bg-white py-10 px-4" data-testid="section-service-selector">
+      <section id="services" className="bg-white py-10 px-4 scroll-mt-16" data-testid="section-service-selector">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold text-[#121212] mb-6 text-center">
             What do you need help with?

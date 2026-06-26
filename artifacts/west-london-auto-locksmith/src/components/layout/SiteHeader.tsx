@@ -5,6 +5,7 @@ import { siteContent } from "@/content/siteContent";
 import { trackCallClick } from "@/lib/analytics";
 
 const navLinks = [
+  { label: "Services", href: "/#services" },
   { label: "Vehicle Lockout", href: "/vehicle-lockout" },
   { label: "Car Keys", href: "/#car-keys" },
   { label: "Lost Car Keys", href: "/#lost-car-keys" },
