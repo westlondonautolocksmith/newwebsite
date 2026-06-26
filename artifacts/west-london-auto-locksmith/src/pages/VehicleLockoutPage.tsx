@@ -104,33 +104,15 @@ export default function VehicleLockoutPage() {
         </div>
       </section>
 
-      {/* Trust bullets + CTA */}
-      <section className="bg-[#121212] px-4 pt-2 pb-8" data-testid="section-trust-cta">
+      {/* Job photo */}
+      <section className="bg-[#121212] px-4 pt-2 pb-8">
         <div className="max-w-3xl mx-auto">
           <img
             src="/images/jobs/locksmith-working.png"
             alt="Locksmith opening a car door in West London"
-            className="w-full rounded-lg object-cover max-h-72 md:max-h-96 mb-6"
+            className="w-full rounded-lg object-cover max-h-72 md:max-h-96"
             loading="lazy"
           />
-          <ul className="flex flex-col gap-3 mb-6">
-            <li className="flex items-center gap-3 text-white">
-              <span className="text-[#C9A227] text-lg leading-none">★</span>
-              <span className="text-sm font-medium">5.0 Google Rating</span>
-            </li>
-            <li className="flex items-center gap-3 text-white">
-              <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
-              <span className="text-sm font-medium">Vehicle Lockout Specialists</span>
-            </li>
-            <li className="flex items-center gap-3 text-white">
-              <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
-              <span className="text-sm font-medium">Fixed price across service area</span>
-            </li>
-            <li className="flex items-center gap-3 text-white">
-              <span className="text-[#C9A227] font-bold text-base leading-none">✓</span>
-              <span className="text-sm font-medium">Uxbridge &amp; Surrounding Areas</span>
-            </li>
-          </ul>
         </div>
       </section>
 
