@@ -125,15 +125,6 @@ export default function VehicleLockoutPage() {
               <span className="text-sm font-medium">Uxbridge &amp; Surrounding Areas</span>
             </li>
           </ul>
-          <a
-            href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
-            onClick={() => trackCallClick("below-collage")}
-            className="flex items-center justify-center gap-3 w-full px-4 py-5 bg-[#C9A227] text-[#121212] font-bold text-base sm:text-xl rounded hover:bg-[#A88417] transition-colors min-h-[64px] whitespace-nowrap"
-            data-testid="button-call-below-collage"
-          >
-            <Phone size={24} />
-            {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
-          </a>
         </div>
       </section>
 
