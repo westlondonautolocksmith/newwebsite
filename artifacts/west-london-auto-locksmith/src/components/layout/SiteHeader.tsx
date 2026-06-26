@@ -27,7 +27,7 @@ export default function SiteHeader() {
 
   const isHome = location === "/" || location === "";
   const tagline = isHome
-    ? "Mobile car locksmith\u00a0·\u00a0Serving Uxbridge and surrounding areas"
+    ? "Mobile car locksmith\u00a0·\u00a0Serving the whole of West London"
     : "Vehicle lockout specialists\u00a0·\u00a0Serving Uxbridge and surrounding areas";
 
   const rating = siteContent.reviews.rating;
