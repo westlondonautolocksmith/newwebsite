@@ -262,69 +262,21 @@ export default function VehicleLockoutPage() {
       <section className="py-14 px-4 bg-[#F7F7F4]" data-testid="section-trust">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-6">
-            A Clear, Straightforward Vehicle Entry Service
+            What's Included in the £100 Fixed Price
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex items-start gap-3">
-              <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
-              <div>
-                <p className="font-semibold text-sm text-[#121212]">{siteContent.business.name}</p>
-                <p className="text-xs text-[#121212]/55">Based in {siteContent.business.baseArea}, West London</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
-              <div>
-                <p className="font-semibold text-sm text-[#121212]">Price confirmed before travel</p>
-                <p className="text-xs text-[#121212]/55">You know the cost before we travel to you</p>
-              </div>
-            </div>
-            {siteContent.trust.invoiceAvailable && (
-              <div className="flex items-start gap-3">
+            {[
+              "£100 fixed-price vehicle entry across our advertised service area",
+              "No call-out, mileage or hidden charges",
+              "Live ETA confirmed before dispatch",
+              "Proof of ownership checked before entry",
+              "Card, cash and bank transfer accepted",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
                 <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold text-sm text-[#121212]">Invoice provided</p>
-                  <p className="text-xs text-[#121212]/55">Receipt available on request</p>
-                </div>
+                <p className="text-sm text-[#121212]">{item}</p>
               </div>
-            )}
-            {siteContent.pricing.paymentMethods.length > 0 && (
-              <div className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold text-sm text-[#121212]">Payment methods</p>
-                  <p className="text-xs text-[#121212]/55">
-                    {siteContent.pricing.paymentMethods.join(", ")}
-                  </p>
-                </div>
-              </div>
-            )}
-            {siteContent.reviews.googleReviewsUrl && (
-              <div className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold text-sm text-[#121212]">Google reviews</p>
-                  <a
-                    href={siteContent.reviews.googleReviewsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-[#121212]/55 underline hover:text-[#121212]"
-                    data-testid="link-trust-google-reviews"
-                  >
-                    View on Google
-                  </a>
-                </div>
-              </div>
-            )}
-            {siteContent.trust.legalName && (
-              <div className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold text-sm text-[#121212]">Registered business</p>
-                  <p className="text-xs text-[#121212]/55">{siteContent.trust.legalName}</p>
-                </div>
-              </div>
-            )}
+            ))}
           </div>
         </div>
       </section>
