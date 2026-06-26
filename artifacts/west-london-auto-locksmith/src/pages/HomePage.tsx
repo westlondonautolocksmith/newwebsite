@@ -100,8 +100,11 @@ export default function HomePage() {
               Serving West London
             </span>
           </h1>
-          <p className="text-white/70 text-base leading-relaxed mb-7 max-w-lg mx-auto">
-            Locked out, need a spare car key, or lost all your keys? Call for a clear price and a live ETA.
+          <p className="text-white text-lg sm:text-xl font-medium leading-snug mb-2 max-w-lg mx-auto">
+            Locked out, need a spare car key, or lost all your keys?
+          </p>
+          <p className="text-white/55 text-sm leading-relaxed mb-7 max-w-lg mx-auto">
+            Call for a clear price and a live ETA.
           </p>
           <a
             href={phoneHref}
