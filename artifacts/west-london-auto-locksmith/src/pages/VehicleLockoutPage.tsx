@@ -145,7 +145,7 @@ export default function VehicleLockoutPage() {
       <section className="py-14 px-4 bg-white" data-testid="section-services">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-2">
-            Locked Out of Your Vehicle?
+            What Do You Need Help With?
           </h2>
           <p className="text-[#121212]/60 mb-8 text-sm">
             We specialise in vehicle entry.
@@ -156,7 +156,7 @@ export default function VehicleLockoutPage() {
               <p className="text-sm text-[#121212]/65 leading-relaxed">Locked keys in the car? We provide £100 fixed-price vehicle entry across our advertised service area.</p>
             </div>
             <div className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg p-6" data-testid="service-card-lost-car-keys">
-              <h3 className="font-bold text-[#121212] mb-2">Lost Your Car Keys?</h3>
+              <h3 className="font-bold text-[#121212] mb-2">Lost All Your Car Keys?</h3>
               <p className="text-sm text-[#121212]/65 leading-relaxed">We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key.</p>
             </div>
           </div>
