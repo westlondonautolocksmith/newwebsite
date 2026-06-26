@@ -168,30 +168,15 @@ export default function VehicleLockoutPage() {
           <p className="text-[#121212]/60 mb-8 text-sm">
             We specialise in vehicle entry.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-            {[
-              {
-                title: "Keys Locked Inside",
-                desc: "Locked your keys in the car? We can open your vehicle without causing damage and retrieve your keys.",
-              },
-              {
-                title: "Locked Out of Your Car",
-                desc: "Can't open your vehicle? Call us with your location and vehicle details and we'll confirm whether we can help.",
-              },
-              {
-                title: "Need Vehicle Entry",
-                desc: "Lost access to your vehicle for another reason? Call and describe your situation — we'll tell you honestly if we can assist.",
-              },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg p-6"
-                data-testid={`service-card-${card.title.replace(/\s/g, "-").toLowerCase()}`}
-              >
-                <h3 className="font-bold text-[#121212] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#121212]/65 leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg p-6" data-testid="service-card-keys-locked-inside">
+              <h3 className="font-bold text-[#121212] mb-2">Keys Locked Inside Your Car</h3>
+              <p className="text-sm text-[#121212]/65 leading-relaxed">Locked keys in the car? We provide £100 fixed-price vehicle entry across our advertised service area.</p>
+            </div>
+            <div className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg p-6" data-testid="service-card-lost-car-keys">
+              <h3 className="font-bold text-[#121212] mb-2">Lost Your Car Keys?</h3>
+              <p className="text-sm text-[#121212]/65 leading-relaxed">Lost all your keys or need a replacement? Tell us your make, model, year and location so we can confirm availability, price and ETA.</p>
+            </div>
           </div>
           <div className="text-center">
             <a
