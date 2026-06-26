@@ -212,8 +212,8 @@ export default function VehicleLockoutPage() {
             We provide mobile vehicle lockout help across West London.{" "}
             Call with your location and we'll confirm availability and give you a live ETA before we set off.
           </p>
-          <p className="text-xs font-semibold uppercase tracking-wider text-[#121212]/40 mb-3">Examples of the locations we cover</p>
-          <div className="flex flex-wrap gap-2 mb-8">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#121212]/40 mb-3">Some of the areas we cover</p>
+          <div className="flex flex-wrap gap-2 mb-4">
             {siteContent.business.coverageAreas.map((area) => (
               <span
                 key={area}
@@ -224,6 +224,7 @@ export default function VehicleLockoutPage() {
               </span>
             ))}
           </div>
+          <p className="text-sm text-[#121212]/60 mb-6">Don't see your area listed? Call us to check availability for your location.</p>
           <Link
             href="/areas-we-cover"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/20 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
