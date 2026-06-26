@@ -169,7 +169,7 @@ export default function VehicleLockoutPage() {
             Locked Out of Your Vehicle?
           </h2>
           <p className="text-[#121212]/60 mb-8 text-sm">
-            We specialise in vehicle entry only. We do not offer house locksmithing or key programming.
+            We specialise in vehicle entry.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             {[
