@@ -453,33 +453,6 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ── PHOTOS ────────────────────────────────────────────────────────── */}
-      <section className="bg-[#121212] py-10 px-4" data-testid="section-photos">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-lg font-bold text-white mb-4">
-            West London Auto Locksmith
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
-            {[
-              { src: "/images/job1.png", alt: "West London Auto Locksmith branded vehicle" },
-              { src: "/images/job2.png", alt: "Technician opening a locked car" },
-              { src: "/images/job3.png", alt: "West London Auto Locksmith technician" },
-              { src: "/images/job5.png", alt: "Technician working on a vehicle door" },
-              { src: "/images/job6.png", alt: "West London Auto Locksmith technician by van" },
-            ].map((photo) => (
-              <div key={photo.src} className="aspect-square overflow-hidden rounded-lg">
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
       <section className="bg-white py-14 px-4" data-testid="section-faq">
         <div className="max-w-3xl mx-auto">
