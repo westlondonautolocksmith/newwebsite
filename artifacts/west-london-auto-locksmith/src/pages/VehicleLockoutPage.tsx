@@ -128,6 +128,18 @@ export default function VehicleLockoutPage() {
         </div>
       </section>
 
+      {/* Job photo */}
+      <section className="bg-[#121212] px-4 pb-6">
+        <div className="max-w-3xl mx-auto">
+          <img
+            src="/images/jobs/locksmith-working.png"
+            alt="Locksmith opening a car door in West London"
+            className="w-full rounded-lg object-cover max-h-72 md:max-h-96"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
       {/* Review card */}
       <section className="bg-[#121212] px-4 pb-8" data-testid="section-home-review">
         <div className="max-w-3xl mx-auto">
