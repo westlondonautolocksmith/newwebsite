@@ -101,7 +101,7 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="text-white/70 text-base leading-relaxed mb-7 max-w-lg mx-auto">
-            Locked out, need a spare car key, or lost all your keys? Call for mobile car locksmith help, a clear price and a live ETA before we set off.
+            Locked out, need a spare car key, or lost all your keys? Call for a clear price and a live ETA.
           </p>
           <a
             href={phoneHref}
