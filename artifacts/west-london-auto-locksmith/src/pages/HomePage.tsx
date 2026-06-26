@@ -94,10 +94,10 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto text-center">
           <h1 className="font-bold leading-tight mb-4 text-white">
             <span className="block text-3xl sm:text-4xl md:text-5xl">
-              Car Locksmith in Uxbridge
+              Mobile Car Locksmith
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl">
-              &amp; West London
+              Across West London
             </span>
           </h1>
           <p className="text-white/70 text-base leading-relaxed mb-7 max-w-lg mx-auto">
