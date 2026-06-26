@@ -358,7 +358,7 @@ export default function HomePage() {
                 desc: siteContent.pricing.paymentMethods.join(", "),
               },
               {
-                title: "Real local technician and branded vehicle",
+                title: "Real local technicians and branded vehicle",
                 desc: `Based in ${siteContent.business.baseArea}, covering West London.`,
               },
             ].map((item) => (
