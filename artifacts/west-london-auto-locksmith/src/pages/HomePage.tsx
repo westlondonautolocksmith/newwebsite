@@ -146,6 +146,65 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── REVIEWS ───────────────────────────────────────────────────────── */}
+      {siteContent.reviews.items.length > 0 && (
+        <section className="bg-white py-14 px-4" data-testid="section-reviews">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-2">
+              Rated by Local Customers
+            </h2>
+            <div className="flex items-center gap-2 mb-8">
+              <div className="flex gap-0.5">
+                {[1,2,3,4,5].map(s => <StarIcon key={s} />)}
+              </div>
+              <span className="text-sm font-semibold text-[#121212]">
+                {siteContent.reviews.rating} on Google
+                {siteContent.reviews.reviewCount && (
+                  <span className="font-normal text-[#121212]/50 ml-1">
+                    ({siteContent.reviews.reviewCount} reviews)
+                  </span>
+                )}
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {siteContent.reviews.items.slice(0, 2).map((review) => (
+                <article
+                  key={review.name}
+                  className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-5"
+                  data-testid={`review-card-${review.name.replace(/\s/g, "-").toLowerCase()}`}
+                >
+                  <div className="flex gap-0.5 mb-3">
+                    {Array.from({ length: review.rating }).map((_, i) => <StarIcon key={i} />)}
+                  </div>
+                  <blockquote className="text-sm text-[#121212]/75 leading-relaxed whitespace-pre-line mb-4">
+                    "{review.text}"
+                  </blockquote>
+                  <footer className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-semibold text-[#121212]">{review.name}</p>
+                      <p className="text-xs text-[#C9A227]">{review.source} Review</p>
+                    </div>
+                    <p className="text-xs text-[#121212]/40">{review.date}</p>
+                  </footer>
+                </article>
+              ))}
+            </div>
+            {siteContent.reviews.googleReviewsUrl && (
+              <a
+                href={siteContent.reviews.googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("homepage_reviews_click")}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/25 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
+                data-testid="link-google-reviews"
+              >
+                Read Our Google Reviews <ChevronRight size={15} />
+              </a>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* ── SERVICE SELECTOR ──────────────────────────────────────────────── */}
       <section id="services" className="bg-white py-10 px-4 scroll-mt-16" data-testid="section-service-selector">
         <div className="max-w-4xl mx-auto">
@@ -393,65 +452,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-      {/* ── REVIEWS ───────────────────────────────────────────────────────── */}
-      {siteContent.reviews.items.length > 0 && (
-        <section className="bg-white py-14 px-4" data-testid="section-reviews">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-2">
-              Rated by Local Customers
-            </h2>
-            <div className="flex items-center gap-2 mb-8">
-              <div className="flex gap-0.5">
-                {[1,2,3,4,5].map(s => <StarIcon key={s} />)}
-              </div>
-              <span className="text-sm font-semibold text-[#121212]">
-                {siteContent.reviews.rating} on Google
-                {siteContent.reviews.reviewCount && (
-                  <span className="font-normal text-[#121212]/50 ml-1">
-                    ({siteContent.reviews.reviewCount} reviews)
-                  </span>
-                )}
-              </span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {siteContent.reviews.items.slice(0, 2).map((review) => (
-                <article
-                  key={review.name}
-                  className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-5"
-                  data-testid={`review-card-${review.name.replace(/\s/g, "-").toLowerCase()}`}
-                >
-                  <div className="flex gap-0.5 mb-3">
-                    {Array.from({ length: review.rating }).map((_, i) => <StarIcon key={i} />)}
-                  </div>
-                  <blockquote className="text-sm text-[#121212]/75 leading-relaxed whitespace-pre-line mb-4">
-                    "{review.text}"
-                  </blockquote>
-                  <footer className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm font-semibold text-[#121212]">{review.name}</p>
-                      <p className="text-xs text-[#C9A227]">{review.source} Review</p>
-                    </div>
-                    <p className="text-xs text-[#121212]/40">{review.date}</p>
-                  </footer>
-                </article>
-              ))}
-            </div>
-            {siteContent.reviews.googleReviewsUrl && (
-              <a
-                href={siteContent.reviews.googleReviewsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent("homepage_reviews_click")}
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/25 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
-                data-testid="link-google-reviews"
-              >
-                Read Our Google Reviews <ChevronRight size={15} />
-              </a>
-            )}
-          </div>
-        </section>
-      )}
 
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
       <section className="bg-white py-14 px-4" data-testid="section-faq">
