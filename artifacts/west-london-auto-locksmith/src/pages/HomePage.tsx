@@ -97,7 +97,7 @@ export default function HomePage() {
               Mobile Car Locksmith
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl">
-              Across West London
+              Serving West London
             </span>
           </h1>
           <p className="text-white/70 text-base leading-relaxed mb-7 max-w-lg mx-auto">
