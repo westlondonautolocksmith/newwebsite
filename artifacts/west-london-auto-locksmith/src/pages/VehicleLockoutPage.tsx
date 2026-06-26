@@ -94,7 +94,7 @@ export default function VehicleLockoutPage() {
             )}
           </div>
           <div className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-1.5">
-            {["£100 fixed price", "No Call-Out Fee", "Proof of ownership checked"].map((item) => (
+            {["£100 fixed price", "Proof of ownership checked", "No Call-Out Fee"].map((item) => (
               <span key={item} className="inline-flex items-center gap-1 text-xs text-white/55">
                 <span className="text-[#C9A227] font-bold">✔</span>
                 {item}
