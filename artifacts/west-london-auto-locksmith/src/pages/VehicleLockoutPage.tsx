@@ -224,13 +224,13 @@ export default function VehicleLockoutPage() {
       <section className="py-14 px-4 bg-white" data-testid="section-coverage">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-3">
-            Vehicle Lockout Coverage Around Uxbridge
+            Mobile vehicle entry across West London
           </h2>
           <p className="text-[#121212]/60 mb-6 text-sm leading-relaxed max-w-xl">
-            We cover vehicle lockouts within approximately {siteContent.business.coverageRadius} of{" "}
-            {siteContent.business.baseArea}. Arrival time depends on your location, traffic, and
-            current availability. Call to confirm we can reach you.
+            We provide mobile vehicle lockout help across West London.{" "}
+            Call with your location and we'll confirm availability and give you a live ETA before we set off.
           </p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-[#121212]/40 mb-3">Examples of the locations we cover</p>
           <div className="flex flex-wrap gap-2 mb-8">
             {siteContent.business.coverageAreas.map((area) => (
               <span
