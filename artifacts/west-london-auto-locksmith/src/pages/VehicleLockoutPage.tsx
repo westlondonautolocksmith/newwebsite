@@ -107,6 +107,12 @@ export default function VehicleLockoutPage() {
       {/* Trust bullets + CTA */}
       <section className="bg-[#121212] px-4 pt-2 pb-8" data-testid="section-trust-cta">
         <div className="max-w-3xl mx-auto">
+          <img
+            src="/images/jobs/locksmith-working.png"
+            alt="Locksmith opening a car door in West London"
+            className="w-full rounded-lg object-cover max-h-72 md:max-h-96 mb-6"
+            loading="lazy"
+          />
           <ul className="flex flex-col gap-3 mb-6">
             <li className="flex items-center gap-3 text-white">
               <span className="text-[#C9A227] text-lg leading-none">★</span>
@@ -125,18 +131,6 @@ export default function VehicleLockoutPage() {
               <span className="text-sm font-medium">Uxbridge &amp; Surrounding Areas</span>
             </li>
           </ul>
-        </div>
-      </section>
-
-      {/* Job photo */}
-      <section className="bg-[#121212] px-4 pb-6">
-        <div className="max-w-3xl mx-auto">
-          <img
-            src="/images/jobs/locksmith-working.png"
-            alt="Locksmith opening a car door in West London"
-            className="w-full rounded-lg object-cover max-h-72 md:max-h-96"
-            loading="lazy"
-          />
         </div>
       </section>
 
