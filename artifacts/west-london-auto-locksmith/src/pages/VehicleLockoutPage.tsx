@@ -175,7 +175,7 @@ export default function VehicleLockoutPage() {
             </div>
             <div className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg p-6" data-testid="service-card-lost-car-keys">
               <h3 className="font-bold text-[#121212] mb-2">Lost Your Car Keys?</h3>
-              <p className="text-sm text-[#121212]/65 leading-relaxed">Lost all your keys or need a replacement? Tell us your make, model, year and location so we can confirm availability, price and ETA.</p>
+              <p className="text-sm text-[#121212]/65 leading-relaxed">We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key.</p>
             </div>
           </div>
           <div className="text-center">
