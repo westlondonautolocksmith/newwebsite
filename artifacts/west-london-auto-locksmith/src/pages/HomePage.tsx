@@ -37,7 +37,7 @@ const homeFaqs = [
   },
   {
     q: "Which areas do you cover?",
-    a: `We cover Uxbridge and surrounding areas within approximately ${siteContent.business.coverageRadius}. Call with your location and we will confirm immediately.`,
+    a: "We cover Uxbridge and the wider West London area. Call with your location and postcode and we will confirm immediately.",
   },
 ];
 
@@ -92,19 +92,14 @@ export default function HomePage() {
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <section className="bg-[#121212] text-white pt-10 pb-8 px-4" data-testid="section-hero">
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="font-bold leading-tight mb-4 text-white">
-            <span className="block text-3xl sm:text-4xl md:text-5xl">
-              Mobile Car Locksmith
-            </span>
-            <span className="block text-3xl sm:text-4xl md:text-5xl">
-              Serving West London
-            </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 text-white">
+            Mobile Car Locksmith Across West London
           </h1>
           <p className="text-white text-lg sm:text-xl font-medium leading-snug mb-2 max-w-lg mx-auto">
-            Locked out, need a spare car key, or lost all your keys?
+            Locked out, need a spare car key, or lost all your car keys?
           </p>
-          <p className="text-white/55 text-sm leading-relaxed mb-7 max-w-lg mx-auto">
-            Call for a clear price and a live ETA.
+          <p className="text-white/60 text-sm leading-relaxed mb-7 max-w-lg mx-auto">
+            Call now for a clear price and a live ETA before we set off.
           </p>
           <a
             href={phoneHref}
@@ -115,6 +110,84 @@ export default function HomePage() {
             <Phone size={24} />
             {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
           </a>
+        </div>
+      </section>
+
+      {/* ── SERVICE SELECTOR ──────────────────────────────────────────────── */}
+      <section id="services" className="bg-white py-10 px-4 scroll-mt-16" data-testid="section-service-selector">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#121212] mb-6 text-center">
+            What do you need help with?
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+            {/* Card 1 — Vehicle Lockout */}
+            <div
+              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
+              data-testid="service-card-lockout"
+            >
+              <h3 className="font-bold text-[#121212] text-base mb-2">
+                Locked Out of Your Car?
+              </h3>
+              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
+                £100 fixed-price vehicle entry across our advertised service area.
+              </p>
+              <Link
+                href="/vehicle-lockout"
+                onClick={() => trackEvent("homepage_lockout_card_click")}
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
+                data-testid="button-lockout-card"
+              >
+                Vehicle Lockout Service
+                <ChevronRight size={15} />
+              </Link>
+            </div>
+
+            {/* Card 2 — Car Keys */}
+            <div
+              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
+              data-testid="service-card-car-keys"
+            >
+              <h3 className="font-bold text-[#121212] text-base mb-2">
+                Need a Spare or Replacement Key?
+              </h3>
+              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
+                Spare keys, replacement keys, remote keys and programming for supported vehicles.
+              </p>
+              <a
+                href="#car-keys"
+                onClick={() => trackEvent("homepage_car_keys_card_click")}
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
+                data-testid="button-car-keys-card"
+              >
+                Car Key Services
+                <ChevronRight size={15} />
+              </a>
+            </div>
+
+            {/* Card 3 — Lost Keys */}
+            <div
+              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
+              data-testid="service-card-lost-keys"
+            >
+              <h3 className="font-bold text-[#121212] text-base mb-2">
+                Lost All Your Car Keys?
+              </h3>
+              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
+                Lost your car keys? We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key.
+              </p>
+              <a
+                href="#lost-car-keys"
+                onClick={() => trackEvent("homepage_lost_keys_card_click")}
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
+                data-testid="button-lost-keys-card"
+              >
+                Lost Car Key Help
+                <ChevronRight size={15} />
+              </a>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -146,143 +219,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── REVIEWS ───────────────────────────────────────────────────────── */}
-      {siteContent.reviews.items.length > 0 && (
-        <section className="bg-white py-14 px-4" data-testid="section-reviews">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-2">
-              Rated by Local Customers
-            </h2>
-            <div className="flex items-center gap-2 mb-8">
-              <div className="flex gap-0.5">
-                {[1,2,3,4,5].map(s => <StarIcon key={s} />)}
-              </div>
-              <span className="text-sm font-semibold text-[#121212]">
-                {siteContent.reviews.rating} on Google
-                {siteContent.reviews.reviewCount && (
-                  <span className="font-normal text-[#121212]/50 ml-1">
-                    ({siteContent.reviews.reviewCount} reviews)
-                  </span>
-                )}
-              </span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {siteContent.reviews.items.slice(0, 2).map((review) => (
-                <article
-                  key={review.name}
-                  className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-5"
-                  data-testid={`review-card-${review.name.replace(/\s/g, "-").toLowerCase()}`}
-                >
-                  <div className="flex gap-0.5 mb-3">
-                    {Array.from({ length: review.rating }).map((_, i) => <StarIcon key={i} />)}
-                  </div>
-                  <blockquote className="text-sm text-[#121212]/75 leading-relaxed whitespace-pre-line mb-4">
-                    "{review.text}"
-                  </blockquote>
-                  <footer className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm font-semibold text-[#121212]">{review.name}</p>
-                      <p className="text-xs text-[#C9A227]">{review.source} Review</p>
-                    </div>
-                    <p className="text-xs text-[#121212]/40">{review.date}</p>
-                  </footer>
-                </article>
-              ))}
-            </div>
-            {siteContent.reviews.googleReviewsUrl && (
-              <a
-                href={siteContent.reviews.googleReviewsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent("homepage_reviews_click")}
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/25 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
-                data-testid="link-google-reviews"
-              >
-                Read Our Google Reviews <ChevronRight size={15} />
-              </a>
-            )}
-          </div>
-        </section>
-      )}
-
-      {/* ── SERVICE SELECTOR ──────────────────────────────────────────────── */}
-      <section id="services" className="bg-white py-10 px-4 scroll-mt-16" data-testid="section-service-selector">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-[#121212] mb-6 text-center">
-            What do you need help with?
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-
-            {/* Card 1 — Vehicle Lockout */}
-            <div
-              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
-              data-testid="service-card-lockout"
-            >
-              <h3 className="font-bold text-[#121212] text-base mb-2">
-                Locked Out of Your Car?
-              </h3>
-              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
-                £100 fixed-price vehicle entry across our advertised service area. Live ETA confirmed before dispatch.
-              </p>
-              <Link
-                href="/vehicle-lockout"
-                onClick={() => trackEvent("homepage_lockout_card_click")}
-                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
-                data-testid="button-lockout-card"
-              >
-                Vehicle Lockout Service
-                <ChevronRight size={15} />
-              </Link>
-            </div>
-
-            {/* Card 2 — Car Keys */}
-            <div
-              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
-              data-testid="service-card-car-keys"
-            >
-              <h3 className="font-bold text-[#121212] text-base mb-2">
-                Need a Spare or Replacement Key?
-              </h3>
-              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
-                Spare keys, replacement keys, remote keys and programming for supported vehicles.
-              </p>
-              <Link
-                href="/car-keys"
-                onClick={() => trackEvent("homepage_car_keys_card_click")}
-                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
-                data-testid="button-car-keys-card"
-              >
-                Car Key Services
-                <ChevronRight size={15} />
-              </Link>
-            </div>
-
-            {/* Card 3 — Lost Keys */}
-            <div
-              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
-              data-testid="service-card-lost-keys"
-            >
-              <h3 className="font-bold text-[#121212] text-base mb-2">
-                Lost All Your Car Keys?
-              </h3>
-              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
-                Call with your make, model, year and location so we can confirm availability, price and ETA before travel.
-              </p>
-              <Link
-                href="/lost-car-keys"
-                onClick={() => trackEvent("homepage_lost_keys_card_click")}
-                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
-                data-testid="button-lost-keys-card"
-              >
-                Lost Car Key Help
-                <ChevronRight size={15} />
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* ── SERVICE DETAIL A — Vehicle Lockouts ───────────────────────────── */}
       <section
         id="vehicle-lockouts"
@@ -294,7 +230,7 @@ export default function HomePage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-4">
             Vehicle Lockout Service
           </h2>
-          <p className="text-[#121212]/65 text-base leading-relaxed mb-8 max-w-xl">
+          <p className="text-[#121212]/70 text-base leading-relaxed mb-8 max-w-xl">
             Locked keys in your car? We provide £100 fixed-price vehicle entry across our advertised service area. Your live ETA is confirmed before we set off.
           </p>
           <Link
@@ -319,7 +255,7 @@ export default function HomePage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-4">
             Spare &amp; Replacement Car Keys
           </h2>
-          <p className="text-[#121212]/65 text-base leading-relaxed mb-8 max-w-xl">
+          <p className="text-[#121212]/70 text-base leading-relaxed mb-8 max-w-xl">
             Need another working key, a replacement remote or key programming? Tell us your vehicle make, model, year and whether you still have a working key. We will confirm availability and price before travelling.
           </p>
           <a
@@ -345,8 +281,8 @@ export default function HomePage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-4">
             Lost All Your Car Keys?
           </h2>
-          <p className="text-[#121212]/65 text-base leading-relaxed mb-8 max-w-xl">
-            All-keys-lost work depends on the vehicle. Call with your make, model, year and location so we can check whether we can help and confirm price and ETA before travel.
+          <p className="text-[#121212]/70 text-base leading-relaxed mb-8 max-w-xl">
+            Lost your car keys? We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key. Call with your make, model, year and location so we can confirm availability, price and ETA before travel.
           </p>
           <a
             href={phoneHref}
@@ -414,10 +350,10 @@ export default function HomePage() {
               },
               {
                 title: "Card, cash and bank transfer accepted",
-                desc: siteContent.pricing.paymentMethods.join(", "),
+                desc: "Card, cash or bank transfer.",
               },
               {
-                title: "Real local technicians and branded vehicle",
+                title: "Real local technician and branded vehicle",
                 desc: `Based in ${siteContent.business.baseArea}, covering West London.`,
               },
             ].map((item) => (
@@ -425,7 +361,7 @@ export default function HomePage() {
                 <span className="text-[#C9A227] font-bold text-lg leading-none mt-0.5 shrink-0">✓</span>
                 <div>
                   <p className="font-semibold text-sm text-[#121212]">{item.title}</p>
-                  <p className="text-xs text-[#121212]/55 mt-0.5">{item.desc}</p>
+                  <p className="text-sm text-[#121212]/60 mt-0.5">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -439,8 +375,11 @@ export default function HomePage() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-3">
             Based in Uxbridge, Serving West London
           </h2>
-          <p className="text-[#121212]/65 text-base leading-relaxed mb-7 max-w-xl">
-            We serve Uxbridge and surrounding areas including Hillingdon, Ickenham, West Drayton, Yiewsley, Hayes, Ruislip and nearby locations. Call with your location and we will confirm immediately.
+          <p className="text-[#121212]/70 text-base leading-relaxed mb-3 max-w-xl">
+            We provide mobile car locksmith help across our West London service area, including Uxbridge, Hillingdon, Hayes, Ruislip, West Drayton, Slough and nearby locations.
+          </p>
+          <p className="text-[#121212]/60 text-sm leading-relaxed mb-7 max-w-xl">
+            Don't see your area listed? Call with your postcode and we'll confirm availability and a live ETA before we set off.
           </p>
           <Link
             href="/areas-we-cover"
@@ -452,6 +391,65 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      {/* ── REVIEWS ───────────────────────────────────────────────────────── */}
+      {siteContent.reviews.items.length > 0 && (
+        <section className="bg-white py-14 px-4" data-testid="section-reviews">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-2">
+              Rated by Local Customers
+            </h2>
+            <div className="flex items-center gap-2 mb-8">
+              <div className="flex gap-0.5">
+                {[1,2,3,4,5].map(s => <StarIcon key={s} />)}
+              </div>
+              <span className="text-sm font-semibold text-[#121212]">
+                {siteContent.reviews.rating} on Google
+                {siteContent.reviews.reviewCount && (
+                  <span className="font-normal text-[#121212]/50 ml-1">
+                    ({siteContent.reviews.reviewCount} reviews)
+                  </span>
+                )}
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {siteContent.reviews.items.slice(0, 2).map((review) => (
+                <article
+                  key={review.name}
+                  className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-5"
+                  data-testid={`review-card-${review.name.replace(/\s/g, "-").toLowerCase()}`}
+                >
+                  <div className="flex gap-0.5 mb-3">
+                    {Array.from({ length: review.rating }).map((_, i) => <StarIcon key={i} />)}
+                  </div>
+                  <blockquote className="text-sm text-[#121212]/75 leading-relaxed whitespace-pre-line mb-4">
+                    "{review.text}"
+                  </blockquote>
+                  <footer className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-semibold text-[#121212]">{review.name}</p>
+                      <p className="text-xs text-[#C9A227]">{review.source} Review</p>
+                    </div>
+                    <p className="text-xs text-[#121212]/40">{review.date}</p>
+                  </footer>
+                </article>
+              ))}
+            </div>
+            {siteContent.reviews.googleReviewsUrl && (
+              <a
+                href={siteContent.reviews.googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("homepage_reviews_click")}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/25 rounded px-5 py-2.5 hover:border-[#121212]/50 transition-colors min-h-[44px]"
+                data-testid="link-google-reviews"
+              >
+                Read Our Google Reviews <ChevronRight size={15} />
+              </a>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
       <section className="bg-white py-14 px-4" data-testid="section-faq">
@@ -480,9 +478,9 @@ export default function HomePage() {
       <section className="bg-[#121212] py-16 px-4" data-testid="section-final-cta">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Need Help With Your Car Keys?
+            Need Car Locksmith Help?
           </h2>
-          <p className="text-white/65 text-base mb-8 max-w-lg mx-auto leading-relaxed">
+          <p className="text-white/70 text-base mb-8 max-w-lg mx-auto leading-relaxed">
             Call now with your location and vehicle details. We will confirm availability, price and a live ETA before we set off.
           </p>
           <a
@@ -494,7 +492,7 @@ export default function HomePage() {
             <Phone size={22} />
             {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
           </a>
-          <p className="mt-5 text-xs text-white/35">
+          <p className="mt-5 text-sm text-white/45">
             Vehicle lockouts, spare keys, replacement keys and all-keys-lost help for supported vehicles.
           </p>
         </div>

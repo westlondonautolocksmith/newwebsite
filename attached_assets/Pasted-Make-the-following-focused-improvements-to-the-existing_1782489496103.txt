@@ -1,0 +1,402 @@
+Make the following focused improvements to the existing homepage only.
+
+Do not redesign the visual identity. Preserve the current dark/gold branding, header, Google review strip, sticky mobile Call Now bar, cookie banner, real photo collage, footer styling, existing analytics and all working routes.
+
+The homepage is the main general Google Ads landing page for vehicle lockouts, spare/replacement keys, programming and all-keys-lost jobs.
+
+PRIMARY GOAL:
+A mobile visitor must understand within seconds that we offer:
+
+1. Vehicle lockout entry
+2. Spare and replacement car keys
+3. Lost-all-car-keys help
+
+The homepage must reassure people throughout the West London coverage area without making unsupported claims that we cover all of London or every vehicle.
+
+---
+
+1. HEADER AND HERO COPY
+
+---
+
+Change the small service-area line beneath the logo to:
+
+Mobile car locksmith · Covering West London and surrounding areas
+
+Do not use:
+
+* “Serving the whole of West London”
+* “within approximately 12 miles”
+* “all areas within West London zone”
+
+Change the homepage H1 to:
+
+Mobile Car Locksmith Across West London
+
+Change the supporting hero copy to:
+
+Locked out, need a spare car key, or lost all your car keys?
+
+Call now for a clear price and a live ETA before we set off.
+
+Keep the current primary hero CTA:
+
+Call Now — 020 3488 0390
+
+Use tel:+442034880390.
+
+---
+
+2. MOVE SERVICE SELECTOR ABOVE PHOTO COLLAGE
+
+---
+
+Change the homepage order to:
+
+1. Header and review strip
+2. Hero
+3. Primary Call Now button
+4. “What do you need help with?” service cards
+5. Real photo collage
+6. The three detailed service sections
+7. How It Works
+8. Trust section
+9. Service area
+10. Reviews
+11. FAQ
+12. Final CTA
+13. Footer
+
+Reason:
+The homepage receives broad paid traffic. Visitors must choose their service before scrolling through photos.
+
+---
+
+3. SERVICE SELECTOR CARDS
+
+---
+
+Keep the heading:
+
+What do you need help with?
+
+Use these exact cards.
+
+CARD 1
+
+Title:
+Locked Out of Your Car?
+
+Copy:
+£100 fixed-price vehicle entry across our advertised service area.
+
+Button:
+Vehicle Lockout Service
+
+Link:
+/vehicle-lockout
+
+Do not repeat “Live ETA confirmed before dispatch” in this card because it is already stated in the hero.
+
+CARD 2
+
+Title:
+Need a Spare or Replacement Key?
+
+Copy:
+Spare keys, replacement keys, remote keys and programming for supported vehicles.
+
+Button:
+Car Key Services
+
+Link:
+#car-keys
+
+CARD 3
+
+Title:
+Lost All Your Car Keys?
+
+Copy:
+Lost your car keys? We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key.
+
+Button:
+Lost Car Key Help
+
+Link:
+#lost-car-keys
+
+Do not promise all makes, all vehicles, same-day service, or a fixed price for key and all-keys-lost services.
+
+---
+
+4. PHOTO COLLAGE
+
+---
+
+Keep the existing real photo collage immediately after the three service cards.
+
+Do not add a heading or caption above it.
+
+Keep the photos prominent and optimised for mobile loading.
+
+Do not use stock or AI-generated photos.
+
+---
+
+5. DETAILED SERVICE SECTIONS
+
+---
+
+Keep the three detailed sections below the collage, but make them concise and remove unnecessary repetition.
+
+SECTION 1
+
+Eyebrow:
+VEHICLE ENTRY
+
+Heading:
+Vehicle Lockout Service
+
+Copy:
+Locked keys in your car? We provide £100 fixed-price vehicle entry across our advertised service area. Your live ETA is confirmed before we set off.
+
+Button:
+View Vehicle Lockout Service
+
+Link:
+/vehicle-lockout
+
+SECTION 2
+
+Anchor ID:
+car-keys
+
+Eyebrow:
+KEY SERVICES
+
+Heading:
+Spare & Replacement Car Keys
+
+Copy:
+Need another working key, a replacement remote or key programming? Tell us your vehicle make, model, year and whether you still have a working key. We will confirm availability and price before travelling.
+
+Button:
+Call About Car Keys
+
+Link:
+tel:+442034880390
+
+SECTION 3
+
+Anchor ID:
+lost-car-keys
+
+Eyebrow:
+ALL KEYS LOST
+
+Heading:
+Lost All Your Car Keys?
+
+Copy:
+Lost your car keys? We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key. Call with your make, model, year and location so we can confirm availability, price and ETA before travel.
+
+Button:
+Call About Lost Car Keys
+
+Link:
+tel:+442034880390
+
+---
+
+6. HOW IT WORKS
+
+---
+
+Keep this section concise and mobile-friendly.
+
+Heading:
+How It Works
+
+Step 1:
+Call Us
+
+Copy:
+Tell us your location, vehicle make, model, year and what has happened.
+
+Step 2:
+Price and ETA Confirmed
+
+Copy:
+We confirm availability, a clear price and your estimated arrival time before we set off.
+
+Step 3:
+We Help You Get Moving
+
+Copy:
+We attend with the right equipment for the service you need, where the job is supported.
+
+Do not promise guaranteed outcomes or universal vehicle support.
+
+---
+
+7. TRUST SECTION
+
+---
+
+Change the heading to:
+
+A Straightforward Service
+
+Use these exact trust points:
+
+Clear price before dispatch
+You know the cost before we travel to you.
+
+Proof of ownership checked
+We verify entitlement to the vehicle before any work begins.
+
+Card, cash and bank transfer accepted
+Card, cash or bank transfer.
+
+Real local technician and branded vehicle
+Based in Uxbridge, covering West London.
+
+Use singular “technician”, not “technicians”.
+
+---
+
+8. SERVICE AREA SECTION
+
+---
+
+Keep the heading:
+
+Based in Uxbridge, Serving West London
+
+Replace the paragraph with:
+
+We provide mobile car locksmith help across our West London service area, including Uxbridge, Hillingdon, Hayes, Ruislip, West Drayton, Slough and nearby locations.
+
+Don’t see your area listed? Call with your postcode and we’ll confirm availability and a live ETA before we set off.
+
+Do not state a mileage radius.
+
+Do not say “whole of West London” or “all areas in West London”.
+
+Keep the “View Areas We Cover” button.
+
+If there are location tags elsewhere on the homepage, change their label to:
+
+Some of the areas we cover
+
+Add this line below any location tags:
+
+Don’t see your area listed? Call us to check availability for your location.
+
+Only show towns we genuinely intend to serve. Do not add Wembley unless it is genuinely within the normal service area and pricing terms.
+
+---
+
+9. REVIEW SECTION
+
+---
+
+Keep the heading:
+
+Rated by Local Customers
+
+Show the real Google score and exact real review count in this format:
+
+★★★★★ 5.0 on Google (2 reviews)
+
+If the current review count is stored in a content/configuration file, use that dynamic value rather than hard-coding 2.
+
+Keep the existing genuine reviews only.
+
+Important:
+
+* Do not invent reviews, customer names, timestamps or star ratings.
+* If relative dates such as “2 weeks ago” are static text, remove them or replace them with the real review date from Google data.
+* Keep the “Read Our Google Reviews” CTA.
+
+---
+
+10. FAQ
+
+---
+
+Keep the existing FAQ layout and heading:
+
+Car Locksmith Questions
+
+Keep these questions:
+
+Can you help if I am locked out of my car?
+Can you make a spare or replacement car key?
+Can you help if I have lost all my car keys?
+What details do you need when I call?
+Do you need proof that I own the vehicle?
+How is the price confirmed?
+Which areas do you cover?
+
+Keep the “See All FAQs” button.
+
+---
+
+11. FINAL CTA
+
+---
+
+Change the heading to:
+
+Need Car Locksmith Help?
+
+Keep the supporting copy:
+
+Call now with your location and vehicle details. We will confirm availability, price and a live ETA before we set off.
+
+Keep the call button:
+
+Call Now — 020 3488 0390
+
+Use tel:+442034880390.
+
+Keep this small supporting line:
+
+Vehicle lockouts, spare keys, replacement keys and all-keys-lost help for supported vehicles.
+
+---
+
+12. FOOTER
+
+---
+
+Replace all existing coverage text that mentions:
+
+* approximately 12 miles
+* a distance radius
+* whole of West London
+* all areas within West London zone
+
+Use this exact footer description:
+
+Mobile car locksmith service across our West London coverage area.
+
+Keep the business name, phone number, email address, WhatsApp link and footer page links.
+
+---
+
+13. VISUAL AND MOBILE QUALITY
+
+---
+
+* Increase the brightness and/or size of small grey body text slightly, especially hero support copy, service-area copy, small trust descriptions and final CTA support text.
+* Keep strong outdoor contrast on mobile.
+* Ensure all buttons are at least 44px high.
+* Keep the sticky mobile Call Now bar fully visible and never covered by the cookie banner.
+* Make sure cards and CTA buttons have generous tap targets.
+* Keep the dark hero, gold CTA buttons and clean off-white sections.
+* Do not add gradients, generic icons, fake badges, stock images or unsupported claims.
+* Test at 360px, 390px and 430px screen widths.
+* Confirm every internal link, anchor link and tel link works before finishing.
