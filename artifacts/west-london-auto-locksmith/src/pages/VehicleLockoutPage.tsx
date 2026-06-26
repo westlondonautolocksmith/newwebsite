@@ -132,7 +132,7 @@ export default function VehicleLockoutPage() {
             data-testid="button-call-below-collage"
           >
             <Phone size={24} />
-            Call to Check Availability
+            {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
           </a>
         </div>
       </section>
@@ -204,7 +204,7 @@ export default function VehicleLockoutPage() {
               data-testid="button-call-services"
             >
               <Phone size={17} />
-              Call to Check Price &amp; Availability
+              Call to Check Availability
             </a>
           </div>
         </div>
