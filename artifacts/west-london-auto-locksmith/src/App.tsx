@@ -5,6 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
 import VehicleLockoutPage from "@/pages/VehicleLockoutPage";
+import CarKeysPage from "@/pages/CarKeysPage";
+import LostCarKeysPage from "@/pages/LostCarKeysPage";
 import AreasPage from "@/pages/AreasPage";
 import PricingPage from "@/pages/PricingPage";
 import ReviewsPage from "@/pages/ReviewsPage";
@@ -31,6 +33,8 @@ function Router() {
       <Switch>
         <Route path="/" component={HomePage} />
         <Route path="/vehicle-lockout" component={VehicleLockoutPage} />
+        <Route path="/car-keys" component={CarKeysPage} />
+        <Route path="/lost-car-keys" component={LostCarKeysPage} />
         <Route path="/areas-we-cover" component={AreasPage} />
         <Route path="/pricing" component={PricingPage} />
         <Route path="/reviews" component={ReviewsPage} />

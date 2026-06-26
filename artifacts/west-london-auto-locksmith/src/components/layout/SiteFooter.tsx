@@ -6,8 +6,8 @@ import { trackCallClick, trackWhatsAppClick } from "@/lib/analytics";
 const navLinks = [
   { label: "Home", href: "/", external: false },
   { label: "Vehicle Lockout", href: "/vehicle-lockout", external: false },
-  { label: "Car Keys", href: "/#car-keys", external: true },
-  { label: "Lost Car Keys", href: "/#lost-car-keys", external: true },
+  { label: "Car Keys", href: "/car-keys", external: false },
+  { label: "Lost Car Keys", href: "/lost-car-keys", external: false },
   { label: "Areas We Cover", href: "/areas-we-cover", external: false },
   { label: "Pricing", href: "/pricing", external: false },
   { label: "Reviews", href: "/reviews", external: false },

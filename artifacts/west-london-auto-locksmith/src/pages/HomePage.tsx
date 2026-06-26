@@ -187,15 +187,15 @@ export default function HomePage() {
               <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
                 Spare keys, replacement keys, remote keys and programming for supported vehicles.
               </p>
-              <a
-                href="#car-keys"
+              <Link
+                href="/car-keys"
                 onClick={() => trackEvent("homepage_car_keys_card_click")}
                 className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
                 data-testid="button-car-keys-card"
               >
                 Car Key Services
                 <ChevronRight size={15} />
-              </a>
+              </Link>
             </div>
 
             {/* Card 3 — Lost Keys */}
@@ -209,15 +209,15 @@ export default function HomePage() {
               <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
                 Call with your make, model, year and location so we can confirm availability, price and ETA before travel.
               </p>
-              <a
-                href="#lost-car-keys"
+              <Link
+                href="/lost-car-keys"
                 onClick={() => trackEvent("homepage_lost_keys_card_click")}
                 className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
                 data-testid="button-lost-keys-card"
               >
                 Lost Car Key Help
                 <ChevronRight size={15} />
-              </a>
+              </Link>
             </div>
 
           </div>
