@@ -23,7 +23,7 @@ const phoneHref = `tel:${siteContent.business.phoneE164}`;
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
 
   const isHome = location === "/" || location === "";
   const tagline = isHome
@@ -32,6 +32,20 @@ export default function SiteHeader() {
 
   const rating = siteContent.reviews.rating;
   const reviewCount = siteContent.reviews.reviewCount;
+
+  function handleHashLink(e: React.MouseEvent, href: string) {
+    e.preventDefault();
+    const id = href.replace("/#", "");
+    setMenuOpen(false);
+    if (isHome) {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 120);
+    }
+  }
 
   return (
     <>
@@ -127,7 +141,7 @@ export default function SiteHeader() {
                   <a
                     key={link.href}
                     href={link.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(e) => handleHashLink(e, link.href)}
                     className="flex items-center py-3.5 border-b border-white/10 text-white/80 hover:text-white text-sm font-medium transition-colors last:border-0"
                   >
                     {link.label}
