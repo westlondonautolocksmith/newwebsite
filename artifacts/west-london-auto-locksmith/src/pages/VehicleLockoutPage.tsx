@@ -186,7 +186,7 @@ export default function VehicleLockoutPage() {
               data-testid="button-call-services"
             >
               <Phone size={17} />
-              Call to Check Availability
+              Call for Urgent Assistance
             </a>
           </div>
         </div>
