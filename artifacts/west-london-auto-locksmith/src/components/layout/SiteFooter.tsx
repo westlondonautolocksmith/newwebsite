@@ -37,7 +37,7 @@ export default function SiteFooter() {
               {siteContent.business.tagline}
             </p>
             <p className="text-sm text-white/60 mb-4">
-              Covering Uxbridge and surrounding areas within approximately {siteContent.business.coverageRadius}.
+              Mobile vehicle locksmith service across all areas within West London zone.
             </p>
             {hasPhone && (
               <a
