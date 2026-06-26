@@ -112,9 +112,6 @@ export default function HomePage() {
             <Phone size={24} />
             {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
           </a>
-          <p className="mt-3 text-xs text-white/35">
-            Proof of ownership required before work begins.
-          </p>
         </div>
       </section>
 
