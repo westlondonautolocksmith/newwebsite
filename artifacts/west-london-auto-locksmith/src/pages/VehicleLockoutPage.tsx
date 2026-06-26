@@ -211,7 +211,7 @@ export default function VehicleLockoutPage() {
             {[
               { n: "1", title: "Tell Us Your Location", desc: "Give us your current location and your vehicle make and model." },
               { n: "2", title: "We Confirm We Can Help", desc: "We'll tell you honestly whether this is something we can assist with." },
-              { n: "3", title: "Price and Arrival Time", desc: "We give you a clear price and an estimated arrival time before we travel." },
+              { n: "3", title: "Arrival Time", desc: "We give you an estimated arrival time before we travel." },
               { n: "4", title: "We Attend and Open", desc: "We come to you and carry out vehicle entry." },
             ].map((step) => (
               <div key={step.n} className="flex flex-col" data-testid={`step-${step.n}`}>
