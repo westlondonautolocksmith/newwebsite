@@ -35,7 +35,10 @@ export default function SiteHeader() {
     const id = href.replace("/#", "");
     setMenuOpen(false);
     if (isHome) {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      // Wait for the menu to close and layout to settle before scrolling
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 60);
     } else {
       sessionStorage.setItem("scrollTarget", id);
       navigate("/");

@@ -25,9 +25,11 @@ function ScrollToTop() {
     const pending = sessionStorage.getItem("scrollTarget");
     if (pending) {
       sessionStorage.removeItem("scrollTarget");
+      // Allow React to finish rendering the new page before scrolling.
+      // 250ms is reliable on both fast and slow mobile connections.
       setTimeout(() => {
         document.getElementById(pending)?.scrollIntoView({ behavior: "smooth" });
-      }, 80);
+      }, 250);
     } else {
       window.scrollTo(0, 0);
     }
