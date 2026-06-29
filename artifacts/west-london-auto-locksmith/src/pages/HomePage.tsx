@@ -188,7 +188,7 @@ export default function HomePage() {
           <p className="text-[#121212]/60 text-sm text-center mb-8">
             Choose the service you need. We'll confirm availability, price and ETA before dispatch.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
             {/* Card 1 — Vehicle Lockout */}
             <div
@@ -234,27 +234,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Card 3 — Lost All Keys */}
-            <div
-              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
-              data-testid="service-card-lost-keys"
-            >
-              <h3 className="font-bold text-[#121212] text-base mb-2">
-                Lost All Your Car Keys?
-              </h3>
-              <p className="text-sm text-[#121212]/70 leading-relaxed mb-5 flex-1">
-                Lost all your keys? Call first with your vehicle details so we can confirm whether we can help.
-              </p>
-              <a
-                href={phoneHref}
-                onClick={() => trackCallClick("homepage-lost-keys-card")}
-                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
-                data-testid="button-lost-keys-card"
-              >
-                <Phone size={14} />
-                Call to Check Availability
-              </a>
-            </div>
 
           </div>
         </div>
