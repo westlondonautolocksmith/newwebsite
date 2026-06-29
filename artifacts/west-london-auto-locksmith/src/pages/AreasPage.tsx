@@ -1,22 +1,31 @@
 import { useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Phone } from "lucide-react";
 import { Link } from "wouter";
 import PageLayout from "@/components/layout/PageLayout";
-import CallCTA from "@/components/sections/CallCTA";
 import { siteContent } from "@/content/siteContent";
-import { Phone } from "lucide-react";
 import { trackCallClick } from "@/lib/analytics";
 
 const hasPhone = siteContent.business.phone !== "PHONE_NUMBER_PLACEHOLDER";
+const phoneHref = `tel:${siteContent.business.phoneE164}`;
+
+const coverageAreas = [
+  "Uxbridge", "Hayes", "Hillingdon", "Southall", "Ruislip", "Northolt",
+  "Greenford", "Ealing", "Slough", "West Drayton", "Yiewsley", "Harlington",
+  "Ickenham", "Denham", "Acton", "Hanwell",
+];
 
 const areaFaqs = [
   {
     q: "Do you cover my area?",
-    a: `We cover vehicle lockouts within approximately ${siteContent.business.coverageRadius} of ${siteContent.business.baseArea}. The best way to check is to call us with your location — we will confirm immediately whether we can reach you.`,
+    a: "We cover many areas across West London and nearby locations from our Uxbridge dispatch point. Call with your exact location and we'll confirm availability before you book.",
   },
   {
     q: "How quickly can you get to me?",
-    a: `Arrival time depends on your location within our coverage area, current traffic, and how busy we are at the time. We will give you an estimated arrival time when you call — before we travel.`,
+    a: "Arrival time depends on your location, traffic, and current availability. We'll give you a realistic ETA before dispatch.",
+  },
+  {
+    q: "Is there a call-out fee?",
+    a: "No call-out fee when you book a confirmed vehicle lockout job. The price is confirmed before we attend.",
   },
 ];
 
@@ -45,61 +54,58 @@ export default function AreasPage() {
   return (
     <PageLayout
       meta={{
-        title: "Areas We Cover | Vehicle Lockout Near Uxbridge | West London Auto Locksmith",
+        title: "Areas We Cover Across West London | West London Auto Locksmith",
         description:
-          "West London Auto Locksmith covers vehicle lockouts within approximately 12 miles of Uxbridge. Call to check if we can reach you.",
+          "Mobile vehicle lockout service across West London and nearby areas, dispatching from Uxbridge. Call to confirm availability, price and ETA for your location.",
         canonical: `${siteContent.seo.siteUrl}/areas-we-cover`,
-        ogTitle: "Areas We Cover — West London Auto Locksmith",
+        ogTitle: "Areas We Cover Across West London — West London Auto Locksmith",
         ogDescription:
-          "Vehicle lockout coverage across Uxbridge and surrounding areas. Call to confirm we can reach your location.",
+          "Mobile vehicle lockout help across West London. Call with your location and we'll confirm availability and price before dispatch.",
       }}
     >
       {/* Hero */}
       <section className="bg-[#121212] text-white py-14 px-4" data-testid="section-areas-hero">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-4 text-white">
-            Areas We Cover From Uxbridge
+            Vehicle Lockout Help Across West London
           </h1>
-          <p className="text-base text-white/75 max-w-xl leading-relaxed">
-            We cover vehicle lockouts within approximately {siteContent.business.coverageRadius} of{" "}
-            {siteContent.business.baseArea}. Arrival time depends on your location, current
-            traffic, and availability. Call us with your location to check instantly.
+          <p className="text-base text-white/75 max-w-xl leading-relaxed mb-7">
+            We dispatch from Uxbridge and cover vehicle lockouts across West London and nearby areas. Availability depends on your exact location, traffic, and current jobs, but we'll confirm clearly before you book.
           </p>
+          <a
+            href={hasPhone ? phoneHref : "/contact"}
+            onClick={() => trackCallClick("areas-hero")}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold rounded hover:bg-[#A88417] transition-colors min-h-[48px]"
+            data-testid="button-call-areas-hero"
+          >
+            <Phone size={17} />
+            Call Now
+          </a>
         </div>
       </section>
 
-      {/* Coverage explanation */}
+      {/* Main coverage section */}
       <section className="py-12 px-4 bg-white" data-testid="section-areas-main">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#121212] mb-4">Our Service Area</h2>
-          <p className="text-[#121212]/70 text-sm leading-relaxed mb-8 max-w-2xl">
-            We operate from {siteContent.business.baseArea} and travel to vehicle lockout jobs
-            across West London and the surrounding area. The towns and areas listed below are
-            examples within our operating radius. If your location is not listed, call us — we
-            may still be able to help.
+          <h2 className="text-2xl font-bold text-[#121212] mb-4">West London Vehicle Lockout Coverage</h2>
+          <p className="text-[#121212]/70 text-base leading-relaxed mb-8 max-w-2xl">
+            Based in Uxbridge, we regularly help drivers in West London and surrounding areas. If you are locked out of your car, call with your location and vehicle details and we'll confirm whether we can reach you, the price, and the estimated arrival time.
           </p>
 
-          {/* Coverage radius visual */}
-          <div className="mb-8 bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 md:p-8 max-w-sm">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-32 h-32 rounded-full border-4 border-[#C9A227]/30 flex items-center justify-center mb-4 relative">
-                <div className="w-20 h-20 rounded-full border-2 border-[#C9A227]/50 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full bg-[#C9A227]" />
-                </div>
-              </div>
-              <p className="font-bold text-[#121212]">{siteContent.business.baseArea}</p>
-              <p className="text-xs text-[#121212]/50 mt-1">
-                Base location &mdash; {siteContent.business.coverageRadius} radius
-              </p>
-            </div>
+          {/* Reassurance card — replaces old radius graphic */}
+          <div className="mb-10 bg-[#121212] text-white rounded-xl p-6 max-w-sm">
+            <p className="font-bold text-base mb-2">Based in Uxbridge — Mobile Across West London</p>
+            <p className="text-sm text-white/65 leading-relaxed">
+              Call with your location and we'll confirm availability before dispatch.
+            </p>
           </div>
 
-          <h2 className="text-xl font-bold text-[#121212] mb-4">Example Areas Covered</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-8">
-            {siteContent.business.coverageAreas.map((area) => (
+          <h2 className="text-xl font-bold text-[#121212] mb-4">Common Areas We Cover</h2>
+          <div className="flex flex-wrap gap-3 mb-8">
+            {coverageAreas.map((area) => (
               <div
                 key={area}
-                className="px-4 py-3 bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg text-sm text-[#121212] font-medium text-center"
+                className="px-4 py-2.5 bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg text-sm text-[#121212] font-medium"
                 data-testid={`area-item-${area.replace(/\s/g, "-").toLowerCase()}`}
               >
                 {area}
@@ -109,29 +115,31 @@ export default function AreasPage() {
 
           <div className="bg-[#121212]/5 border border-[#121212]/10 rounded-lg p-5 max-w-2xl">
             <p className="text-sm text-[#121212]/80 leading-relaxed">
-              <strong className="text-[#121212]">Not sure if we cover your area?</strong>{" "}
-              Call us with your location and we will tell you immediately. We will not travel
-              to you without first confirming the price and arrival time estimate.
+              Not sure if we cover your area? Call us anyway. We'll tell you straight away if we can help, confirm the price, and give you a realistic arrival time.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CTA to call with location */}
-      <section className="py-10 px-4 bg-[#F7F7F4] border-y border-[#D8D8D3]" data-testid="section-areas-cta">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#121212] font-medium text-sm">
-            Not sure if we cover your area? Call with your location and we'll confirm.
+      {/* Bottom CTA */}
+      <section className="bg-[#121212] py-16 px-4" data-testid="section-areas-final-cta">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Locked Out in West London?
+          </h2>
+          <p className="text-white/70 text-base mb-8 max-w-lg mx-auto leading-relaxed">
+            Call with your location and vehicle details. We'll confirm availability, price, and ETA before dispatch.
           </p>
           <a
-            href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
-            onClick={() => trackCallClick("areas-mid")}
-            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold text-sm rounded hover:bg-[#A88417] transition-colors min-h-[48px]"
-            data-testid="button-call-areas-mid"
+            href={hasPhone ? phoneHref : "/contact"}
+            onClick={() => trackCallClick("areas-final")}
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C9A227] text-[#121212] font-bold text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px]"
+            data-testid="button-call-areas-final"
           >
-            <Phone size={16} />
-            Call Now
+            <Phone size={22} />
+            {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call Now"}
           </a>
+          <p className="mt-5 text-xs text-white/40">Vehicle lockouts only. Price confirmed before travel.</p>
         </div>
       </section>
 
@@ -145,7 +153,6 @@ export default function AreasPage() {
             ))}
           </div>
 
-          {/* Related links */}
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/vehicle-lockout"
@@ -164,12 +171,6 @@ export default function AreasPage() {
           </div>
         </div>
       </section>
-
-      <CallCTA
-        heading="Locked Out in West London?"
-        subtext="Call us with your location and we'll confirm whether we can help."
-        source="areas-final"
-      />
     </PageLayout>
   );
 }

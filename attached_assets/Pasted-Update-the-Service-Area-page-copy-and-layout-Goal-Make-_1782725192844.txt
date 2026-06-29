@@ -1,0 +1,91 @@
+Update the Service Area page copy and layout.
+
+Goal:
+Make the page encourage people across West London and nearby areas to call, without showing or stating a fixed mile radius. Uxbridge should only be described as the dispatch/base location, not the only area served.
+
+Remove:
+- Any mention of “12 mile radius”
+- Any circular/radius map graphic
+- Any wording that makes the coverage sound limited or uncertain too early
+
+Page title:
+Areas We Cover Across West London
+
+Hero section:
+Headline:
+Vehicle Lockout Help Across West London
+
+Body:
+We dispatch from Uxbridge and cover vehicle lockouts across West London and nearby areas. Availability depends on your exact location, traffic, and current jobs, but we’ll confirm clearly before you book.
+
+CTA button:
+Call Now
+
+Main section title:
+West London Vehicle Lockout Coverage
+
+Main section body:
+Based in Uxbridge, we regularly help drivers in West London and surrounding areas. If you are locked out of your car, call with your location and vehicle details and we’ll confirm whether we can reach you, the price, and the estimated arrival time.
+
+Replace the radius graphic with a simple reassurance card:
+Title:
+Based in Uxbridge — Mobile Across West London
+
+Text:
+Call with your location and we’ll confirm availability before dispatch.
+
+Example Areas Covered:
+Keep the area buttons, but change the heading to:
+Common Areas We Cover
+
+Use these area buttons:
+Uxbridge
+Hayes
+Hillingdon
+Southall
+Ruislip
+Northolt
+Greenford
+Ealing
+Slough
+West Drayton
+Yiewsley
+Harlington
+Ickenham
+Denham
+Acton
+Hanwell
+
+Change the grey reassurance box to:
+Not sure if we cover your area? Call us anyway. We’ll tell you straight away if we can help, confirm the price, and give you a realistic arrival time.
+
+Bottom CTA section:
+Headline:
+Locked Out in West London?
+
+Text:
+Call with your location and vehicle details. We’ll confirm availability, price, and ETA before dispatch.
+
+Button:
+Call Now — 020 3488 0390
+
+Coverage Questions accordion:
+1. Do you cover my area?
+Answer:
+We cover many areas across West London and nearby locations from our Uxbridge dispatch point. Call with your exact location and we’ll confirm availability before you book.
+
+2. How quickly can you get to me?
+Answer:
+Arrival time depends on your location, traffic, and current availability. We’ll give you a realistic ETA before dispatch.
+
+3. Is there a call-out fee?
+Answer:
+No call-out fee when you book a confirmed vehicle lockout job. The price is confirmed before we attend.
+
+Design changes:
+- Remove the circle/radius visual completely.
+- Replace it with a clean card using the existing gold/black/white branding.
+- Make the page feel reassuring, not restrictive.
+- Keep the language simple and professional.
+- Keep “vehicle lockouts only” visible near the bottom.
+- Make sure mobile spacing looks clean.
