@@ -68,7 +68,7 @@ export default function AboutPage() {
                 "Lost access to your vehicle",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-[#121212]/80">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C79A1B] mt-2 shrink-0" />
                   {item}
                 </li>
               ))}
@@ -103,21 +103,21 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-bold text-[#121212] mb-4">How We Communicate</h2>
           <div className="space-y-4">
-            <div className="border-l-2 border-[#C9A227] pl-4">
+            <div className="border-l-2 border-[#C79A1B] pl-4">
               <p className="text-sm font-semibold text-[#121212]">Price confirmed before travel</p>
               <p className="text-xs text-[#121212]/60 mt-1">
                 We give you a clear price before we travel. You are never committed before
                 agreeing on the cost.
               </p>
             </div>
-            <div className="border-l-2 border-[#C9A227] pl-4">
+            <div className="border-l-2 border-[#C79A1B] pl-4">
               <p className="text-sm font-semibold text-[#121212]">Estimated arrival time given upfront</p>
               <p className="text-xs text-[#121212]/60 mt-1">
                 We give an estimated arrival time when you call. We are honest if we are not
                 available or cannot reach you in reasonable time.
               </p>
             </div>
-            <div className="border-l-2 border-[#C9A227] pl-4">
+            <div className="border-l-2 border-[#C79A1B] pl-4">
               <p className="text-sm font-semibold text-[#121212]">We confirm whether we can help</p>
               <p className="text-xs text-[#121212]/60 mt-1">
                 Not all vehicles or situations are the same. We tell you honestly if we can

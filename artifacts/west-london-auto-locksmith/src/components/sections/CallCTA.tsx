@@ -29,7 +29,7 @@ export default function CallCTA({ heading, subtext, source, dark = true }: CallC
         <a
           href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
           onClick={() => trackCallClick(source)}
-          className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C9A227] text-[#121212] font-bold text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px] min-w-[200px]"
+          className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C79A1B] text-[#121212] font-bold text-lg rounded hover:bg-[#A07A10] transition-colors min-h-[56px] min-w-[200px]"
           data-testid={`button-call-${source}`}
         >
           <Phone size={20} />

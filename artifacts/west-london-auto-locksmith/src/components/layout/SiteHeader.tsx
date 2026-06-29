@@ -69,7 +69,7 @@ export default function SiteHeader() {
           <a
             href={phoneHref}
             onClick={() => trackCallClick("header")}
-            className="flex w-1/4 flex-col items-center justify-center bg-[#C9A227] hover:bg-[#A88417] transition-colors"
+            className="flex w-1/4 flex-col items-center justify-center bg-[#C79A1B] hover:bg-[#A07A10] transition-colors"
             aria-label={`Call us on ${phone}`}
             data-testid="button-call-header"
           >
@@ -93,14 +93,14 @@ export default function SiteHeader() {
       <div className="sticky top-0 z-40" data-testid="sticky-reviews-bar">
 
         {/* Reviews strip + hamburger on same row */}
-        <div className="flex items-center bg-[#1e1a0e] border-y border-[#C9A227]/30 px-4 py-1.5">
+        <div className="flex items-center bg-[#1e1a0e] border-y border-[#C79A1B]/30 px-4 py-1.5">
           <p className="flex-1 text-center text-[11px] tracking-wide whitespace-nowrap overflow-hidden font-semibold">
-            <span className="text-[#C9A227]">★★★★★</span>
+            <span className="text-[#C79A1B]">★★★★★</span>
             <span className="text-white ml-1.5">{rating} on Google</span>
             {reviewCount && (
               <span className="text-white/50 ml-1">({reviewCount} reviews)</span>
             )}
-            <span className="text-[#C9A227]/50 mx-2">·</span>
+            <span className="text-[#C79A1B]/50 mx-2">·</span>
             {siteContent.reviews.googleReviewsUrl ? (
               <a
                 href={siteContent.reviews.googleReviewsUrl}

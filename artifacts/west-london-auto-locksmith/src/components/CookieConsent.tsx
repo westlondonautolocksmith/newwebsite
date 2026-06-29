@@ -48,7 +48,7 @@ export default function CookieConsent() {
       <div className="max-w-4xl mx-auto flex flex-row items-center gap-3 sm:gap-4">
         <p className="text-[11px] md:text-sm text-white/90 flex-1 leading-snug">
           We use cookies to measure calls and improve ads.{" "}
-          <a href="/cookies" className="underline text-white hover:text-[#C9A227] transition-colors whitespace-nowrap">
+          <a href="/cookies" className="underline text-white hover:text-[#C79A1B] transition-colors whitespace-nowrap">
             Cookie Policy
           </a>
         </p>
@@ -62,7 +62,7 @@ export default function CookieConsent() {
           </button>
           <button
             onClick={accept}
-            className="text-xs md:text-sm px-3 py-1.5 md:px-4 md:py-2 rounded bg-[#C9A227] text-[#121212] font-semibold hover:bg-[#A88417] transition-colors min-h-[40px] md:min-h-[44px]"
+            className="text-xs md:text-sm px-3 py-1.5 md:px-4 md:py-2 rounded bg-[#C79A1B] text-[#121212] font-semibold hover:bg-[#A07A10] transition-colors min-h-[40px] md:min-h-[44px]"
             data-testid="cookie-accept"
           >
             Accept

@@ -1,0 +1,264 @@
+Polish the whole website design and copy to make it feel more professional, trustworthy and conversion-focused.
+
+Keep the current black, white and gold brand identity. Do not redesign the whole site from scratch. Improve what is already there.
+
+Global design changes:
+- Change the gold colour to a slightly deeper, more premium gold.
+- Use something close to #C79A1B or #B8860B.
+- Make sure all gold buttons still have strong contrast and readable black text.
+- Increase vertical spacing between sections by around 15–20%.
+- Add slightly more padding inside cards.
+- Make body text slightly darker/easier to read on light sections.
+- Keep the sticky bottom call bar.
+- Make the sticky call button and phone icon feel slightly stronger.
+- Keep the site mobile-first and check spacing on small screens.
+
+Header:
+- Keep logo and phone button.
+- Keep the review strip:
+  ★★★★★ 5.0 on Google · Read our Google reviews
+- Make sure the header feels clean and not cramped.
+
+Homepage hero:
+Replace the current hero headline with:
+
+Locked Out? Need a Spare Key?
+
+Subheadline:
+Mobile auto locksmith covering West London and surrounding areas.
+
+Supporting text:
+Call now for a clear price and live ETA before we set off.
+
+Main CTA button:
+Call Now — 020 3488 0390
+
+Trust badges directly under the CTA:
+✓ 5-Star Google Rated
+✓ Price Confirmed Before Dispatch
+✓ Damage-Free Vehicle Entry
+
+Important:
+Only use “Damage-Free Vehicle Entry” for lockout-related sections. Do not apply that phrase to spare key programming.
+
+Homepage review/trust section:
+Move the 5.0 Google rating/review card higher on the homepage, directly after the hero CTA/trust badges.
+
+Section heading:
+Rated by Local Customers
+
+Text:
+★★★★★ 5.0 on Google
+
+Use the existing review cards from Jamie Allan and Louis Debouze.
+Add a button:
+Read Our Google Reviews
+
+Homepage service section:
+Rename:
+What Do You Need Help With?
+
+Intro:
+Choose the service you need. We’ll confirm availability, price and ETA before dispatch.
+
+Create three clean service cards with small professional line icons, not emojis:
+
+1. Vehicle Lockout
+Title:
+Keys Locked Inside Your Car?
+
+Text:
+Locked your keys inside the car? We provide mobile vehicle entry across West London.
+
+Button/link:
+Vehicle Lockout Service
+
+2. Spare Car Key
+Title:
+Need a Spare Car Key?
+
+Text:
+Already have a working key? We may be able to supply, cut and program a spare key.
+
+Button/link:
+Spare Car Key Service
+
+3. Lost All Keys
+Title:
+Lost All Your Car Keys?
+
+Text:
+Lost all your keys? Call first with your vehicle details so we can confirm whether we can help.
+
+Button/link:
+Call to Check Availability
+
+Do not overpromise lost-all-keys service. Keep it cautious.
+
+Lockout page hero:
+Change headline to:
+Locked Out of Your Car?
+
+Subheadline:
+Mobile vehicle entry across West London and surrounding areas.
+
+Supporting text:
+Call now for a clear price and live ETA before we set off.
+
+CTA:
+Call Now — 020 3488 0390
+
+Trust badges:
+✓ £100 Fixed Price
+✓ No Call-Out Fee
+✓ Proof of Ownership Checked
+
+Keep the real photo of me working on the BMW in the lockout page hero area.
+
+Lockout page copy adjustments:
+Where it says “£100 fixed-price vehicle entry across our advertised service area”, change to:
+£100 fixed-price vehicle entry for standard local lockout jobs.
+
+Where it says:
+“No call-out, mileage or hidden charges”
+Change to:
+No hidden charges once the job is confirmed.
+
+Where it says:
+“Live ETA confirmed before dispatch”
+Keep it.
+
+Where it says:
+“Proof of ownership checked before entry”
+Keep it.
+
+Add this note under the included section:
+For unusual vehicles, difficult access, long-distance jobs or non-standard situations, we will confirm the price before dispatch.
+
+Lockout “What Happens When You Call” section:
+Keep the structure but update step 2:
+
+Step 2 title:
+Price & ETA Confirmed
+
+Step 2 text:
+We confirm availability, the price and your estimated arrival time before we set off.
+
+Step 3 title:
+We Attend and Carry Out Entry
+
+Step 3 text:
+Once proof of ownership is checked, we attend and carry out vehicle entry carefully.
+
+Areas section:
+Use wording that does not mention a fixed radius.
+
+Heading:
+Mobile Vehicle Entry Across West London
+
+Body:
+Based in Uxbridge, we provide mobile vehicle lockout help across West London and nearby areas. Call with your location and we’ll confirm availability and ETA before we set off.
+
+Area buttons:
+Uxbridge
+Hayes
+Southall
+Hillingdon
+Ruislip
+Northolt
+Greenford
+Ealing
+Slough
+West Drayton
+Yiewsley
+Harlington
+Ickenham
+Denham
+Acton
+Hanwell
+
+Small text:
+Don’t see your area listed? Call us to check availability for your location.
+
+Spare key page:
+Make sure the Spare Car Key page uses the same layout and design language as the lockout page.
+
+Hero headline:
+Need a Spare Car Key?
+
+Subheadline:
+Mobile spare car key service across West London and surrounding areas.
+
+Supporting text:
+Already have a working key? Call with your vehicle make, model, year and location. We’ll confirm whether we can supply and program a spare key before we attend.
+
+CTA:
+Call Now — 020 3488 0390
+
+Trust badges:
+✓ Working Key Required
+✓ Price Confirmed Before Dispatch
+✓ Mobile Service from Uxbridge
+
+Important:
+Do not say we can help every vehicle.
+Do not say we can always do lost-all-keys jobs.
+Make the spare key service sound professional but realistic.
+
+Spare key “What Happens When You Call”:
+Step 1:
+Tell Us Your Vehicle Details
+Give us your vehicle make, model, year, key type and your location.
+
+Step 2:
+We Check Key Availability
+We confirm whether we can supply and program a spare key for your vehicle.
+
+Step 3:
+Price & ETA Confirmed
+We confirm the price, arrival time and key options before dispatch.
+
+Step 4:
+We Cut & Program the Key
+Where supported, we cut and program the spare key.
+
+Add note:
+A working key is normally required for spare key service. If you have lost all keys, call first so we can confirm whether we can help.
+
+FAQ adjustments:
+Make the FAQ copy clear and reassuring.
+
+Lockout FAQ question:
+How much does vehicle entry cost?
+
+Answer:
+Standard local vehicle lockout jobs are £100. If the job is unusual or outside our normal working area, we will confirm the price before dispatch.
+
+Spare key FAQ question:
+How much does a spare car key cost?
+
+Answer:
+The price depends on the vehicle, key type and whether remote programming is required. We’ll confirm the price before dispatch.
+
+Footer:
+Keep the bottom CTA black section.
+
+Headline:
+Need Help With Your Car Key?
+
+Text:
+Call with your location and vehicle details. We’ll confirm availability, price and ETA before dispatch.
+
+Button:
+Call Now — 020 3488 0390
+
+Footer note:
+Vehicle lockouts and spare car keys only.
+
+Final check:
+- The site should feel premium, local and trustworthy.
+- The copy should lead with the customer’s problem, not just describe the business.
+- Do not add fake claims.
+- Do not add fake reviews.
+- Do not mention a fixed service radius anywhere.
+- Keep everything consistent across homepage, lockout page, spare key page and areas page.

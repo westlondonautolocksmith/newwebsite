@@ -82,16 +82,16 @@ export default function SpareCarKeyPage() {
           <a
             href={hasPhone ? phoneHref : "/contact"}
             onClick={() => trackCallClick("spare-key-hero")}
-            className="flex items-center justify-center gap-3 w-full sm:w-auto sm:inline-flex px-6 py-4 bg-[#C9A227] text-[#121212] font-bold text-base sm:text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px]"
+            className="flex items-center justify-center gap-3 w-full sm:w-auto sm:inline-flex px-6 py-4 bg-[#C79A1B] text-[#121212] font-bold text-base sm:text-lg rounded hover:bg-[#A07A10] transition-colors min-h-[56px]"
             data-testid="button-call-hero"
           >
             <Phone size={20} />
             {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
           </a>
           <div className="mt-6 flex flex-col gap-2">
-            {["Working key required", "Price confirmed before dispatch", "Mobile service from Uxbridge"].map((point) => (
+            {["Working Key Required", "Price Confirmed Before Dispatch", "Mobile Service from Uxbridge"].map((point) => (
               <span key={point} className="inline-flex items-center gap-2 text-sm text-white/60">
-                <span className="text-[#C9A227] font-bold">✓</span>
+                <span className="text-[#C79A1B] font-bold">✓</span>
                 {point}
               </span>
             ))}
@@ -118,7 +118,7 @@ export default function SpareCarKeyPage() {
             <p className="text-sm font-semibold text-white mb-1">Trusted Local Auto Locksmith</p>
             <div className="flex gap-0.5 mb-2">
               {[1,2,3,4,5].map(s => (
-                <svg key={s} className="w-4 h-4 text-[#C9A227]" fill="currentColor" viewBox="0 0 20 20">
+                <svg key={s} className="w-4 h-4 text-[#C79A1B]" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
@@ -129,7 +129,7 @@ export default function SpareCarKeyPage() {
                 href={siteContent.reviews.googleReviewsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-[#C9A227] underline hover:text-[#A88417]"
+                className="text-xs text-[#C79A1B] underline hover:text-[#A07A10]"
               >
                 Read our Google reviews
               </a>
@@ -167,7 +167,7 @@ export default function SpareCarKeyPage() {
             <a
               href={hasPhone ? phoneHref : "/contact"}
               onClick={() => trackCallClick("spare-key-services")}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold rounded hover:bg-[#A88417] transition-colors min-h-[48px]"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#C79A1B] text-[#121212] font-bold rounded hover:bg-[#A07A10] transition-colors min-h-[48px]"
               data-testid="button-call-services"
             >
               <Phone size={17} />
@@ -199,7 +199,7 @@ export default function SpareCarKeyPage() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-[#121212]/50 border-l-2 border-[#C9A227] pl-3 max-w-2xl">
+          <p className="text-xs text-[#121212]/50 border-l-2 border-[#C79A1B] pl-3 max-w-2xl">
             A working key is normally required for this service. If you have lost all keys, call first so we can confirm whether we can help.
           </p>
         </div>
@@ -252,7 +252,7 @@ export default function SpareCarKeyPage() {
               "Price confirmed before attendance",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
+                <CheckCircle size={18} className="text-[#C79A1B] shrink-0 mt-0.5" />
                 <p className="text-sm text-[#121212]">{item}</p>
               </div>
             ))}
@@ -291,13 +291,13 @@ export default function SpareCarKeyPage() {
           <a
             href={hasPhone ? phoneHref : "/contact"}
             onClick={() => trackCallClick("spare-key-final")}
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C9A227] text-[#121212] font-bold text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px]"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C79A1B] text-[#121212] font-bold text-lg rounded hover:bg-[#A07A10] transition-colors min-h-[56px]"
             data-testid="button-call-final"
           >
             <Phone size={22} />
             {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call Now"}
           </a>
-          <p className="mt-5 text-xs text-white/40">Spare car keys and vehicle lockouts only.</p>
+          <p className="mt-5 text-xs text-white/40">Vehicle lockouts and spare car keys only.</p>
         </div>
       </section>
 

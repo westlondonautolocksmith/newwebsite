@@ -33,7 +33,7 @@ export default function PricingPage() {
           <a
             href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
             onClick={() => trackCallClick("pricing-hero")}
-            className="inline-flex flex-col items-center justify-center gap-0.5 px-8 py-4 bg-[#C9A227] text-[#121212] rounded hover:bg-[#A88417] transition-colors min-h-[64px]"
+            className="inline-flex flex-col items-center justify-center gap-0.5 px-8 py-4 bg-[#C79A1B] text-[#121212] rounded hover:bg-[#A07A10] transition-colors min-h-[64px]"
             data-testid="button-call-pricing-hero"
           >
             <span className="flex items-center gap-2 font-bold text-base sm:text-lg">
@@ -58,7 +58,7 @@ export default function PricingPage() {
               "Live ETA confirmed before dispatch",
             ].map((point) => (
               <div key={point} className="flex items-start gap-3">
-                <CheckCircle size={18} className="text-[#C9A227] shrink-0 mt-0.5" />
+                <CheckCircle size={18} className="text-[#C79A1B] shrink-0 mt-0.5" />
                 <p className="text-sm font-medium text-[#121212]">{point}</p>
               </div>
             ))}
@@ -113,7 +113,7 @@ export default function PricingPage() {
           <a
             href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
             onClick={() => trackCallClick("pricing-final")}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#C9A227] text-[#121212] font-bold text-base sm:text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px] whitespace-nowrap"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#C79A1B] text-[#121212] font-bold text-base sm:text-lg rounded hover:bg-[#A07A10] transition-colors min-h-[56px] whitespace-nowrap"
             data-testid="button-call-pricing-final"
           >
             <Phone size={20} />

@@ -25,7 +25,7 @@ export default function StickyCallBar() {
         <a
           href={hasPhone ? `tel:${siteContent.business.phone.replace(/\s/g, "")}` : "/contact"}
           onClick={() => trackCallClick("sticky")}
-          className="flex-1 flex items-center justify-center gap-2 bg-[#C9A227] text-[#121212] font-bold text-base rounded py-3 min-h-[52px] hover:bg-[#A88417] transition-colors active:scale-[0.99]"
+          className="flex-1 flex items-center justify-center gap-2 bg-[#C79A1B] text-[#121212] font-bold text-base rounded py-3 min-h-[52px] hover:bg-[#A07A10] transition-colors active:scale-[0.99]"
           data-testid="button-call-sticky"
         >
           <Phone size={18} />

@@ -67,7 +67,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 function StarIcon() {
   return (
-    <svg className="w-4 h-4 text-[#C9A227]" fill="currentColor" viewBox="0 0 20 20">
+    <svg className="w-4 h-4 text-[#C79A1B]" fill="currentColor" viewBox="0 0 20 20">
       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
     </svg>
   );
@@ -92,24 +92,32 @@ export default function HomePage() {
       {/* ── HERO ──────────────────────────────────────────────────────────── */}
       <section className="bg-[#121212] text-white pt-10 pb-8 px-4" data-testid="section-hero">
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 text-white">
-            Mobile Car Locksmith Across West London
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-3 text-white">
+            Locked Out? Need a Spare Key?
           </h1>
-          <p className="text-white text-lg sm:text-xl font-medium leading-snug mb-2 max-w-lg mx-auto">
-            Locked out, need a spare car key, or lost all your car keys?
+          <p className="text-white/80 text-lg sm:text-xl font-medium leading-snug mb-2 max-w-lg mx-auto">
+            Mobile auto locksmith covering West London and surrounding areas.
           </p>
-          <p className="text-white/60 text-sm leading-relaxed mb-7 max-w-lg mx-auto">
-            Call now for a clear price and a live ETA before we set off.
+          <p className="text-white/55 text-sm leading-relaxed mb-7 max-w-lg mx-auto">
+            Call now for a clear price and live ETA before we set off.
           </p>
           <a
             href={phoneHref}
             onClick={() => trackCallClick("homepage-hero")}
-            className="flex items-center justify-center gap-3 w-full px-4 py-5 bg-[#C9A227] text-[#121212] font-bold text-base sm:text-xl rounded hover:bg-[#A88417] transition-colors min-h-[64px]"
+            className="flex items-center justify-center gap-3 w-full px-4 py-5 bg-[#C79A1B] text-[#121212] font-bold text-base sm:text-xl rounded hover:bg-[#A07A10] transition-colors min-h-[64px]"
             data-testid="button-call-hero"
           >
             <Phone size={24} />
             {hasPhone ? `Call Now — ${siteContent.business.phone}` : "Call to Check Availability"}
           </a>
+          <div className="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-2">
+            {["5-Star Google Rated", "Price Confirmed Before Dispatch", "Damage-Free Vehicle Entry"].map((point) => (
+              <span key={point} className="inline-flex items-center gap-1.5 text-xs text-white/60">
+                <span className="text-[#C79A1B] font-bold">✓</span>
+                {point}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* ── REVIEWS (inside hero) ──────────────────────────────────────── */}
@@ -147,7 +155,7 @@ export default function HomePage() {
                   <footer className="flex items-center justify-between">
                     <div>
                       <p className="text-sm font-semibold text-white">{review.name}</p>
-                      <p className="text-xs text-[#C9A227]">{review.source} Review</p>
+                      <p className="text-xs text-[#C79A1B]">{review.source} Review</p>
                     </div>
                     <p className="text-xs text-white/40">{review.date}</p>
                   </footer>
@@ -160,7 +168,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("homepage_reviews_click")}
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#C9A227] border border-[#C9A227]/30 rounded px-5 py-2.5 hover:border-[#C9A227]/60 transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#C79A1B] border border-[#C79A1B]/30 rounded px-5 py-2.5 hover:border-[#C79A1B]/60 transition-colors min-h-[44px]"
                 data-testid="link-google-reviews"
               >
                 Read Our Google Reviews <ChevronRight size={15} />
@@ -172,12 +180,15 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICE SELECTOR ──────────────────────────────────────────────── */}
-      <section id="services" className="bg-white py-10 px-4 scroll-mt-16" data-testid="section-service-selector">
+      <section id="services" className="bg-white py-12 px-4 scroll-mt-16" data-testid="section-service-selector">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-[#121212] mb-6 text-center">
-            What do you need help with?
+          <h2 className="text-xl sm:text-2xl font-bold text-[#121212] mb-2 text-center">
+            What Do You Need Help With?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <p className="text-[#121212]/60 text-sm text-center mb-8">
+            Choose the service you need. We'll confirm availability, price and ETA before dispatch.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
             {/* Card 1 — Vehicle Lockout */}
             <div
@@ -185,10 +196,10 @@ export default function HomePage() {
               data-testid="service-card-lockout"
             >
               <h3 className="font-bold text-[#121212] text-base mb-2">
-                Locked Out of Your Car?
+                Keys Locked Inside Your Car?
               </h3>
-              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
-                £100 fixed-price vehicle entry across our advertised service area.
+              <p className="text-sm text-[#121212]/70 leading-relaxed mb-5 flex-1">
+                Locked your keys inside the car? We provide mobile vehicle entry across West London.
               </p>
               <Link
                 href="/vehicle-lockout"
@@ -201,25 +212,47 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Card 2 — Car Keys */}
+            {/* Card 2 — Spare Car Key */}
             <div
               className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
-              data-testid="service-card-car-keys"
+              data-testid="service-card-spare-key"
             >
               <h3 className="font-bold text-[#121212] text-base mb-2">
-                Need a Spare or Replacement Key?
+                Need a Spare Car Key?
               </h3>
-              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
-                Spare keys, replacement keys, remote keys and programming for supported vehicles.
+              <p className="text-sm text-[#121212]/70 leading-relaxed mb-5 flex-1">
+                Already have a working key? We may be able to supply, cut and program a spare key.
+              </p>
+              <Link
+                href="/spare-car-key"
+                onClick={() => trackEvent("homepage_spare_key_card_click")}
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
+                data-testid="button-spare-key-card"
+              >
+                Spare Car Key Service
+                <ChevronRight size={15} />
+              </Link>
+            </div>
+
+            {/* Card 3 — Lost All Keys */}
+            <div
+              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
+              data-testid="service-card-lost-keys"
+            >
+              <h3 className="font-bold text-[#121212] text-base mb-2">
+                Lost All Your Car Keys?
+              </h3>
+              <p className="text-sm text-[#121212]/70 leading-relaxed mb-5 flex-1">
+                Lost all your keys? Call first with your vehicle details so we can confirm whether we can help.
               </p>
               <a
-                href="#car-keys"
-                onClick={() => trackEvent("homepage_car_keys_card_click")}
+                href={phoneHref}
+                onClick={() => trackCallClick("homepage-lost-keys-card")}
                 className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
-                data-testid="button-car-keys-card"
+                data-testid="button-lost-keys-card"
               >
-                Car Key Services
-                <ChevronRight size={15} />
+                <Phone size={14} />
+                Call to Check Availability
               </a>
             </div>
 
@@ -262,7 +295,7 @@ export default function HomePage() {
         data-testid="section-detail-lockouts"
       >
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-semibold text-[#C9A227] uppercase tracking-widest mb-2">Vehicle Entry</p>
+          <p className="text-xs font-semibold text-[#C79A1B] uppercase tracking-widest mb-2">Vehicle Entry</p>
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-4">
             Vehicle Lockout Service
           </h2>
@@ -271,7 +304,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/vehicle-lockout"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold rounded hover:bg-[#A88417] transition-colors min-h-[48px] text-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C79A1B] text-[#121212] font-bold rounded hover:bg-[#A07A10] transition-colors min-h-[48px] text-sm"
             data-testid="link-view-lockout-service"
           >
             View Vehicle Lockout Service
@@ -287,7 +320,7 @@ export default function HomePage() {
         data-testid="section-detail-car-keys"
       >
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-semibold text-[#C9A227] uppercase tracking-widest mb-2">Key Services</p>
+          <p className="text-xs font-semibold text-[#C79A1B] uppercase tracking-widest mb-2">Key Services</p>
           <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-4">
             Spare &amp; Replacement Car Keys
           </h2>
@@ -297,7 +330,7 @@ export default function HomePage() {
           <a
             href={phoneHref}
             onClick={() => trackCallClick("homepage-car-keys-section")}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold rounded hover:bg-[#A88417] transition-colors min-h-[48px] text-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C79A1B] text-[#121212] font-bold rounded hover:bg-[#A07A10] transition-colors min-h-[48px] text-sm"
             data-testid="button-call-car-keys"
           >
             <Phone size={16} />
@@ -368,7 +401,7 @@ export default function HomePage() {
               },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-3">
-                <span className="text-[#C9A227] font-bold text-lg leading-none mt-0.5 shrink-0">✓</span>
+                <span className="text-[#C79A1B] font-bold text-lg leading-none mt-0.5 shrink-0">✓</span>
                 <div>
                   <p className="font-semibold text-sm text-[#121212]">{item.title}</p>
                   <p className="text-sm text-[#121212]/60 mt-0.5">{item.desc}</p>
@@ -437,7 +470,7 @@ export default function HomePage() {
           <a
             href={phoneHref}
             onClick={() => trackCallClick("homepage-final")}
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C9A227] text-[#121212] font-bold text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px] min-w-[240px]"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C79A1B] text-[#121212] font-bold text-lg rounded hover:bg-[#A07A10] transition-colors min-h-[56px] min-w-[240px]"
             data-testid="button-call-final"
           >
             <Phone size={22} />

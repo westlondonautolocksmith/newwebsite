@@ -75,7 +75,7 @@ export default function AreasPage() {
           <a
             href={hasPhone ? phoneHref : "/contact"}
             onClick={() => trackCallClick("areas-hero")}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold rounded hover:bg-[#A88417] transition-colors min-h-[48px]"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C79A1B] text-[#121212] font-bold rounded hover:bg-[#A07A10] transition-colors min-h-[48px]"
             data-testid="button-call-areas-hero"
           >
             <Phone size={17} />
@@ -133,7 +133,7 @@ export default function AreasPage() {
           <a
             href={hasPhone ? phoneHref : "/contact"}
             onClick={() => trackCallClick("areas-final")}
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C9A227] text-[#121212] font-bold text-lg rounded hover:bg-[#A88417] transition-colors min-h-[56px]"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#C79A1B] text-[#121212] font-bold text-lg rounded hover:bg-[#A07A10] transition-colors min-h-[56px]"
             data-testid="button-call-areas-final"
           >
             <Phone size={22} />

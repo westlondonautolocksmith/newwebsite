@@ -46,7 +46,7 @@ export default function ContactPage() {
                 <a
                   href={`tel:${siteContent.business.phone.replace(/\s/g, "")}`}
                   onClick={() => trackCallClick("contact")}
-                  className="inline-flex items-center gap-3 px-7 py-4 bg-[#C9A227] text-[#121212] font-bold text-lg rounded hover:bg-[#A88417] transition-colors min-h-[60px] mb-4"
+                  className="inline-flex items-center gap-3 px-7 py-4 bg-[#C79A1B] text-[#121212] font-bold text-lg rounded hover:bg-[#A07A10] transition-colors min-h-[60px] mb-4"
                   data-testid="button-call-contact"
                 >
                   <Phone size={22} />
@@ -69,7 +69,7 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold text-[#121212] mb-3">Email Us</h2>
               <a
                 href={`mailto:${siteContent.business.email}`}
-                className="inline-flex items-center gap-2 text-[#121212] font-semibold text-base hover:text-[#C9A227] transition-colors"
+                className="inline-flex items-center gap-2 text-[#121212] font-semibold text-base hover:text-[#C79A1B] transition-colors"
                 data-testid="link-email-contact"
               >
                 <Mail size={18} />
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 "Be ready to confirm you are entitled to access the vehicle (a standard precaution)",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-[#121212]/80">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C79A1B] mt-2 shrink-0" />
                   {item}
                 </li>
               ))}
