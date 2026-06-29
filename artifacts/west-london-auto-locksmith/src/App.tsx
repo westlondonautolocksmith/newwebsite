@@ -7,6 +7,7 @@ import HomePage from "@/pages/HomePage";
 import VehicleLockoutPage from "@/pages/VehicleLockoutPage";
 import CarKeysPage from "@/pages/CarKeysPage";
 import LostCarKeysPage from "@/pages/LostCarKeysPage";
+import SpareCarKeyPage from "@/pages/SpareCarKeyPage";
 import AreasPage from "@/pages/AreasPage";
 import PricingPage from "@/pages/PricingPage";
 import ReviewsPage from "@/pages/ReviewsPage";
@@ -35,6 +36,7 @@ function Router() {
         <Route path="/vehicle-lockout" component={VehicleLockoutPage} />
         <Route path="/car-keys" component={CarKeysPage} />
         <Route path="/lost-car-keys" component={LostCarKeysPage} />
+        <Route path="/spare-car-key" component={SpareCarKeyPage} />
         <Route path="/areas-we-cover" component={AreasPage} />
         <Route path="/pricing" component={PricingPage} />
         <Route path="/reviews" component={ReviewsPage} />

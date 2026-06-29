@@ -155,6 +155,16 @@ export default function VehicleLockoutPage() {
               <h3 className="font-bold text-[#121212] mb-2">Keys Locked Inside Your Car</h3>
               <p className="text-sm text-[#121212]/65 leading-relaxed">Locked keys in the car? We provide £100 fixed-price vehicle entry across our advertised service area.</p>
             </div>
+            <div className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg p-6 flex flex-col" data-testid="service-card-spare-key">
+              <h3 className="font-bold text-[#121212] mb-2">Need a Spare Key?</h3>
+              <p className="text-sm text-[#121212]/65 leading-relaxed mb-4 flex-1">Already have a working key? We may be able to supply and program a spare.</p>
+              <Link
+                href="/spare-car-key"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#121212] border border-[#121212]/20 rounded px-4 py-2 hover:border-[#121212]/50 transition-colors min-h-[40px]"
+              >
+                Spare Car Key Service <ChevronRight size={14} />
+              </Link>
+            </div>
           </div>
           <div className="text-center">
             <a

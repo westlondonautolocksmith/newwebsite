@@ -1,0 +1,181 @@
+Create/fill the Spare Key page using the same layout, styling, spacing, header, footer, sticky call button, cards, buttons and section style as the existing Vehicle Lockout page.
+
+Important:
+This page is for spare car keys only, not all keys lost.
+Do not say we can help if the customer has no working key.
+Do not promise every vehicle is supported.
+Make it clear availability depends on vehicle make, model, year, key type and stock.
+Use Uxbridge as the dispatch/base location, but encourage calls across West London and surrounding areas.
+
+Page URL:
+/spare-car-key
+
+SEO title:
+Spare Car Key West London | Mobile Auto Locksmith
+
+Meta description:
+Need a spare car key in West London? Mobile spare car key service from Uxbridge. Call with your vehicle make, model and year to confirm availability, price and ETA.
+
+Hero section:
+Headline:
+Need a Spare Car Key?
+
+Subheadline:
+Mobile spare car key service across West London and surrounding areas.
+
+Supporting text:
+Already have a working key? Call with your vehicle make, model, year and location. We’ll confirm whether we can supply and program a spare key before we attend.
+
+Main CTA button:
+Call Now — 020 3488 0390
+
+Trust points under CTA:
+✓ Working key required
+✓ Price confirmed before dispatch
+✓ Mobile service from Uxbridge
+
+Hero image:
+Use the same visual style as the lockout page. Use a relevant image of car key cutting/programming if available. If no image exists yet, leave an image placeholder card with alt text:
+Mobile spare car key cutting and programming in West London
+
+Review card:
+Use the same review card component as the lockout page, but keep it general. If there are only lockout reviews, do not pretend they are spare key reviews. Use heading:
+Trusted Local Auto Locksmith
+
+Text:
+Rated 5.0 on Google by local customers.
+
+Button:
+Read our Google reviews
+
+Section:
+What Do You Need Help With?
+
+Intro:
+We provide spare car key services for customers who already have a working key.
+
+Service card title:
+Spare Car Key
+
+Service card body:
+Need a second key for your car? We can help with many spare key jobs where you already have a working key. Call with your vehicle details and we’ll confirm availability, key options and price.
+
+CTA:
+Call to Check Availability
+
+Section:
+What Happens When You Call
+
+Step 1:
+Tell Us Your Vehicle Details
+Give us your vehicle make, model, year, key type and your location.
+
+Step 2:
+We Check Key Availability
+We confirm whether we can supply and program a spare key for your vehicle.
+
+Step 3:
+Price & ETA Confirmed
+We confirm the price, arrival time and what key options are available before dispatch.
+
+Step 4:
+We Cut & Program the Key
+Once checked, we cut and program the spare key where supported.
+
+Add small note under steps:
+A working key is normally required for this service. If you have lost all keys, call first so we can confirm whether we can help.
+
+Section:
+Mobile Spare Car Keys Across West London
+
+Body:
+Based in Uxbridge, we provide mobile spare car key services across West London and nearby areas. Call with your location and vehicle details and we’ll confirm availability before we set off.
+
+Area buttons:
+Uxbridge
+Hayes
+Southall
+Hillingdon
+Ruislip
+Northolt
+Greenford
+Ealing
+Slough
+West Drayton
+Yiewsley
+Harlington
+Ickenham
+Denham
+Acton
+Hanwell
+
+Small text:
+Don’t see your area listed? Call us to check availability for your location.
+
+Button:
+See Areas We Cover
+
+Section:
+What’s Included
+
+Heading:
+What’s Included With a Spare Key Service
+
+Bullet list:
+✓ Vehicle details checked before booking
+✓ Key availability confirmed before dispatch
+✓ Key cut where required
+✓ Transponder programming where supported
+✓ Remote programming where supported
+✓ Price confirmed before attendance
+
+Important note box:
+Spare key service requires a working key unless confirmed otherwise. Some vehicles, key types and remote functions may not be supported. We’ll confirm this before booking.
+
+Common Questions:
+
+Question 1:
+Do I need a working key?
+Answer:
+For spare key jobs, yes, a working key is normally required. If you have lost all keys, call us first so we can confirm whether we can help.
+
+Question 2:
+Can you make remote keys?
+Answer:
+We can help with many remote key jobs, but support depends on the vehicle, key type and available stock. Call with your make, model and year and we’ll check before booking.
+
+Question 3:
+How much does a spare car key cost?
+Answer:
+The price depends on the vehicle, key type and whether remote programming is required. We’ll confirm the price before dispatch.
+
+Question 4:
+Do you cover my area?
+Answer:
+We operate from Uxbridge and cover many areas across West London and nearby locations. Call with your exact location and we’ll confirm availability.
+
+Bottom CTA:
+Headline:
+Need a Spare Car Key in West London?
+
+Text:
+Call with your vehicle make, model, year and location. We’ll confirm availability, price and ETA before dispatch.
+
+Button:
+Call Now — 020 3488 0390
+
+Footer note:
+Spare car keys and vehicle lockouts only.
+
+Navigation:
+Add this page to the menu as:
+Spare Car Key
+
+Also add internal links:
+- From the lockout page service section, add a second card linking to Spare Car Key:
+Title: Need a Spare Key?
+Text: Already have a working key? We may be able to supply and program a spare.
+Button/link: Spare Car Key Service
+- From the spare key page, include a link back to Vehicle Lockout Service.
+
+Keep the design consistent with the current lockout page. Do not create a completely different design.
