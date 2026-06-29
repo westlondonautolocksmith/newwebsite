@@ -155,10 +155,6 @@ export default function VehicleLockoutPage() {
               <h3 className="font-bold text-[#121212] mb-2">Keys Locked Inside Your Car</h3>
               <p className="text-sm text-[#121212]/65 leading-relaxed">Locked keys in the car? We provide £100 fixed-price vehicle entry across our advertised service area.</p>
             </div>
-            <div className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-lg p-6" data-testid="service-card-lost-car-keys">
-              <h3 className="font-bold text-[#121212] mb-2">Lost All Your Car Keys?</h3>
-              <p className="text-sm text-[#121212]/65 leading-relaxed">We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key.</p>
-            </div>
           </div>
           <div className="text-center">
             <a
