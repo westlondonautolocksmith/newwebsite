@@ -1,0 +1,93 @@
+Improve the Services page design and copy while keeping the current website branding and layout style.
+
+Goal:
+Make the Services page feel more professional, more clickable, and more conversion-focused. Keep it mobile-first and consistent with the rest of the website.
+
+Page heading:
+What Do You Need Help With?
+
+Replace the intro text with:
+We provide mobile vehicle lockout and spare key services across West London and surrounding areas.
+
+Service cards:
+Make each service card feel more like a clickable navigation card, not just an information box.
+
+Design changes for cards:
+- Make the entire card clickable.
+- Add a small professional gold line icon at the top of each card.
+- Do not use emoji icons.
+- Add slightly more spacing between cards.
+- Add slightly more padding inside each card.
+- Use subtle hover/press styling if supported.
+- Keep the cards clean, premium and simple.
+- Make the first card slightly more visually prominent because vehicle lockouts are the main service.
+
+Card 1:
+Icon:
+Car with lock / vehicle lockout icon
+
+Title:
+Locked Your Keys in the Car?
+
+Text:
+Mobile vehicle entry across West London and surrounding areas.
+
+Trust points:
+✓ £100 Fixed Price
+✓ No Call-Out Fee
+
+Button text:
+Vehicle Lockout Service
+
+Link:
+Vehicle lockout page
+
+Card 2:
+Icon:
+Car key icon
+
+Title:
+Need a Spare Car Key?
+
+Text:
+Already have a working key? We can supply, cut and program spare keys for many vehicles. Call to confirm availability.
+
+Trust points:
+✓ Mobile Service
+✓ Programming Available
+
+Button text:
+Spare Car Key Service
+
+Link:
+Spare car key page
+
+Do not add a Lost All Keys card yet.
+
+CTA section under cards:
+Replace the current “Not sure which applies to you?” text with:
+
+Heading:
+Not Sure Which Service You Need?
+
+Text:
+Call with your vehicle make, model, year and location. We’ll recommend the right service, confirm availability, give you a clear price and a live ETA before dispatch.
+
+Button:
+Call Now — 020 3488 0390
+
+Spacing:
+- Reduce the large empty gap above the footer by about half.
+- Keep enough breathing room so the page does not feel cramped.
+- Make the CTA section feel intentional, not like loose text.
+
+Footer:
+Keep the existing footer and sticky bottom call button.
+
+Final check:
+- The Services page should look trustworthy and professional.
+- The card text should be short and easy to scan.
+- The page should guide customers quickly to either lockout or spare key service.
+- Do not make fake claims.
+- Do not overpromise spare key availability.
+- Keep wording consistent with the rest of the website.
