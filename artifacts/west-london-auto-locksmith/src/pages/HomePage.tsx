@@ -119,7 +119,7 @@ export default function HomePage() {
           <h2 className="text-xl sm:text-2xl font-bold text-[#121212] mb-6 text-center">
             What do you need help with?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
             {/* Card 1 — Vehicle Lockout */}
             <div
@@ -161,28 +161,6 @@ export default function HomePage() {
                 data-testid="button-car-keys-card"
               >
                 Car Key Services
-                <ChevronRight size={15} />
-              </a>
-            </div>
-
-            {/* Card 3 — Lost Keys */}
-            <div
-              className="bg-[#F7F7F4] border border-[#D8D8D3] rounded-xl p-6 flex flex-col"
-              data-testid="service-card-lost-keys"
-            >
-              <h3 className="font-bold text-[#121212] text-base mb-2">
-                Lost All Your Car Keys?
-              </h3>
-              <p className="text-sm text-[#121212]/65 leading-relaxed mb-5 flex-1">
-                Lost your car keys? We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key.
-              </p>
-              <a
-                href="#lost-car-keys"
-                onClick={() => trackEvent("homepage_lost_keys_card_click")}
-                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#121212] text-white font-semibold text-sm rounded hover:bg-[#2a2a2a] transition-colors min-h-[44px]"
-                data-testid="button-lost-keys-card"
-              >
-                Lost Car Key Help
                 <ChevronRight size={15} />
               </a>
             </div>
@@ -266,32 +244,6 @@ export default function HomePage() {
           >
             <Phone size={16} />
             Call About Car Keys
-          </a>
-        </div>
-      </section>
-
-      {/* ── SERVICE DETAIL C — Lost Car Keys ──────────────────────────────── */}
-      <section
-        id="lost-car-keys"
-        className="bg-white py-14 px-4 scroll-mt-20"
-        data-testid="section-detail-lost-keys"
-      >
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-semibold text-[#C9A227] uppercase tracking-widest mb-2">All Keys Lost</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#121212] mb-4">
-            Lost All Your Car Keys?
-          </h2>
-          <p className="text-[#121212]/70 text-base leading-relaxed mb-8 max-w-xl">
-            Lost your car keys? We can help you regain access to your vehicle and, for supported vehicles, supply and programme a replacement key. Call with your make, model, year and location so we can confirm availability, price and ETA before travel.
-          </p>
-          <a
-            href={phoneHref}
-            onClick={() => trackCallClick("homepage-lost-keys-section")}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C9A227] text-[#121212] font-bold rounded hover:bg-[#A88417] transition-colors min-h-[48px] text-sm"
-            data-testid="button-call-lost-keys"
-          >
-            <Phone size={16} />
-            Call About Lost Car Keys
           </a>
         </div>
       </section>
