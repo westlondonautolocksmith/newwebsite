@@ -37,8 +37,8 @@ export default function SiteHeader() {
     if (isHome) {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Full navigation preserves the hash in the URL so ScrollToTop can read it
-      window.location.href = href;
+      sessionStorage.setItem("scrollTarget", id);
+      navigate("/");
     }
   }
 

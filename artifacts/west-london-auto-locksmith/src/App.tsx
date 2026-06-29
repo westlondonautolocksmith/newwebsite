@@ -22,10 +22,11 @@ import StructuredData from "@/components/StructuredData";
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
+    const pending = sessionStorage.getItem("scrollTarget");
+    if (pending) {
+      sessionStorage.removeItem("scrollTarget");
       setTimeout(() => {
-        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById(pending)?.scrollIntoView({ behavior: "smooth" });
       }, 80);
     } else {
       window.scrollTo(0, 0);
