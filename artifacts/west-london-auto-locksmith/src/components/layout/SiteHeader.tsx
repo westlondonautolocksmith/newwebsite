@@ -6,7 +6,7 @@ import { trackCallClick } from "@/lib/analytics";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
   { label: "Vehicle Lockout", href: "/vehicle-lockout" },
   { label: "Spare Car Key", href: "/spare-car-key" },
   { label: "Areas We Cover", href: "/areas-we-cover" },
